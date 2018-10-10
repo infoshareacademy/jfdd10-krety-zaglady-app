@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const range = length => Array.from({ length }, (_, i) => i)
 
-class GridView extends Component {
+class ProjectBoard extends Component {
 
   state = {
     size: 5,
@@ -50,4 +50,4 @@ class GridView extends Component {
   }
 }
 
-export default GridView
+export default ProjectBoard
