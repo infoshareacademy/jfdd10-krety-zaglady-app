@@ -16,10 +16,10 @@ class ProjectListItem extends Component {
   render() {
     return (
 
-      <div>
+      <div className="ProjectListItem-container">
         <div className="ProjectListItem-leftSide">
           <div className="ProjectListItem-userInfo">
-            <img src="https://via.placeholder.com/350x150" />
+            <img src="https://cdn3.iconfinder.com/data/icons/avatar-55/64/Gardener-avatar-occupation-profession-woman-human-512.png" />
             <h1>{this.props.userName} {this.props.userSurname}</h1>
             <p>I like gardening and my dream is to grow my own vegetables</p>
           </div>

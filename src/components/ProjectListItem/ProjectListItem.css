@@ -1,19 +1,51 @@
+.ProjectListItem-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .ProjectListItem-leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
 .ProjectListItem-userInfo {
+ 
+}
 
+.ProjectListItem-userInfo img {
+  width: 150px;
+  height: 150px;
+}
+
+.ProjectListItem-userInfo h1 {
+  font-size: 40px;
+}
+
+.ProjectListItem-userInfo p {
+  font-size: 18px;
 }
 
 .ProjectListItem-fruitIcons {
-
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .ProjectListItem-fruitIcons img {
-
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.ProjectListItem-boardImage {
-
+.ProjectListItem-boardImage img {
+  width: 400px;
+  height: 400px;
 }
