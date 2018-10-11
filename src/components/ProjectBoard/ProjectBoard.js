@@ -5,28 +5,18 @@ const range = length => Array.from({ length }, (_, i) => i)
 class ProjectBoard extends Component {
 
 
-  state = {
-    garden: {}
-  }
-
-  componentDidMount() {
-    fetch('/data/garden.json').then(
-      response => response.json()
-      )
-      .then(data => this.setState({ garden: data }))
-  }
-      
-      render() {
-        const rows = range(this.state.garden.size);
-        const grid = rows.map(
-          y => (
+  render() {
+    const rows = range(this.props.size);
+    const grid = rows.map(
+      y => (
         <tr>
           {
-            range(this.state.garden.size).map(
+            range(this.props.size).map(
               x => (
-                <td style={{ border: '1px solid black' }}>
+                <td style={{ border: this.props.editable ? '1px solid black' : '10px solid black' }}>
+                  {/* Pozycja wyswietlana w tablicy - do umieszczenia obrazek zastepczy / dodac plik css osobny dla fields */}
                   {x}, {y}
-                  {this.state.garden.fields[y] && this.state.garden.fields[y][x]}
+                  {this.props.fields[y] && this.props.fields[y][x]}
                 </td>
               )
             )
@@ -39,10 +29,7 @@ class ProjectBoard extends Component {
       <table>
         <tbody>
           {grid}
-          
-          
         </tbody>
-            {this.state.garden.name}
       </table>
     )
   }
