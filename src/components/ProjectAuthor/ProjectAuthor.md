@@ -1,5 +1,5 @@
 Example  ProjectAuthor:
 
 ```js
-<ProjectAuthor  />
+<ProjectAuthor name="Stefan" photo="foto" />
 ```
