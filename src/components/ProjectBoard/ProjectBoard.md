@@ -2,5 +2,5 @@
 - Style board
 
 ```js
-<ProjectBoard ProjectBoard={board => console.log()} />
+// <ProjectBoard ProjectBoard={board => console.log()} />
 ```

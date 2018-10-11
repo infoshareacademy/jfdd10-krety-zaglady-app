@@ -4,34 +4,29 @@ const range = length => Array.from({ length }, (_, i) => i)
 
 class ProjectBoard extends Component {
 
+
   state = {
-    size: 5,
-    fields: {
-      0: {
-        0: 'tree',
-        4: 'tree'
-      },
-      1: {
-        2: 'pond'
-      },
-      4: {
-        4: 'pond'
-      }
-    }
+    garden: {}
   }
 
-  render() {
-
-    const rows = range(this.state.size);
-    const grid = rows.map(
-      y => (
+  componentDidMount() {
+    fetch('/data/garden.json').then(
+      response => response.json()
+      )
+      .then(data => this.setState({ garden: data }))
+  }
+      
+      render() {
+        const rows = range(this.state.garden.size);
+        const grid = rows.map(
+          y => (
         <tr>
           {
-            range(this.state.size).map(
+            range(this.state.garden.size).map(
               x => (
                 <td style={{ border: '1px solid black' }}>
                   {x}, {y}
-                  {this.state.fields[y] && this.state.fields[y][x]}
+                  {this.state.garden.fields[y] && this.state.garden.fields[y][x]}
                 </td>
               )
             )
@@ -44,7 +39,10 @@ class ProjectBoard extends Component {
       <table>
         <tbody>
           {grid}
+          
+          
         </tbody>
+            {this.state.garden.name}
       </table>
     )
   }

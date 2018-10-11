@@ -1,15 +1,22 @@
 import React, { Component } from 'react'
 
 class Test extends Component {
-
     state = {
-        title: 'Test'
-    }
+        items: []
+      }
+    
+      componentDidMount() {
+        fetch('/data/garden.json').then(
+          response => response.json()
+        ).then(
+          arrayOfItems => this.setState({ items: arrayOfItems })
+        )
+      }
 
     render() {
         return (
             <div>
-                {this.state.title}
+                this.state.id
             </div>
         )
     }
