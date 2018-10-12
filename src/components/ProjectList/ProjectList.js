@@ -1,25 +1,22 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import ProjectListItem from '../ProjectListItem'
+import React, { Component } from "react";
+import ProjectListItem from "../ProjectListItem";
 
-import './ProjectList.css'
+import "./ProjectList.css";
 
 class ProjectList extends Component {
-  static propTypes = {
-
-  }
 
   render() {
-    return  (
+    return (
       <div className="ProjectList">
-      <h2>Projects</h2>
-        {this.props.projects.map(
-          project => <ProjectListItem {...project} />
-        )}
-
+        <h2>Projects</h2>
+        {this.props.projects.map(project => (
+          <div key={project.id}>
+            <ProjectListItem {...project} />
+          </div>
+        ))}
       </div>
-    )
+    );
   }
 }
 
-export default ProjectList
+export default ProjectList;
