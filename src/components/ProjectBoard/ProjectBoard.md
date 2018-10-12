@@ -1,5 +1,6 @@
 - Project board
-- Style board
+- Przekazana klasa w pliku CSS ma przypisany kolor co zastąpimy grafiką.
+- Klasa UNDEFINED będzie wypełniaczem pustych cell
 
 ```js
 const fields = {
@@ -17,6 +18,8 @@ const fields = {
 
 ;<ProjectBoard fields={fields} size={5} />
 ```
+
+- Dodanie klasy EDITABLE 
 
 ```js
 const fields = {
