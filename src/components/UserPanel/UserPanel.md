@@ -1,9 +1,11 @@
 ```js
-<StarButton isActive={true} handleClick={() => console.log('clicked')} />
-```
-
-Example of inactive star button:
-
-```js
-<StarButton isActive={false} handleClick={() => console.log('clicked')} />
+<UserPanel
+  userName="Grażyna"
+  userSurname="Krecik"
+  userAvatar={'https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png'}
+  userCity="Miasto: Gdańsk"
+  userGender="Płeć: kobieta"
+  userAge="Wiek: 38"
+  userDescription="Szalona Graża mająca bzika na punkcie ogrodnictwa."
+/>
 ```

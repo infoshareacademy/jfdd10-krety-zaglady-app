@@ -1,23 +1,28 @@
-import React, { Component } from 'react'
-// import UserProfileView from '../UserProfileView/UserProfileView'
 
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
-
   render() {
-    return 
-    //   <Router>
-    //     <div className="App">
-    //       <ul>
-    //         <li><NavLink exact to="/">Home</NavLink></li>
-    //       </ul>
-
-    //       <Route exact path="/" component={() => <h1>Hello</h1>} />
-    //     </div>
-    //   </Router>
-    
+    return (
+      <div className="App">
+        <header className="App-header">
+        
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
   }
 }
 
-export default App
+export default App;

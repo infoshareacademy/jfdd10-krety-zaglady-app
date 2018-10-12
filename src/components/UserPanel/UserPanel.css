@@ -1,0 +1,48 @@
+.UserPanel {
+    display: flex;
+    background: rgb(1, 206, 1);
+    height: 300px;
+}
+
+
+.UserPanelAvatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: darkgreen;
+    align-items: center;
+    align-self: flex-start;
+    width: 200px;
+}
+
+  .UserPanelAvatar img {
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+}
+          
+.UserPanelInfo {
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    height: 200px;
+    width: 300px;
+}
+
+
+.UserName {
+    font-size: 30px; 
+    margin-top: 20px;
+    background: pink;
+    
+}
+
+.UserInfos {
+    font-size: 18px;
+    background: white;
+}
+
+.Description {
+    
+}
+
