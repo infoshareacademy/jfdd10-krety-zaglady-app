@@ -19,23 +19,25 @@ class ProjectListItem extends Component {
       <div className="ProjectListItem-container">
         <div className="ProjectListItem-leftSide">
           <div className="ProjectListItem-userInfo">
-            <img src="https://cdn3.iconfinder.com/data/icons/avatar-55/64/Gardener-avatar-occupation-profession-woman-human-512.png" />
+            <img src={this.props.userImage} alt="userImage"/>
             <div>
               <h1>{this.props.userName} {this.props.userSurname}</h1>
-              <p>I like gardening and my dream is to grow my own vegetables</p>
+              <p>{this.props.description}</p>
             </div>
           </div>
           <div className="ProjectListItem-fruitIcons">
-            <img src="https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png" />
-            <img src="https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png" />
-            <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png" />
-            <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_ameixa-512.png" />
-            <img src="https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png" />
+            {
+              this.props.fruits.map(
+                fruit => (
+                  <img src={fruit.image} alt={fruit.alt}/>
+                )
+              )
+            }
           </div>
         </div>
 
         <div className="ProjectListItem-boardImage">
-          <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png" />
+          <img src={this.props.boardImage} alt="boardImage" />
         </div>
 
 
