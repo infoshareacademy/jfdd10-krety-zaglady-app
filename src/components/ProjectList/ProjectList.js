@@ -5,12 +5,21 @@ import "./ProjectList.css";
 
 class ProjectList extends Component {
 
+  // showHeadline = () => {
+  //   if (this.props.projects === []) {
+  //     <span>There are no projects yet</span>
+  //     }
+  //     <span>Projects</span>
+  //   }
+
+  // }
+
   render() {
     return (
       <div className="ProjectList">
-        <h2>Projects</h2>
+        <span>Projects</span>
         {this.props.projects.map(project => (
-          <div key={project.id}>
+          <div class="ProjectList-projectListItem" key={project.id}>
             <ProjectListItem {...project} />
           </div>
         ))}
