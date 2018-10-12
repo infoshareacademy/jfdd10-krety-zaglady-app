@@ -34,6 +34,7 @@
     font-size: 30px; 
     margin-top: 20px;
     background: pink;
+    font-weight: bold;
     
 }
 
@@ -43,6 +44,6 @@
 }
 
 .Description {
-    
+    font-style: italic;
 }
 
