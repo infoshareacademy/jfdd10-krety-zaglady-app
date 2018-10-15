@@ -1,5 +1,11 @@
 .ProjectList {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ProjectList-sadPanda {
+  width: 350px;
 }
 
 .ProjectList-projectListItem {
@@ -15,6 +21,7 @@
 }
 
 span {
+  width: 80%;
   font-size: 30px;
   font-weight: bold;
   display: block;
