@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import ProjectAuthor from "../ProjectAuthor/ProjectAuthor"
 import PropTypes from 'prop-types'
 import './ProjectListItem.css'
-
 class ProjectListItem extends Component {
 
   static propTypes = {
@@ -18,13 +18,7 @@ class ProjectListItem extends Component {
 
       <div className="ProjectListItem-container">
         <div className="ProjectListItem-leftSide">
-          <div className="ProjectListItem-userInfo">
-            <img src={this.props.userImage} alt="userImage"/>
-            <div>
-              <h1>{this.props.userName} {this.props.userSurname}</h1>
-              <p>{this.props.description}</p>
-            </div>
-          </div>
+          <ProjectAuthor userName={this.props.userName} userSurname={this.props.userSurname} userImage={this.props.userImage}/>
           <div className="ProjectListItem-fruitIcons">
             {
               this.props.fruits.map(
