@@ -1,3 +1,6 @@
+Wszystkie elementy graficzne przekazywane są w propsach w formie adresów URL, z nazwą np. 'carrot' dla atrybutu alt obrazka.
+Opis pod nazwą użytkownika również jest przekazywany w propsach jako tekst.
+
 ```js
 <ProjectListItem
   userName="Stefan"
