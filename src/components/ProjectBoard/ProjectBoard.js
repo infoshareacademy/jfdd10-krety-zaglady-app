@@ -10,7 +10,9 @@ class ProjectBoard extends Component {
       <tr>
         {range(this.props.size).map(x => (
           <td
-            className={'cell '+ (this.props.fields[y] && this.props.fields[y][x])}
+            className={
+              "cell " + (this.props.fields[y] && this.props.fields[y][x])
+            }
             style={{
               border: this.props.editable
                 ? "1px solid black"

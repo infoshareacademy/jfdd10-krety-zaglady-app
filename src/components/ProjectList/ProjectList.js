@@ -18,7 +18,8 @@ class ProjectList extends Component {
       <div className="ProjectList">
         {this.props.projects.length !== 0 ? (
           <>
-            <span>Projects</span>
+            <span className="ProjectList-headline">Projects</span>
+
             {this.props.projects.map(project => (
               <div class="ProjectList-projectListItem" key={project.id}>
                 <ProjectListItem {...project} />
@@ -27,7 +28,8 @@ class ProjectList extends Component {
           </>
         ) : (
           <>
-          <span>There are no projects yet</span>
+
+          <span className="ProjectList-headline">There are no projects yet</span>
           <img class="ProjectList-sadPanda" src="https://cdn1.iconfinder.com/data/icons/panda-emojis-2/64/Sad_panda_face_bear_copy-512.png" alt="sad panda" />
           </>
         )}
