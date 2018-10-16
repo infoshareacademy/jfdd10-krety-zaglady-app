@@ -10,6 +10,7 @@ class UserProfileView extends Component {
     render() {
         return (
             <div class="UserProfileView">
+            
             <div>
                 <UserPanel />
                 <ProjectsList />

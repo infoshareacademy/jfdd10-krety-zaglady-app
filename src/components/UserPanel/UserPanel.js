@@ -22,17 +22,23 @@ class UserPanel extends Component {
           <div className="UserName">
             {this.props.userName} {this.props.userSurname}
           </div>
+
           <div className="UserInfos">
-            <p>
-              {this.props.userCity}
-              <br />
-              {this.props.userGender}
-              <br />
-              {this.props.userAge}
-            </p>
-            <div className="Description">
+            <div className="UserInfo">
+              <p>
+                {this.props.userCity}
+                <br />
+                {this.props.userGender}
+                <br />
+                {this.props.userAge}
+              </p>
+              <div className="Description">
               <p>{this.props.userDescription}</p>
             </div>
+            </div>
+            <div className="UserMail">
+                <img src={this.props.userMailIcon} alt="userMailIcon" />
+              </div>
           </div>
         </div>
       </div>
