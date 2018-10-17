@@ -1,0 +1,21 @@
+.HomeView-main_box{
+    background: gray;
+
+   
+}
+.HomeView-top_box{
+    background: green;
+    border-radius: 10px;
+  
+}
+
+.HomeView-main_box {
+    background: none;
+    
+}
+
+.HomeView-main_box h1 {
+    padding: 20px;
+    font-size: 60px;
+    
+}
