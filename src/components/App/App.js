@@ -1,28 +1,42 @@
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import HomeView from "../HomeView";
+import ProjectView from "../ProjectView";
+// import UserProfileView from './components/UserProfileView'
 
-import React, { Component } from 'react';
-import './App.css';
-
+import "./App.css";
 class App extends Component {
+
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-        
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <ul>
+              <li>
+                <NavLink exact to="/">
+                  Strona Główna
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/project">Projekt</NavLink>
+              </li>
+              <li>
+                <NavLink to="/user">Profil</NavLink>
+              </li>
+              <li>
+                <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">Strona WWW</a>
+              </li>
+            </ul>
+
+            <Route exact path="/" component={HomeView} />
+            <Route path="/project" component={ProjectView} />
+            {/* <Route exact path="/user" component={UserProfileView} /> */}
+          </header>
+        </div>
+      </Router>
     );
   }
 }
-
 export default App;
