@@ -14,14 +14,17 @@ class App extends Component {
             <ul>
               <li>
                 <NavLink exact to="/">
-                  Home
+                  Strona Główna
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/project">My Project</NavLink>
+                <NavLink to="/project">Projekt</NavLink>
               </li>
               <li>
-                <NavLink to="/user">My Profile</NavLink>
+                <NavLink to="/user">Profil</NavLink>
+              </li>
+              <li>
+                <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">Strona WWW</a>
               </li>
             </ul>
 
