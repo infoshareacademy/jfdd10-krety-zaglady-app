@@ -9,7 +9,7 @@ class UserPanel extends Component {
      *
      * @param {string} title text written in the form field
      */
-  };
+  }; 
 
   render() {
     return (
