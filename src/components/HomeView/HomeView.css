@@ -5,10 +5,17 @@
 }
 .HomeView-top_box{
     background: green;
+    border-radius: 10px;
   
 }
 
-h1 {
-    background-color: red;
+.HomeView-main_box {
+    background: none;
+    
+}
+
+.HomeView-main_box h1 {
+    padding: 20px;
+    font-size: 60px;
     
 }
