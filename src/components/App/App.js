@@ -18,7 +18,7 @@ class App extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/project">My Project</NavLink>
+                <NavLink to="/projects">Projects</NavLink>
               </li>
               <li>
                 <NavLink to="/user">My Profile</NavLink>
@@ -26,7 +26,7 @@ class App extends Component {
             </ul>
 
             {/* <Route exact path="/" component={HomeView} /> */}
-            <Route path="/project" component={ProjectView} />
+            <Route path="/projects/:projectId" component={ProjectView} />
             {/* <Route exact path="/user" component={UserProfileView} /> */}
           </header>
         </div>
