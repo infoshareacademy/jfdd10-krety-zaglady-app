@@ -20,7 +20,7 @@ class App extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/projects">Projects</NavLink>
+                <NavLink to="/projects">Projekt</NavLink>
               </li>
               <li>
                 <NavLink to="/user">Profil</NavLink>
