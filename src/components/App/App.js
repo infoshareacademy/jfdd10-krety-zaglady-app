@@ -20,7 +20,7 @@ class App extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/project">Projekt</NavLink>
+                <NavLink to="/projects">Projekt</NavLink>
               </li>
               <li>
                 <NavLink to="/user">Profil</NavLink>
@@ -30,9 +30,11 @@ class App extends Component {
               </li>
             </ul>
 
+
             <Route exact path="/" component={HomeView} />
-            <Route path="/project" component={ProjectView} />
+      <Route path="/projects/:projectId" component={ProjectView} />
             <Route exact path="/user" component={UserProfileView} />
+
           </header>
         </div>
       </Router>
