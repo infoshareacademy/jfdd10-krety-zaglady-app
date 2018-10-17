@@ -6,11 +6,15 @@ import "./HomeView.css";
 class HomeView extends Component {
   render() {
     return (
+    <>
       <div className="HomeView-main_box">
-        <h1> WITAJCIE W NASZEJ APLIKACJI </h1>
-        <div className="HomeView-top_box" />
+        <h1> WITAJCIE W KRETOGRODZIE! </h1>
+        </div>
+        <div className="HomeView-top_box">
         <ProjectList projects={[]} />
+
       </div>
+      </>
     );
   } 
 }
