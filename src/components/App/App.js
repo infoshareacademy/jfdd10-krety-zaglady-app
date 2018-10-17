@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-// import HomeView from "../HomeView";
+import HomeView from "../HomeView";
 import ProjectView from "../ProjectView";
 // import UserProfileView from './components/UserProfileView'
 
@@ -14,18 +14,21 @@ class App extends Component {
             <ul>
               <li>
                 <NavLink exact to="/">
-                  Home
+                  Strona Główna
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/project">My Project</NavLink>
+                <NavLink to="/project">Projekt</NavLink>
               </li>
               <li>
-                <NavLink to="/user">My Profile</NavLink>
+                <NavLink to="/user">Profil</NavLink>
+              </li>
+              <li>
+                <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">Strona WWW</a>
               </li>
             </ul>
 
-            {/* <Route exact path="/" component={HomeView} /> */}
+            <Route exact path="/" component={HomeView} />
             <Route path="/project" component={ProjectView} />
             {/* <Route exact path="/user" component={UserProfileView} /> */}
           </header>
