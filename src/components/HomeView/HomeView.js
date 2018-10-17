@@ -4,6 +4,21 @@ import ProjectList from "../ProjectList";
 
 import "./HomeView.css";
 class HomeView extends Component {
+  state = {
+    projects: []
+  }
+
+
+  componentDidMount() {
+    fetch(process.env.PUBLIC_URL + '/data/projects.json').then(
+      response => response.json()
+    ).then(
+      arrayOfProjects => this.setState({
+        projects: arrayOfProjects
+      })
+    )
+  }
+
   render() {
     return (
     <>
@@ -11,7 +26,7 @@ class HomeView extends Component {
         <h1> WITAJCIE W KRETOGRODZIE! </h1>
         </div>
         <div className="HomeView-top_box">
-        <ProjectList projects={[]} />
+        <ProjectList projects={this.state.projects} />
 
       </div>
       </>
