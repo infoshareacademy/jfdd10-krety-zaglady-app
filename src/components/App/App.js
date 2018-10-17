@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import HomeView from "../HomeView";
+// import HomeView from "../HomeView";
 import ProjectView from "../ProjectView";
 // import UserProfileView from './components/UserProfileView'
 
@@ -25,7 +25,7 @@ class App extends Component {
               </li>
             </ul>
 
-            <Route exact path="/" component={HomeView} />
+            {/* <Route exact path="/" component={HomeView} /> */}
             <Route path="/project" component={ProjectView} />
             {/* <Route exact path="/user" component={UserProfileView} /> */}
           </header>
