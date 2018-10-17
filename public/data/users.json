@@ -1,0 +1,42 @@
+[
+    {
+      "useruserId": 1,
+      "useruserName": "Grażyna",
+      "userSuruserName": "Kretowska",
+      "userAge": "31",
+      "userGender": "kobieta",
+      "userCity": "Radom"
+    },
+    {
+        "userId": 2,
+        "userName": "Stefan",
+        "userSuruserName": "Ziółko",
+        "userAge": "50",
+        "userGender": "mężczyzna",
+        "userCity": "Rzeszotary Panciawa"
+      },
+      {
+        "userId": 3,
+        "userName": "Jan",
+        "userSuruserName": "Papryka",
+        "userAge": "20",
+        "userGender": "mężczyzna",
+        "userCity": "Gdynia"
+      },
+      {
+        "userId": 4,
+        "userName": "Pamela",
+        "userSuruserName": "Karmazyn",
+        "userAge": "67",
+        "userGender": "kobieta",
+        "userCity": "Kielce"
+      },
+      {
+        "userId": 5,
+        "userName": "Melania",
+        "userSuruserName": "Bila",
+        "userAge": "37",
+        "userGender": "kobieta",
+        "userCity": "Warszawa"
+      }
+]
