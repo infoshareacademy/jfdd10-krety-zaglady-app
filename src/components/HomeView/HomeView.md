@@ -1,3 +1,3 @@
 ```js
-<HomeView author={{ }}/>
+<HomeView />
 ```
