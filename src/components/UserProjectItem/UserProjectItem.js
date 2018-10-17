@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './ProjectItem.css'
+import './UserProjectItem.css'
 
-class ProjectItem extends Component {
+class UserProjectItem extends Component {
 
     render() {
         return (
-            <div class="ProjectItem">
-                <div class="ProjectImage"><img src={this.props.projectImage} alt="projectImage" /></div>
+            <div class="UserProjectItem">
+                <div class="ProjectImage"><img src={this.props.userProjectImage} alt="userProjectImage" /></div>
                 <div class="DescriptionOfProject">
                 <h3>Mój ogródek</h3>
                 <p>Ogródek ze szklarnią i małym oczkiem wodnym. Powierzchnia pięćdziesięciu metrów kwadratowych, grządka z warzywami korzeniowymi. 
@@ -18,4 +18,4 @@ class ProjectItem extends Component {
     }
 }
 
-export default ProjectItem
+export default UserProjectItem
