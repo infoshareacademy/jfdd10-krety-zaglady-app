@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import HomeView from "../HomeView";
 import ProjectView from "../ProjectView";
-// import UserProfileView from './components/UserProfileView'
+import UserProfileView from './components/UserProfileView'
 
 import "./App.css";
 class App extends Component {
+
+  
   render() {
     return (
       <Router>
@@ -30,7 +32,7 @@ class App extends Component {
 
             <Route exact path="/" component={HomeView} />
             <Route path="/project" component={ProjectView} />
-            {/* <Route exact path="/user" component={UserProfileView} /> */}
+            <Route exact path="/user" component={UserProfileView} />
           </header>
         </div>
       </Router>
