@@ -18,7 +18,7 @@ class ProjectList extends Component {
       <div className="ProjectList">
         {this.props.projects.length !== 0 ? (
           <>
-            <span className="ProjectList-headline">Projects</span>
+            <span className="ProjectList-headline">Projekty</span>
 
             {this.props.projects.map(project => (
               <div class="ProjectList-projectListItem" key={project.id}>

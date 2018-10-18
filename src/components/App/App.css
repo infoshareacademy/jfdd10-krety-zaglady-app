@@ -21,6 +21,16 @@
   list-style-type: none;
 }
 
+.App-footer {
+  background: rgb(215, 237, 240);
+  padding: 10px;
+}
+
+.App-footer a {
+  text-decoration: none;
+  color: black;
+}
+
 .App-header li {
   margin: 0px 5px;
 }
