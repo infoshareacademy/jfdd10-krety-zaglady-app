@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './ProjectAuthor.css'
-
+import { Link } from 'react-router-dom'
 class ProjectAuthor extends Component {
 
 
@@ -9,6 +9,7 @@ class ProjectAuthor extends Component {
 
   render() {
     return (
+      <Link to={"/projects/user/" + this.props.id} >
      <div className="ProjectAuthor"> 
         <h1 className="ProjectAuthor-header">{this.props.name}</h1>
         <div className="ProjectListItem-userInfo">
@@ -21,7 +22,7 @@ class ProjectAuthor extends Component {
         {/* <p className="ProjectAuthor-photo">{this.props.photo}</p> */}
         {/* <img src="https://via.placeholder.com/350x150" /> */}
      </div> 
-
+</Link>
     )
   }
 }
