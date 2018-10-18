@@ -1,3 +1,8 @@
+.ProjectListItem {
+  color: black;
+  text-decoration: none;
+}
+
 .ProjectListItem-container {
   display: flex;
   background: rgb(54, 211, 54);

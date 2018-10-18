@@ -14,26 +14,30 @@ class ProjectListItem extends Component {
 
   render() {
     return (
-      <Link to={"projects/" + this.props.id}>
-        <div className="ProjectListItem-container">
-          <div className="ProjectListItem-leftSide">
-            <ProjectAuthor
-              userName={this.props.userName}
-              userSurname={this.props.userSurname}
-              userImage={this.props.userImage}
-            />
-            <div className="ProjectListItem-fruitIcons">
-              {this.props.fruits.map(fruit => (
-                <img src={fruit.image} alt={fruit.alt} />
-              ))}
-            </div>
-          </div>
-
-          <div className="ProjectListItem-boardImage">
-            <img src={this.props.boardImage} alt="boardImage" />
+      <div className="ProjectListItem-container">
+        <div className="ProjectListItem-leftSide">
+          <ProjectAuthor
+            userName={this.props.userName}
+            userSurname={this.props.userSurname}
+            userImage={this.props.userImage}
+          />
+          <div className="ProjectListItem-fruitIcons">
+            {this.props.fruits.map(fruit => (
+              <img src={fruit.image} alt={fruit.alt} />
+            ))}
           </div>
         </div>
-      </Link>
+
+        <div className="ProjectListItem-boardImage">
+          <Link
+            to={"projects/" + this.props.id}
+            style={{ textDecoration: "none" }}
+            className="ProjectListItem"
+          >
+            <img src={this.props.boardImage} alt="boardImage" />
+          </Link>
+        </div>
+      </div>
     );
   }
 }

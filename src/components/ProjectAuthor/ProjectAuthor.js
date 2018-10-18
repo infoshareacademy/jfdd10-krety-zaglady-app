@@ -9,7 +9,7 @@ class ProjectAuthor extends Component {
 
   render() {
     return (
-      <Link to={"/projects/user/" + this.props.id} >
+      <Link to={"/projects/user/" + this.props.id}className="ProjectAuthorLink" >
      <div className="ProjectAuthor"> 
         <h1 className="ProjectAuthor-header">{this.props.name}</h1>
         <div className="ProjectListItem-userInfo">
