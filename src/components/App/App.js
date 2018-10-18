@@ -5,6 +5,7 @@ import ProjectView from "../ProjectView";
 import UserProfileView from '../UserProfileView'
 
 import "./App.css";
+import ProjectAuthor from '../ProjectAuthor/ProjectAuthor';
 class App extends Component {
 
   
@@ -32,8 +33,10 @@ class App extends Component {
 
 
             <Route exact path="/" component={HomeView} />
-      <Route path="/projects/:projectId" component={ProjectView} />
+            <Route path="/projects/:projectId" component={ProjectView} />
             <Route exact path="/user" component={UserProfileView} />
+            <Route path="/projects/user/:projectId" component={ProjectAuthor} />
+
 
           </header>
         </div>
