@@ -12,13 +12,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <ul>
-              <li>
-                <NavLink exact to="/">
-                  Strona Główna
-                </NavLink>
-              </li>
-            </ul>
+            <NavLink exact to="/">
+              <img src="/data/molelogo.png" alt="home" className="App-logo" />
+            </NavLink>
 
             <Route exact path="/" component={HomeView} />
             <Route path="/projects/:projectId" component={ProjectView} />
