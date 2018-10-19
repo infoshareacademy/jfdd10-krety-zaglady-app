@@ -16,13 +16,21 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
 }
-.App-header ul {
-  display: flex;
-  list-style-type: none;
+
+.App-logo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 20px;
 }
 
-.App-header li {
-  margin: 0px 5px;
+.App-footer {
+  background: rgb(215, 237, 240);
+  padding: 10px;
+}
+
+.App-footer a {
+  text-decoration: none;
+  color: black;
 }
 
 .App-link {
