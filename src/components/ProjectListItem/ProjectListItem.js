@@ -3,6 +3,12 @@ import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 import PropTypes from "prop-types";
 import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
+import posed from "react-pose";
+
+const PushUp = posed.div({
+  idle: { scale: 1 },
+  hovered: { scale: 1.1 }
+});
 class ProjectListItem extends Component {
   static propTypes = {
     /**
@@ -12,14 +18,21 @@ class ProjectListItem extends Component {
      */
   };
 
+  state = { hovering: false };
   render() {
+
     return (
       <div className="ProjectListItem-container">
           <ProjectAuthor
             {...this.props}
           />
 
-        <div className="ProjectListItem-boardImage">
+        <PushUp
+        pose={this.state.hovering ? "hovered" : "idle"}
+        onMouseEnter={() => this.setState({ hovering: true })}
+        onMouseLeave={() => this.setState({ hovering: false })}
+      
+        className="ProjectListItem-boardImage">
           <Link
             to={"projects/" + this.props.id}
             style={{ textDecoration: "none" }}
@@ -32,7 +45,7 @@ class ProjectListItem extends Component {
             ))}
           </div>
           </Link>
-        </div>
+        </PushUp>
       </div>
     );
   }
