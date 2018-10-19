@@ -12,19 +12,11 @@
   margin: 20px 10px;
 }
 
-.ProjectListItem-userInfo:hover {
+.ProjectListItem-boardImage:hover, .ProjectListItem-userInfo:hover  {
   background: rgb(218, 249, 255);
 }
 
-.ProjectListItem-userInfo:active {
-  background: rgb(190, 233, 241);
-}
-
-.ProjectListItem-boardImage:hover {
-  background: rgb(218, 249, 255);
-}
-
-.ProjectListItem-boardImage:active {
+.ProjectListItem-boardImage:active, .ProjectListItem-userInfo:active {
   background: rgb(190, 233, 241);
 }
 

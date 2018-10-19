@@ -35,7 +35,7 @@
   box-shadow: 1px 5px 15px  black;
 }
 
-h1 {
+.ProjectListItem-userInfo h1 {
   font-size: 30px;
   margin: 20px;
   
