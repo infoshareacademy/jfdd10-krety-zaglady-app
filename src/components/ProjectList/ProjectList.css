@@ -13,23 +13,6 @@
   width: calc(100% - 20px);
 }
 
-.ProjectListItem-userInfo:hover {
-  background: rgb(218, 249, 255);
-}
-
-.ProjectListItem-userInfo:active {
-  background: rgb(190, 233, 241);
-}
-
-.ProjectListItem-boardImage:hover {
-  background: rgb(218, 249, 255);
-}
-
-.ProjectListItem-boardImage:active {
-  background: rgb(190, 233, 241);
-}
-
-
 .ProjectList-headline {
   width: 80%;
   font-size: 30px;
