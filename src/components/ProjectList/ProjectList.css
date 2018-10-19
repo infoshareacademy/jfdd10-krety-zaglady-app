@@ -10,6 +10,7 @@
 
 .ProjectList-projectListItem {
   margin: 20px 10px;
+  width: calc(100% - 20px);
 }
 
 .ProjectListItem-userInfo:hover {

@@ -11,6 +11,10 @@
   border: 1px solid green;
 }
 
+.ProjectListItem-container a {
+  width: 100%;
+}
+
 .ProjectListItem-leftSide {
   display: flex;
   flex-direction: column;
@@ -35,10 +39,9 @@
   box-shadow: 1px 5px 15px  black;
 }
 
-h1 {
+.ProjectListItem-userInfo h1 {
   font-size: 30px;
   margin: 20px;
-  
 }
 
 .ProjectListItem-userInfo p {
