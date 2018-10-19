@@ -15,12 +15,9 @@ class ProjectListItem extends Component {
   render() {
     return (
       <div className="ProjectListItem-container">
-        <div className="ProjectListItem-leftSide">
           <ProjectAuthor
             {...this.props}
           />
-          
-        </div>
 
         <div className="ProjectListItem-boardImage">
           <Link
