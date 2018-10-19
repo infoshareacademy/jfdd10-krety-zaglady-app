@@ -26,7 +26,6 @@
 .ProjectListItem-userInfo {
  display: flex;
  padding: 20px 10px;
- border: 1px solid black;
  box-shadow: 5px 5px 15px  black;
  border-radius: 10px;
  background: white;
