@@ -54,7 +54,7 @@ h1 {
   border-radius: 10px; */
   padding-top: 10px;
   padding-bottom: 10px;
-  background: white;
+  background: transparent;
 }
 
 .ProjectListItem-fruitIcons img {

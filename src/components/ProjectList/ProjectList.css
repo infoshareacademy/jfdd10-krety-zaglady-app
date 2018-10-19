@@ -12,12 +12,12 @@
   margin: 20px 10px;
 }
 
-.ProjectListItem-container:hover {
-  background: rgb(5, 163, 5);
+.ProjectListItem-boardImage:hover {
+  background: rgb(218, 249, 255);
 }
 
-.ProjectListItem-container:active {
-  background: green;
+.ProjectListItem-boardImage:active {
+  background: rgb(190, 233, 241);
 }
 
 
