@@ -13,12 +13,20 @@
   width: calc(100% - 20px);
 }
 
-.ProjectListItem-container:hover {
-  background: rgb(4, 197, 4);
+.ProjectListItem-userInfo:hover {
+  background: rgb(218, 249, 255);
 }
 
-.ProjectListItem-container:active {
-  background: rgb(2, 172, 2);
+.ProjectListItem-userInfo:active {
+  background: rgb(190, 233, 241);
+}
+
+.ProjectListItem-boardImage:hover {
+  background: rgb(218, 249, 255);
+}
+
+.ProjectListItem-boardImage:active {
+  background: rgb(190, 233, 241);
 }
 
 
