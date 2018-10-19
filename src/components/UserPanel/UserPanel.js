@@ -9,7 +9,7 @@ class UserPanel extends Component {
     return (
       <div className="UserPanel">
         <div className="UserPanelAvatar">
-          {this.props.userAvatar}
+          <img src={this.props.userAvatar} alt="userAvatar" />
         </div>
 
         <div className="UserPanelInfo">
@@ -20,18 +20,18 @@ class UserPanel extends Component {
           <div className="UserInfos">
             <div className="UserInfo">
               <p>
-                {this.props.userCity}
+                Miasto: {this.props.userCity}
                 <br />
-                {this.props.userGender}
+                Płeć: {this.props.userGender}
                 <br />
-                {this.props.userAge}
+                Wiek: {this.props.userAge}
               </p>
               <div className="Description">
               <p>{this.props.userDescription}</p>
             </div>
             </div>
             <div className="UserMail">
-               
+            <img src="/data/mail.png" alt="mailIcon" className="mail-icon" />
               </div>
           </div>
         </div>

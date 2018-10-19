@@ -4,11 +4,15 @@ html {
 
 .UserPanel {
     display: flex;
-box-shadow: 0px 5px 5px grey;
+    box-shadow: 0px 5px 5px rgb(187, 182, 182);
+    text-align: start;
+    margin-top: 50px;
     height: 300px;
-    margin-bottom: 50px;
+    margin-left: 200px;
+    width: 70%;
+    margin-bottom: 0px;
     background: linear-gradient(124deg, #75d924, #3b7f04);
-background-size: 400% 400%;
+    background-size: 400% 400%;
 
 -webkit-animation: AnimationName 30s ease infinite;
 -moz-animation: AnimationName 30s ease infinite;
@@ -43,8 +47,8 @@ animation: AnimationName 30s ease infinite;
 }
 
 .UserPanelAvatar img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin-top: 50px;
 }
 
@@ -52,6 +56,7 @@ animation: AnimationName 30s ease infinite;
 .UserPanelInfo {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     /* background: grey; */
     height: 200px;
     width: 680px;
@@ -97,10 +102,9 @@ animation: AnimationName 30s ease infinite;
 
 }
 
-.UserMail {
+.UserMail img {
     /* background: violet; */
     width: 70px;
-    width: 50px;
-    height: 50px;
+    height: 70px;
     background-image: url ('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-4/177800/155-512.png')
 }

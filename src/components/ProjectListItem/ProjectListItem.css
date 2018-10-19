@@ -1,3 +1,8 @@
+.ProjectListItem {
+  color: black;
+  text-decoration: none;
+}
+
 .ProjectListItem-container {
   display: flex;
   background: rgb(54, 211, 54);
@@ -44,12 +49,12 @@ h1 {
 .ProjectListItem-fruitIcons {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+  /* border: 1px solid black;
   box-shadow: 5px 5px 15px black;
-  border-radius: 10px;
+  border-radius: 10px; */
   padding-top: 10px;
   padding-bottom: 10px;
-  background: white;
+  background: transparent;
 }
 
 .ProjectListItem-fruitIcons img {
@@ -61,6 +66,7 @@ h1 {
 
 .ProjectListItem-boardImage {
   margin: 0px 20px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: 5px 5px 15px black;
   background: rgb(255, 255, 255);
@@ -68,5 +74,7 @@ h1 {
 
 .ProjectListItem-boardImage img {
   display: block;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 200px;
+  max-height: 200px;
 }

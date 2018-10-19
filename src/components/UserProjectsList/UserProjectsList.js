@@ -10,10 +10,6 @@ class UserProjectList extends Component {
         return (
             <div>
             <UserProjectItem />
-
-            <UserProjectItem />
-            
-            <UserProjectItem />
             </div>
         )
     }

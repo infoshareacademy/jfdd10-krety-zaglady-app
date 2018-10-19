@@ -1,33 +1,27 @@
-.ProjectItem {
+.UserProjectItem {
   display: flex;
   padding: 20px;
-  width: 80%;
-  margin-left: 60px;
-  margin-top: 20px;
+  width: 60%;
+  margin-left: 250px;
+  margin-top: 50px;
+  text-align: start;
   border-radius: 5px;
   box-shadow: 5px 5px 5px grey;
   background: linear-gradient(270deg, #19d7d0, #07aea8);
-background-size: 400% 400%;
+  background-size: 400% 400%;
+  animation: AnimationName 30s ease infinite;
+}
 
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 30s ease infinite;
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .ProjectItem h3 {
@@ -41,16 +35,17 @@ animation: AnimationName 30s ease infinite;
   justify-content: center;
   width: 500px;
   align-items: center;
-}    
+}
 
 .ProjectImage img {
-height: 80%;
-width: 80%;
-
+  height: 80%;
+  width: 80%;
 }
-    
+
 .DescriptionOfProject {
   display: flex;
   flex-direction: column;
+  font-size: 10px;
+ 
   /* background: grey; */
 }

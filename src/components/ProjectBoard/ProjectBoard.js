@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import "./ProjectBoard.css";
 
+
 const range = length => Array.from({ length }, (_, i) => i);
 
 class ProjectBoard extends Component {
+
+  
+ 
+
   render() {
     const rows = range(this.props.size);
     const grid = rows.map(y => (

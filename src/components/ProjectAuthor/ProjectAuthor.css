@@ -1,6 +1,8 @@
-.ProjectAuthor {
-
+.ProjectAuthorLink {
+  color: black;
+  text-decoration: none;
 }
+
 .ProjectAuthor-header {
 
 }

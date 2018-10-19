@@ -41,7 +41,8 @@ class UserProfileView extends Component {
             
             <div>
                 <UserPanel {...user}/>
-                <UserProjectsList />
+                {/* <UserProjectsList /> */}
+                <UserProjectItem {...user}/>
             </div>
             </div>
         )
