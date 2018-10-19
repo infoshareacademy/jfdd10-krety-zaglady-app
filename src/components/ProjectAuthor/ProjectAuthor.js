@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import './ProjectAuthor.css'
 import { Link } from 'react-router-dom'
+import posed from "react-pose";
+
+
 class ProjectAuthor extends Component {
 
 
