@@ -9,7 +9,7 @@ class UserPanel extends Component {
      *
      * @param {string} title text written in the form field
      */
-  }; 
+  };
 
   render() {
     return (
@@ -33,12 +33,12 @@ class UserPanel extends Component {
                 {this.props.userAge}
               </p>
               <div className="Description">
-              <p>{this.props.userDescription}</p>
-            </div>
+                <p>{this.props.userDescription}</p>
+              </div>
             </div>
             <div className="UserMail">
-                <img src={this.props.userMailIcon} alt="userMailIcon" />
-              </div>
+              <img src={this.props.userMailIcon} alt="userMailIcon" />
+            </div>
           </div>
         </div>
       </div>

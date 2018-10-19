@@ -17,13 +17,12 @@ class ProjectAuthor extends Component {
         to={"/projects/user/" + this.props.id}
         className="ProjectAuthorLink"
       >
-        <PushUp 
-        pose={this.state.hovering ? "hovered" : "idle"}
-        onMouseEnter={() => this.setState({ hovering: true })}
-        onMouseLeave={() => this.setState({ hovering: false })}
-      
-        
-        className="ProjectAuthor">
+        <PushUp
+          pose={this.state.hovering ? "hovered" : "idle"}
+          onMouseEnter={() => this.setState({ hovering: true })}
+          onMouseLeave={() => this.setState({ hovering: false })}
+          className="ProjectAuthor"
+        >
           <h1 className="ProjectAuthor-header">{this.props.name}</h1>
           <div className="ProjectListItem-userInfo">
             <img src={this.props.userImage} alt="userImage" />
