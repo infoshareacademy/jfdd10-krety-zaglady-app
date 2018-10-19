@@ -31,9 +31,14 @@ class ProjectView extends Component {
 
     return (
       <div className="main_b">
+        <div className="ProjectView-projectAuthor">
         <ProjectAuthor {...project}/>
+        </div>
+        <div className="ProjectView-board">
         <div className="top_box" />
         <ProjectBoard size={project.size} fields={project.fields}/>
+        </div>
+        
       </div>
     );
   }
