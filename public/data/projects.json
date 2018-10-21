@@ -1,9 +1,37 @@
 [
   {
     "id": 1,
+    "userName": "Grażyna",
+    "userSurname": "Kretowska",
+    "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
+    "userAge": "31",
+    "userGender": "kobieta",
+    "userCity": "Radom",
+    "fruits": [
+      {
+        "image": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+        "alt": "carrot"
+      },
+      {
+        "image": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+        "alt": "apple"
+      },
+      {
+        "image": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png",
+        "alt": "cherry"
+      }
+    ],
+    "description": "Chciałem spróbować czegoś nowego dlatego kupiłem ogród, teraz chcę go zaprojektować",
+    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
+  },
+  {
+    "id": 2,
     "userName": "Michael",
     "userSurname": "Cranberry",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Businessman-avatar-occupation-profession-man-human-512.png",
+    "userAge": "50",
+    "userGender": "mężczyzna",
+    "userCity": "Rzeszotary Panciawa",
     "fruits": [
       {
         "image": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
@@ -35,10 +63,13 @@
     }
   },
   {
-    "id": 2,
+    "id": 3,
     "userName": "Stefan",
     "userSurname": "Kowalski",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Gardener-avatar-occupation-profession-woman-human-512.png",
+    "userAge": "20",
+    "userGender": "mężczyzna",
+    "userCity": "Gdynia",
     "fruits": [
       {
         "image": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png",
@@ -57,10 +88,13 @@
     "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
   },
   {
-    "id": 3,
+    "id": 4,
     "userName": "Angelika",
     "userSurname": "Nowak",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
+    "userAge": "67",
+    "userGender": "kobieta",
+    "userCity": "Kielce",
     "fruits": [
       {
         "image": "https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png",
