@@ -1,12 +1,32 @@
-```js
-<UserPanel
-  userName="Grażyna"
-  userSurname="Krecik"
-  userAvatar={'https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png'}
-  userMailIcon={'https://cdn4.iconfinder.com/data/icons/green-shopper/1049/email.png'}
-  userCity="Miasto: Gdańsk"
-  userGender="Płeć: kobieta"
-  userAge="Wiek: 38"
-  userDescription="Szalona Graża mająca bzika na punkcie ogrodnictwa."
-/>
-```
+// {
+    //     "userId": 2,
+    //     "userName": "Stefan",
+    //     "userSurname": "Ziółko",
+    //     "userAge": "50",
+    //     "userGender": "mężczyzna",
+    //     "userCity": "Rzeszotary Panciawa"
+    //   },
+    //   {
+    //     "userId": 3,
+    //     "userName": "Jan",
+    //     "userSurname": "Papryka",
+    //     "userAge": "20",
+    //     "userGender": "mężczyzna",
+    //     "userCity": "Gdynia"
+    //   },
+    //   {
+    //     "userId": 4,
+    //     "userName": "Pamela",
+    //     "userSurname": "Karmazyn",
+    //     "userAge": "67",
+    //     "userGender": "kobieta",
+    //     "userCity": "Kielce"
+    //   },
+    //   {
+    //     "userId": 5,
+    //     "userName": "Melania",
+    //     "userSurname": "Bila",
+    //     "userAge": "37",
+    //     "userGender": "kobieta",
+    //     "userCity": "Warszawa"
+    //   }

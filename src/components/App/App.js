@@ -33,6 +33,7 @@ class App extends Component {
             <Route path="/projects/:projectId" component={ProjectView} />
             <Route exact path="/user" component={UserProfileView} />
             <Route path="/projects/user/:projectId" component={ProjectAuthor} />
+            <Route exact path="/users/:userId" component={UserProfileView} />
           </header>
           <div className="App-footer">
             <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">

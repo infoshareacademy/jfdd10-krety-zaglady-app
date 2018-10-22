@@ -3,13 +3,7 @@ import PropTypes from "prop-types";
 import "./UserPanel.css";
 
 class UserPanel extends Component {
-  static propTypes = {
-    /**
-     * Function called during form submission
-     *
-     * @param {string} title text written in the form field
-     */
-  }; 
+ 
 
   render() {
     return (
@@ -26,18 +20,18 @@ class UserPanel extends Component {
           <div className="UserInfos">
             <div className="UserInfo">
               <p>
-                {this.props.userCity}
+                Miasto: {this.props.userCity}
                 <br />
-                {this.props.userGender}
+                Płeć: {this.props.userGender}
                 <br />
-                {this.props.userAge}
+                Wiek: {this.props.userAge}
               </p>
               <div className="Description">
               <p>{this.props.userDescription}</p>
             </div>
             </div>
             <div className="UserMail">
-                <img src={this.props.userMailIcon} alt="userMailIcon" />
+            <img src="/data/mail.png" alt="mailIcon" className="mail-icon" />
               </div>
           </div>
         </div>
