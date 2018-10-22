@@ -20,7 +20,7 @@ class ProjectView extends Component {
   render() {
 
     const projectId = parseInt(this.props.match.params.projectId)
-    const project = this.state.projects.find(project => project.userId === projectId)
+    const project = this.state.projects.find(project => project.id === projectId)
 
 
     if (project === undefined) {

@@ -1,6 +1,6 @@
 [
   {
-    "userId": 1,
+    "id": 1,
     "userName": "Grażyna",
     "userSurname": "Kretowska",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
@@ -21,11 +21,13 @@
         "alt": "cherry"
       }
     ],
-    "description": "Chciałem spróbować czegoś nowego dlatego kupiłem ogród, teraz chcę go zaprojektować",
-    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
+    "userDescription": "Szalona Graża mająca bzika na punkcie ogrodnictwa.",
+    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+    "userDescriptionTitle": "Mój ogródek",
+    "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym o powierzchni pięćdziesięciu metrów kwadratowych. W planach stworzenie oczka wodnego."
   },
   {
-    "userId": 2,
+    "id": 2,
     "userName": "Michael",
     "userSurname": "Cranberry",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Businessman-avatar-occupation-profession-man-human-512.png",
@@ -46,8 +48,10 @@
         "alt": "cherry"
       }
     ],
-    "description": "Chciałem spróbować czegoś nowego dlatego kupiłem ogród, teraz chcę go zaprojektować",
+    "userDescription": "Chciałem spróbować czegoś nowego, dlatego kupiłem ogród. Teraz chcę go zaprojektować",
     "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+    "userDescriptionTitle": "Ogródek",
+    "userGardenDescription": "Kilkadziesiąt metrów kwadratowych mojego królestwa.",
     "size": 5,
     "fields": {
       "0": {
@@ -63,7 +67,7 @@
     }
   },
   {
-    "userId": 3,
+    "id": 3,
     "userName": "Stefan",
     "userSurname": "Kowalski",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Gardener-avatar-occupation-profession-woman-human-512.png",
@@ -84,11 +88,13 @@
         "alt": "tomato"
       }
     ],
-    "description": "Chcę mieć najpiękniejszy i najbardziej praktyczny ogród!",
-    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
+    "userDescription": "Chcę mieć najpiękniejszy i najbardziej praktyczny ogród!",
+    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+    "userDescriptionTitle": "Ogródek przy domu",
+    "userGardenDescription": "Skromny ogródek pełen witamin."
   },
   {
-    "userId": 4,
+    "id": 4,
     "userName": "Angelika",
     "userSurname": "Nowak",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
@@ -109,7 +115,9 @@
         "alt": "broccoli"
       }
     ],
-    "description": "Lubię ogrodnictwo i moim marzeniem jest uprawiać własne warzywa",
-    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
+    "userDescription": "Lubię ogrodnictwo i moim marzeniem jest uprawiać własne warzywa",
+    "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+    "userDescriptionTitle": "Działka pod miastem",
+    "userGardenDescription": "Dopiero pracuję nad rozbudową działki, więc nie ma na niej wielu elementów."
   }
 ]

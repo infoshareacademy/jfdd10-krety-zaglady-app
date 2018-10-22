@@ -32,7 +32,8 @@ class App extends Component {
             <Route exact path="/" component={HomeView} />
             <Route path="/projects/:userId" component={ProjectView} />
           
-            <Route path="/projects/user/:userId" component={UserProfileView} />
+            <Route path="/projects/:userId" component={UserProfileView} />
+           
         
           </header>
           <div className="App-footer">
