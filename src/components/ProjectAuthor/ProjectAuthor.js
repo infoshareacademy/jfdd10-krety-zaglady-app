@@ -14,7 +14,7 @@ class ProjectAuthor extends Component {
   render() {
     return (
       <Link
-        to={"/projects/user/" + this.props.userId}
+        to={"/user/" + this.props.userId}
         className="ProjectAuthorLink"
       >
         <PushUp 

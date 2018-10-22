@@ -13,37 +13,25 @@ class UserProfileView extends Component {
     };
 
   
-    
-      componentDidMount() {
-        this.componentIsMount = true;
-        fetch("/data/projects.json")
-          .then(response => response.json())
-          .then(arrayOfProjects => {
-            if (this.componentIsMount) {
-              this.setState({ projects: arrayOfProjects });
-            }
-          });
-      }
+    componentDidMount() {
+      this.componentIsMount = true;
+      fetch("/data/projects.json")
+        .then(response => response.json())
+        .then(arrayOfProjects => {
+          if (this.componentIsMount) {
+            this.setState({ projects: arrayOfProjects });
+          }
+        });
+        
 
-      // 
-// componentDidMount() {
-//     fetch(process.env.PUBLIC_URL + '/data/projects.json').then(
-//       response => response.json()
-//     ).then(
-//       arrayOfProjects => this.setState({
-//         projects: arrayOfProjects
-//       })
-//     )
-//   }
+    }
+  
+
 
 
     render() {
-        
-        const projectId = parseInt(this.props.match.params.projectId)
-        const project = this.state.projects.find(project => project.id === projectId)
-
-    // const userId = parseInt(this.props.match.params.userId)
-    //     const user = this.state.users.find(user => user.userId === userId)
+        const userId = parseInt(this.props.match.params.userId)
+        const project = this.state.projects.find(project => project.userId === userId)
 
         if (project === undefined) {
             return <p>Loading...</p>
@@ -62,4 +50,3 @@ class UserProfileView extends Component {
 }
 
 export default UserProfileView
-

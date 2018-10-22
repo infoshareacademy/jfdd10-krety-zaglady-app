@@ -103,7 +103,6 @@ animation: AnimationName 30s ease infinite;
 }
 
 .UserMail img {
-    /* background: violet; */
     width: 70px;
     height: 70px;
     background-image: url ('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-4/177800/155-512.png')

@@ -30,10 +30,10 @@ class App extends Component {
             </NavLink>
 
             <Route exact path="/" component={HomeView} />
-            <Route path="/projects/:userId" component={ProjectView} />
-          
-            <Route path="/projects/:userId" component={UserProfileView} />
-           
+            <Route exact path="/projects/:projectId" component={ProjectView} />
+            {/* <Route exact path="/projects/:projectId" component={ProjectView} /> */}
+            <Route exact path="/user/:userId" component={UserProfileView} />
+            
         
           </header>
           <div className="App-footer">

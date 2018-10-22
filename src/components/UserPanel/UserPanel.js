@@ -31,7 +31,7 @@ class UserPanel extends Component {
             </div>
             </div>
             <div className="UserMail">
-            <img src="/data/mail.png" alt="mailIcon" className="mail-icon" />
+            {/* <img src="/data/mail.png" alt="mailIcon" className="mail-icon" /> */}
               </div>
           </div>
         </div>
