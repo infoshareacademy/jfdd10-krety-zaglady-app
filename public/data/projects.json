@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "userId": 1,
     "userName": "Grażyna",
     "userSurname": "Kretowska",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
@@ -25,7 +25,7 @@
     "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
   },
   {
-    "id": 2,
+    "userId": 2,
     "userName": "Michael",
     "userSurname": "Cranberry",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Businessman-avatar-occupation-profession-man-human-512.png",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "id": 3,
+    "userId": 3,
     "userName": "Stefan",
     "userSurname": "Kowalski",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Gardener-avatar-occupation-profession-woman-human-512.png",
@@ -88,7 +88,7 @@
     "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png"
   },
   {
-    "id": 4,
+    "userId": 4,
     "userName": "Angelika",
     "userSurname": "Nowak",
     "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",

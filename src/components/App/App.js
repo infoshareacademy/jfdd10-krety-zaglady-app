@@ -30,10 +30,10 @@ class App extends Component {
             </NavLink>
 
             <Route exact path="/" component={HomeView} />
-            <Route path="/projects/:projectId" component={ProjectView} />
-            <Route exact path="/user" component={UserProfileView} />
-            <Route path="/projects/user/:projectId" component={ProjectAuthor} />
-            <Route exact path="/users/:userId" component={UserProfileView} />
+            <Route path="/projects/:userId" component={ProjectView} />
+          
+            <Route path="/projects/user/:userId" component={UserProfileView} />
+        
           </header>
           <div className="App-footer">
             <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">

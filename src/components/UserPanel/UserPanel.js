@@ -9,7 +9,7 @@ class UserPanel extends Component {
     return (
       <div className="UserPanel">
         <div className="UserPanelAvatar">
-          <img src={this.props.userAvatar} alt="userAvatar" />
+          <img src={this.props.userImage} alt="userAvatar" />
         </div>
 
         <div className="UserPanelInfo">

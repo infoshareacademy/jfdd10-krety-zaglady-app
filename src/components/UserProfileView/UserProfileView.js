@@ -9,40 +9,37 @@ import UserProjectItem from '../UserProjectItem/UserProjectItem'
 
 class UserProfileView extends Component {
     state = {
-      users: []
+      projects: []
     };
 
   
     componentDidMount() {
-      this.componentIsMount = true;
-      fetch("/data/users.json")
-        .then(response => response.json())
-        .then(arrayOfUsers => {
-          if (this.componentIsMount) {
-            this.setState({ users: arrayOfUsers });
-          }
-        });
-        
-
-    }
-  
+        fetch(process.env.PUBLIC_URL + '/data/projects.json').then(
+          response => response.json()
+        ).then(
+          arrayOfProjects => this.setState({
+            projects: arrayOfProjects
+          })
+        )
+      }
+    
 
 
 
     render() {
-        const userId = parseInt(this.props.match.params.userId)
-        const user = this.state.users.find(user => user.userId === userId)
+        const userId = parseInt(this.props.match.params.projectId)
+        const project = this.state.projects.find(project => project.userId === userId)
 
-        if (user === undefined) {
+        if (project === undefined) {
             return <p>Loading...</p>
         }
         return (
             <div class="UserProfileView">
             
             <div>
-                <UserPanel {...user}/>
+                <UserPanel {...project}/>
                 {/* <UserProjectsList /> */}
-                <UserProjectItem {...user}/>
+                <UserProjectItem {...project}/>
             </div>
             </div>
         )
