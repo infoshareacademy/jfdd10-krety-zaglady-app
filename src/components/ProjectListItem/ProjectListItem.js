@@ -15,12 +15,11 @@ class ProjectListItem extends Component {
 
     return (
       <div className="ProjectListItem-container">
-          <Link
-            to={"/user/" + this.props.id}>
+      
              <ProjectAuthor
             {...this.props}
           />
-          </Link>
+  
          
 
         <PushUp
@@ -30,7 +29,7 @@ class ProjectListItem extends Component {
       
         className="ProjectListItem-boardImage">
           <Link
-            to={"/projects/" + this.props.id}
+            to={"projects/" + this.props.id}
             style={{ textDecoration: "none" }}
             className="ProjectListItem"
           >
