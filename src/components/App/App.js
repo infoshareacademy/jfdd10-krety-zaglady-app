@@ -31,6 +31,7 @@ class App extends Component {
 
             <Route exact path="/" component={HomeView} />
             <Route exact path="/projects/:projectId" component={ProjectView} />
+            <Route exact path="user/projects/:userId" component={ProjectView} />
             {/* <Route exact path="/projects/:projectId" component={ProjectView} /> */}
             <Route exact path="/user/:userId" component={UserProfileView} />
             

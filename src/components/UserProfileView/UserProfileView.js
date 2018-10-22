@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './UserProfileView.css'
+import { Link } from "react-router-dom";
+import posed from "react-pose";
 
 
 import UserPanel from '../UserPanel/UserPanel'
 import UserProjectsList from '../UserProjectsList/UserProjectsList'
 import UserProjectItem from '../UserProjectItem/UserProjectItem'
+
+
+const PushUp = posed.div({
+    idle: { scale: 1 },
+    hovered: { scale: 1.1 }
+  });
 
 class UserProfileView extends Component {
     state = {
@@ -42,7 +50,24 @@ class UserProfileView extends Component {
             <div>
                 <UserPanel {...project}/>
                 {/* <UserProjectsList /> */}
-                <UserProjectItem {...project}/>
+                
+
+                 <PushUp
+        pose={this.state.hovering ? "hovered" : "idle"}
+        onMouseEnter={() => this.setState({ hovering: true })}
+        onMouseLeave={() => this.setState({ hovering: false })}
+      
+        className="User-Project-Item">
+          <Link
+            to={"/projects/" + userId}
+            style={{ textDecoration: "none" }}
+            className="ProjectListItem"
+          >
+          <div className="User-Project-Item"><UserProjectItem {...project}/></div>
+    
+            
+          </Link>
+        </PushUp>
             </div>
             </div>
         )
