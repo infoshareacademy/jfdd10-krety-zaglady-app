@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
-import PropTypes from "prop-types";
 import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
 import posed from "react-pose";

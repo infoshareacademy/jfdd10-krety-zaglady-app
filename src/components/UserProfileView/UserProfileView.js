@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import './UserProfileView.css'
 import { Link } from "react-router-dom";
 import posed from "react-pose";
 
 
 import UserPanel from '../UserPanel/UserPanel'
-import UserProjectsList from '../UserProjectsList/UserProjectsList'
+// import UserProjectsList from '../UserProjectsList/UserProjectsList'
 import UserProjectItem from '../UserProjectItem/UserProjectItem'
 
 

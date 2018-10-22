@@ -5,7 +5,7 @@ import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
 import posed from "react-pose";
 import "./App.css";
-import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
+// import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 const PushUp = posed.div({
   idle: { scale: 1 },
   hovered: { scale: 1.5 }
@@ -38,7 +38,7 @@ class App extends Component {
         
           </header>
           <div className="App-footer">
-            <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">
+            <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank" rel="noopener noreferrer">
               Strona WWW
             </a>
           </div>
