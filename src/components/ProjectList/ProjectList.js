@@ -4,14 +4,6 @@ import ProjectListItem from "../ProjectListItem";
 import "./ProjectList.css";
 
 class ProjectList extends Component {
-  // showHeadline = () => {
-  //   if (this.props.projects === []) {
-  //     <span>There are no projects yet</span>
-  //     }
-  //     return
-  //   }
-
-  // }
 
   render() {
     return (

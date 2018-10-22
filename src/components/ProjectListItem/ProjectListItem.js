@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
-import PropTypes from "prop-types";
 import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
 import posed from "react-pose";
@@ -10,13 +9,6 @@ const PushUp = posed.div({
   hovered: { scale: 1.1 }
 });
 class ProjectListItem extends Component {
-  static propTypes = {
-    /**
-     * Function called during form submission
-     *
-     * @param {string} title text written in the form field
-     */
-  };
 
   state = { hovering: false };
   render() {
