@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./UserPanel.css";
 
 class UserPanel extends Component {
@@ -9,7 +8,7 @@ class UserPanel extends Component {
     return (
       <div className="UserPanel">
         <div className="UserPanelAvatar">
-          <img src={this.props.userAvatar} alt="userAvatar" />
+          <img src={this.props.userImage} alt="userAvatar" />
         </div>
 
         <div className="UserPanelInfo">
@@ -31,7 +30,7 @@ class UserPanel extends Component {
             </div>
             </div>
             <div className="UserMail">
-            <img src="/data/mail.png" alt="mailIcon" className="mail-icon" />
+            {/* <img src="/data/mail.png" alt="mailIcon" className="mail-icon" /> */}
               </div>
           </div>
         </div>

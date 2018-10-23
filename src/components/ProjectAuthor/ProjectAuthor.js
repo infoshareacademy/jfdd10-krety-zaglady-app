@@ -14,7 +14,7 @@ class ProjectAuthor extends Component {
   render() {
     return (
       <Link
-        to={"/projects/user/" + this.props.id}
+        to={"/user/" + this.props.userId}
         className="ProjectAuthorLink"
       >
         <PushUp 
@@ -31,7 +31,7 @@ class ProjectAuthor extends Component {
               <h1>
                 {this.props.userName} {this.props.userSurname}
               </h1>
-              <p>{this.props.description}</p>
+              <p>{this.props.userDescription}</p>
             </div>
           </div>
           {/* <p className="ProjectAuthor-photo">{this.props.photo}</p> */}

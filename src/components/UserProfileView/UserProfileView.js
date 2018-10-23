@@ -1,25 +1,32 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import './UserProfileView.css'
+import { Link } from "react-router-dom";
+import posed from "react-pose";
 
 
 import UserPanel from '../UserPanel/UserPanel'
-import UserProjectsList from '../UserProjectsList/UserProjectsList'
+// import UserProjectsList from '../UserProjectsList/UserProjectsList'
 import UserProjectItem from '../UserProjectItem/UserProjectItem'
+
+
+const PushUp = posed.div({
+    idle: { scale: 1 },
+    hovered: { scale: 1.1 }
+  });
 
 class UserProfileView extends Component {
     state = {
-      users: []
+      projects: []
     };
 
   
     componentDidMount() {
       this.componentIsMount = true;
-      fetch("/data/users.json")
+      fetch("/data/projects.json")
         .then(response => response.json())
-        .then(arrayOfUsers => {
+        .then(arrayOfProjects => {
           if (this.componentIsMount) {
-            this.setState({ users: arrayOfUsers });
+            this.setState({ projects: arrayOfProjects });
           }
         });
         
@@ -31,18 +38,35 @@ class UserProfileView extends Component {
 
     render() {
         const userId = parseInt(this.props.match.params.userId)
-        const user = this.state.users.find(user => user.userId === userId)
+        const project = this.state.projects.find(project => project.userId === userId)
 
-        if (user === undefined) {
+        if (project === undefined) {
             return <p>Loading...</p>
         }
         return (
             <div class="UserProfileView">
             
             <div>
-                <UserPanel {...user}/>
+                <UserPanel {...project}/>
                 {/* <UserProjectsList /> */}
-                <UserProjectItem {...user}/>
+                
+
+                 <PushUp
+        pose={this.state.hovering ? "hovered" : "idle"}
+        onMouseEnter={() => this.setState({ hovering: true })}
+        onMouseLeave={() => this.setState({ hovering: false })}
+      
+        className="User-Project-Item">
+          <Link
+            to={"/projects/" + userId}
+            style={{ textDecoration: "none" }}
+            className="ProjectListItem"
+          >
+          <div className="User-Project-Item"><UserProjectItem {...project}/></div>
+    
+            
+          </Link>
+        </PushUp>
             </div>
             </div>
         )

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./UserProjectItem.css";
 
 class UserProjectItem extends Component {
@@ -7,7 +6,7 @@ class UserProjectItem extends Component {
     return (
       <div class="UserProjectItem">
         <div class="ProjectImage">
-          <img src={this.props.userGardenImage} alt="userGardenImage" />
+          <img src={this.props.boardImage} alt="userGardenImage" />
         </div>
         <div class="UserGardenProject">
           <h3>{this.props.userDescriptionTitle}</h3>

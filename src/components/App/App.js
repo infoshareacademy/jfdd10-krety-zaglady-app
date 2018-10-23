@@ -5,7 +5,7 @@ import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
 import posed from "react-pose";
 import "./App.css";
-import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
+// import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 const PushUp = posed.div({
   idle: { scale: 1 },
   hovered: { scale: 1.5 }
@@ -30,13 +30,15 @@ class App extends Component {
             </NavLink>
 
             <Route exact path="/" component={HomeView} />
-            <Route path="/projects/:projectId" component={ProjectView} />
-            <Route exact path="/user" component={UserProfileView} />
-            <Route path="/projects/user/:projectId" component={ProjectAuthor} />
-            <Route exact path="/users/:userId" component={UserProfileView} />
+            <Route exact path="/projects/:projectId" component={ProjectView} />
+            <Route exact path="user/projects/:userId" component={ProjectView} />
+            {/* <Route exact path="/projects/:projectId" component={ProjectView} /> */}
+            <Route exact path="/user/:userId" component={UserProfileView} />
+            
+        
           </header>
           <div className="App-footer">
-            <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank">
+            <a href="http://krety-zaglady.jfdd10.is-academy.pl" target="_blank" rel="noopener noreferrer">
               Strona WWW
             </a>
           </div>
