@@ -1,0 +1,55 @@
+//users:
+[
+  {
+    "userId": "", //id nadawane przez Firebase
+    "userName": "Grażyna",
+    "userSurname": "Kretowska",
+    "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
+    "userAge": "31",
+    "userGender": "kobieta",
+    "userCity": "Radom",
+    "userDescription": "Szalona Graża mająca bzika na punkcie ogrodnictwa."
+  }
+]
+
+//projects
+[{
+  "projectId": "", //nadawane przez Firebase'a
+  "Author": "userId", //z Firebase'a, jak ID właściciela projektu
+  "projects": {
+              "projectId": "",
+              "size": 6,
+              "fields": {
+                "0": {
+                  "3": "tree",
+                  "4": "tree"
+                },
+                "3": {
+                  "1": "pond"
+                },
+                "2": {
+                  "2": "pond"
+                    
+                }
+  }
+}]
+    // "fruits": [
+    //   {
+    //     "image": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+    //     "alt": "carrot"
+    //   },
+    //   {
+    //     "image": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+    //     "alt": "apple"
+    //   },
+    //   {
+    //     "image": "https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png",
+    //     "alt": "tomato"
+    //   }
+    // ],
+
+    // "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png", //to ma być podlinkowane w komponentach, a nie pobierane z Firebase'a
+    // "userDescriptionTitle": "Mój ogródek",
+    // "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
+    
+  },
