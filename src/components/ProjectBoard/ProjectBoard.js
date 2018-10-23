@@ -33,8 +33,6 @@ class ProjectBoard extends Component {
                 : "5px solid black"
             }}
           >
-            {/* {x}, {y} wyświetla pozycje x,y w danej cell */}
-            {/* {this.props.fields[y] && this.props.fields[y][x]} wyswietla nazwe z tablicy cell z klasa*/}
           </td>
         ))}
       </tr>

@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./UserPanel.css";
 
 class UserPanel extends Component {
- 
-
   render() {
     return (
       <div className="UserPanel">
@@ -26,12 +24,10 @@ class UserPanel extends Component {
                 Wiek: {this.props.userAge}
               </p>
               <div className="Description">
-              <p>{this.props.userDescription}</p>
-            </div>
-            </div>
-            <div className="UserMail">
-            {/* <img src="/data/mail.png" alt="mailIcon" className="mail-icon" /> */}
+                <p>{this.props.userDescription}</p>
               </div>
+            </div>
+            <div className="UserMail" />
           </div>
         </div>
       </div>

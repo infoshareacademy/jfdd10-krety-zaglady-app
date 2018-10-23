@@ -1,0 +1,62 @@
+{
+  "users": {
+    "-asdfaassdf": {
+      "userName": "Grażyna",
+      "userSurname": "Kretowska",
+      "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
+      "userAge": "31",
+      "userGender": "kobieta",
+      "userCity": "Radom",
+      "userDescription": "Szalona Graża mająca bzika na punkcie ogrodnictwa."
+    },
+    "-asdfasd2s": {
+      "userName": "Liwia",
+      "userSurname": "Kretowska",
+      "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
+      "userAge": "31",
+      "userGender": "kobieta",
+      "userCity": "Radom",
+      "userDescription": "Szalona Graża mająca bzika na punkcie ogrodnictwa."
+    }
+  },
+  "projects": {
+    "-adfsdfa": {
+      "authorId": "-asdfaassdf",
+      "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+      "userDescriptionTitle": "Mój ogródek",
+      "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
+      "size": 6,
+      "fields": {
+        "0": {
+          "3": "tree",
+          "4": "tree"
+        },
+        "3": {
+          "1": "pond"
+        },
+        "2": {
+          "2": "pond"
+        }
+      }
+    },
+    "-adfsssdfdfa": {
+      "authorId": "-asdfaassdf",
+      "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+      "userDescriptionTitle": "Mój ogródek",
+      "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
+      "size": 6,
+      "fields": {
+        "0": {
+          "3": "tree",
+          "4": "tree"
+        },
+        "3": {
+          "1": "pond"
+        },
+        "2": {
+          "2": "pond"
+        }
+      }
+    }
+  }
+}

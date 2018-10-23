@@ -9,29 +9,18 @@ const PushUp = posed.div({
   hovered: { scale: 1.1 }
 });
 class ProjectListItem extends Component {
-  static propTypes = {
-    /**
-     * Function called during form submission
-     *
-     * @param {string} title text written in the form field
-     */
-  };
-
   state = { hovering: false };
   render() {
-
     return (
       <div className="ProjectListItem-container">
-          <ProjectAuthor
-            {...this.props}
-          />
+        <ProjectAuthor {...this.props} />
 
         <PushUp
-        pose={this.state.hovering ? "hovered" : "idle"}
-        onMouseEnter={() => this.setState({ hovering: true })}
-        onMouseLeave={() => this.setState({ hovering: false })}
-      
-        className="ProjectListItem-boardImage">
+          pose={this.state.hovering ? "hovered" : "idle"}
+          onMouseEnter={() => this.setState({ hovering: true })}
+          onMouseLeave={() => this.setState({ hovering: false })}
+          className="ProjectListItem-boardImage"
+        >
           <Link
             to={"projects/" + this.props.id}
             style={{ textDecoration: "none" }}
@@ -39,10 +28,10 @@ class ProjectListItem extends Component {
           >
             <img src={this.props.boardImage} alt="boardImage" />
             <div className="ProjectListItem-fruitIcons">
-            {this.props.fruits.map(fruit => (
-              <img src={fruit.image} alt={fruit.alt} />
-            ))}
-          </div>
+              {this.props.fruits.map(fruit => (
+                <img src={fruit.image} alt={fruit.alt} />
+              ))}
+            </div>
           </Link>
         </PushUp>
       </div>
