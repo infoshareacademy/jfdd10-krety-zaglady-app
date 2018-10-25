@@ -4,17 +4,39 @@ import ProjectList from "../ProjectList";
 import "./HomeView.css";
 class HomeView extends Component {
   state = {
-    projects: []
+    projects: [],
+    users: []
   };
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "/data/projects.json")
+    this.componentIsMount = true;
+    fetch("https://kretogrod-app.firebaseio.com/users.json")
       .then(response => response.json())
-      .then(arrayOfProjects =>
-        this.setState({
-          projects: arrayOfProjects
-        })
-      );
+      .then(objectOfUsers => {
+        // console.log(objectOfUsers)
+        if (this.componentIsMount) {
+          this.setState({
+            users: Object.entries(objectOfUsers || {}).map(
+              ([id, other]) => ({ id, ...other })
+            )
+          });
+          console.log(this.state.users)
+        }
+      });
+
+      fetch("https://kretogrod-app.firebaseio.com/projects.json")
+      .then(response => response.json())
+      .then(objectOfProjects => {
+        // console.log(objectOfProjects)
+        if (this.componentIsMount) {
+          this.setState({
+            projects: Object.entries(objectOfProjects || {}).map(
+              ([id, other]) => ({ id, ...other })
+            )
+          });
+          console.log(this.state.projects)
+        }
+      });
   }
 
   render() {

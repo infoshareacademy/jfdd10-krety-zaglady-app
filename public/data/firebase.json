@@ -44,6 +44,22 @@
       "userDescriptionTitle": "Mój ogródek domowy",
       "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
       "size": 6,
+      "fruits": {
+        "carrot":{
+      
+          "image": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+          "alt": "carrot"
+        },
+        "apple": {
+          "image": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+          "alt": "apple"
+        },
+        "cherry":
+        {
+          "image": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png",
+          "alt": "cherry"
+      },
+       
       "fields": {
         "0": {
           "3": "tree",

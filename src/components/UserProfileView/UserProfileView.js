@@ -29,7 +29,7 @@ class UserProfileView extends Component {
               ([id, other]) => ({ id, ...other })
             )
           });
-          // console.log(this.state.users)
+          console.log(this.state.users)
         }
       });
 
@@ -43,15 +43,19 @@ class UserProfileView extends Component {
               ([id, other]) => ({ id, ...other })
             )
           });
-          // console.log(this.state.projects)
+          console.log(this.state.projects)
         }
       });
   }
 
   render() {
     const userId = parseInt(this.props.match.params.userId);
+    const user = this.state.users.find(user => user.id === userId)
+    if (user === undefined) {
+      return <p>Nie ma jeszcze użytkownika...</p>;
+    }
     const project = this.state.projects.find(
-      project => project.userId === userId
+      project => project.authorId === userId
     );
 
     if (project === undefined) {
@@ -60,7 +64,7 @@ class UserProfileView extends Component {
     return (
       <div class="UserProfileView">
         <div>
-          <UserPanel {...project} />
+          <UserPanel {...project}/>
 
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
