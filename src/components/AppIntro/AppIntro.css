@@ -1,0 +1,23 @@
+.AppIntro{
+    background: green;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.Intro{
+    
+    font-size: 40px
+
+}
+
+.MeloIintro {
+    width: 100px;
+    height: 100px;
+    background: url(/public/data/molelogo.png) no-repeat center;
+    background-size: 100%
+
+}
