@@ -6,6 +6,7 @@ import UserProfileView from "../UserProfileView";
 import posed from "react-pose";
 import "./App.css";
 
+
 const PushUp = posed.div({
   idle: { scale: 1 },
   hovered: { scale: 1.5 }
