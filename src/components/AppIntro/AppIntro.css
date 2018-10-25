@@ -7,6 +7,10 @@
     align-items: center;
     flex-direction: column;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
 }
 
 .Intro{
@@ -18,7 +22,7 @@
 .MeloIintro {
     width: 100px;
     height: 100px;
-    background: url(/public/data/molelogo.png) no-repeat center;
+    background: url(./molelogo.png);
     background-size: 100%
 
 }
