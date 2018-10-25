@@ -22,14 +22,28 @@ class UserProfileView extends Component {
     fetch("https://kretogrod-app.firebaseio.com/users.json")
       .then(response => response.json())
       .then(objectOfUsers => {
-        console.log(objectOfUsers)
+        // console.log(objectOfUsers)
         if (this.componentIsMount) {
           this.setState({
             users: Object.entries(objectOfUsers || {}).map(
               ([id, other]) => ({ id, ...other })
             )
           });
-          console.log(this.state.users)
+          // console.log(this.state.users)
+        }
+      });
+
+      fetch("https://kretogrod-app.firebaseio.com/projects.json")
+      .then(response => response.json())
+      .then(objectOfProjects => {
+        // console.log(objectOfProjects)
+        if (this.componentIsMount) {
+          this.setState({
+            projects: Object.entries(objectOfProjects || {}).map(
+              ([id, other]) => ({ id, ...other })
+            )
+          });
+          // console.log(this.state.projects)
         }
       });
   }
@@ -41,7 +55,7 @@ class UserProfileView extends Component {
     );
 
     if (project === undefined) {
-      return <p>Loading...</p>;
+      return <p>Coś poszło nie tak :(</p>;
     }
     return (
       <div class="UserProfileView">
