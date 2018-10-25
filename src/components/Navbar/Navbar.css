@@ -1,0 +1,32 @@
+.menu{
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background-color: #063d4d;
+    background: rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+.navigation .active {
+    background: grey;
+} 
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin: 0px;
+    padding: 15px;
+    color: white;
+    /* font-weight: bold; */
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background-color: rgba(4, 59, 209, 0.247);
+    opacity: 0.5;
+}

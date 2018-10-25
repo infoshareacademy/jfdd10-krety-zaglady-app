@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import HomeView from "../HomeView";
 import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
+
 import posed from "react-pose";
 import "./App.css";
 
@@ -17,6 +19,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+        <Navbar />
           <header className="App-header">
             <NavLink exact to="/">
               <PushUp

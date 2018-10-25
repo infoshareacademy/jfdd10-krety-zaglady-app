@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProjectList from "../ProjectList";
 
 import "./HomeView.css";
+import Navbar from "../Navbar/Navbar";
 class HomeView extends Component {
   state = {
     projects: []
