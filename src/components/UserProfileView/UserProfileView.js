@@ -13,16 +13,23 @@ const PushUp = posed.div({
 
 class UserProfileView extends Component {
   state = {
-    projects: []
+    projects: [],
+    users: []
   };
 
   componentDidMount() {
     this.componentIsMount = true;
-    fetch("/data/projects.json")
+    fetch("https://kretogrod-app.firebaseio.com/users.json")
       .then(response => response.json())
-      .then(arrayOfProjects => {
+      .then(objectOfUsers => {
+        console.log(objectOfUsers)
         if (this.componentIsMount) {
-          this.setState({ projects: arrayOfProjects });
+          this.setState({
+            users: Object.entries(objectOfUsers || {}).map(
+              ([id, other]) => ({ id, ...other })
+            )
+          });
+          console.log(this.state.users)
         }
       });
   }
