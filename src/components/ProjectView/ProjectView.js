@@ -23,11 +23,10 @@ class ProjectView extends Component {
     if (project === undefined) {
       return <div>Loading...</div>;
     }
-
     return (
       <div className="main_b">
         <div className="ProjectView-projectAuthor">
-          <AuthorAvatar project={project} name={project.userName} userImage= {project.userImage} />
+          <AuthorAvatar userId={project.userId} project={project} name={project.userName} userImage= {project.userImage} />
         </div>
         <div className="ProjectView-board">
           <div className="top_box" />

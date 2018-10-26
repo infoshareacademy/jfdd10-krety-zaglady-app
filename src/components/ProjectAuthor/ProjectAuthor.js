@@ -24,6 +24,8 @@ class ProjectAuthor extends Component {
           <h1 className="ProjectAuthor-header">{this.props.name}</h1>
           <div className="ProjectListItem-userInfo">
             <AuthorAvatar 
+              noLink
+              userId={this.props.userId}
               name={this.props.name}
               userImage={this.props.userImage}
             />

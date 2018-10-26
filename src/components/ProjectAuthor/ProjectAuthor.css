@@ -10,3 +10,10 @@
 .ProjectAuthor-photo {
     
 }
+.ProjectListItem-userInfo {
+  display: flex;
+  margin: 2%;
+}
+.ProjectAuthor {
+
+}

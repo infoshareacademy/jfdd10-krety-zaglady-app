@@ -6,6 +6,7 @@
     border: 1px solid black;
     margin: -100px;
     text-shadow: -1px -3px green, 2px 2px #333;
+    margin: 0 auto;
 
 }
 .nameBox {
