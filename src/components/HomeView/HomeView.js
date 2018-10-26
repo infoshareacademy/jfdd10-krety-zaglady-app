@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProjectList from "../ProjectList";
-
+import AppIntro from "../AppIntro/AppIntro";
 import "./HomeView.css";
 class HomeView extends Component {
   state = {
@@ -42,7 +42,9 @@ class HomeView extends Component {
   render() {
     return (
       <>
+        
         <div className="HomeView-main_box">
+        <AppIntro />
           <h1> WITAJCIE W KRETOGRODZIE! </h1>
         </div>
         <div className="HomeView-top_box">
