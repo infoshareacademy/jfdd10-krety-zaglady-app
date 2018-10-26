@@ -20,7 +20,7 @@ class HomeView extends Component {
               ([id, other]) => ({ id, ...other })
             )
           });
-          console.log(this.state.users)
+          // console.log(this.state.users)
         }
       });
 
@@ -29,12 +29,12 @@ class HomeView extends Component {
       .then(objectOfProjects => {
         // console.log(objectOfProjects)
         if (this.componentIsMount) {
-          this.setState({
+          this.setState ({
             projects: Object.entries(objectOfProjects || {}).map(
               ([id, other]) => ({ id, ...other })
             )
           });
-          console.log(this.state.projects)
+          // console.log(this.state.projects)
         }
       });
   }
