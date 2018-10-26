@@ -5,50 +5,43 @@ import "./HomeView.css";
 class HomeView extends Component {
   state = {
     projects: [],
-    users: []
+    users: [],
+    projectsWithAuthors: []
   };
 
   componentDidMount() {
     this.componentIsMount = true;
-    fetch("https://kretogrod-app.firebaseio.com/users.json")
-      .then(response => response.json())
-      .then(objectOfUsers => {
-        // console.log(objectOfUsers)
-        if (this.componentIsMount) {
-          this.setState({
-            users: Object.entries(objectOfUsers || {}).map(
-              ([id, other]) => ({ id, ...other })
-            )
-          });
-          // console.log(this.state.users)
-        }
-      });
 
-      fetch("https://kretogrod-app.firebaseio.com/projects.json")
-      .then(response => response.json())
-      .then(objectOfProjects => {
-        // console.log(objectOfProjects)
-        if (this.componentIsMount) {
-          this.setState ({
-            projects: Object.entries(objectOfProjects || {}).map(
-              ([id, other]) => ({ id, ...other })
-            )
-          });
-          // console.log(this.state.projects)
-        }
-      });
+    const usersPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/users.json"
+    ).then(response => response.json());
+
+    const projectsPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/projects.json"
+    ).then(response => response.json());
+
+    Promise.all([usersPromise, projectsPromise]).then(([users, projects]) => {
+      return Object.entries(projects || {}).map(
+        ([id, { authorId, ...project }]) => ({
+          id,
+          ...project,
+          author: users[authorId]
+        })
+      )
+    }).then(
+      projectsWithAuthors => this.setState({ projectsWithAuthors })
+    )
   }
 
   render() {
     return (
       <>
-        
         <div className="HomeView-main_box">
-        <AppIntro />
+          <AppIntro />
           <h1> WITAJCIE W KRETOGRODZIE! </h1>
         </div>
         <div className="HomeView-top_box">
-          <ProjectList projects={this.state.projects} />
+          <ProjectList projects={this.state.projectsWithAuthors} />
         </div>
       </>
     );
