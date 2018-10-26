@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./ProjectView.css";
-import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 import ProjectBoard from "../ProjectBoard/ProjectBoard";
+import AuthorAvatar from '../AuthorAvatar/AuthorAvatar';
 
 class ProjectView extends Component {
   state = {
@@ -27,7 +27,7 @@ class ProjectView extends Component {
     return (
       <div className="main_b">
         <div className="ProjectView-projectAuthor">
-          <ProjectAuthor {...project} />
+          <AuthorAvatar project={project} name={project.userName} userImage= {project.userImage} />
         </div>
         <div className="ProjectView-board">
           <div className="top_box" />
