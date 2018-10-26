@@ -49,7 +49,7 @@ class UserProfileView extends Component {
   }
 
   render() {
-    const userId = parseInt(this.props.match.params.userId);
+    const userId = this.props.match.params.userId
     const user = this.state.users.find(user => user.id === userId)
     if (user === undefined) {
       return <p>Nie ma jeszcze użytkownika...</p>;

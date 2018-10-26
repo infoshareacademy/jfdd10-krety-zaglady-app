@@ -4,8 +4,6 @@ import AppIntro from "../AppIntro/AppIntro";
 import "./HomeView.css";
 class HomeView extends Component {
   state = {
-    projects: [],
-    users: [],
     projectsWithAuthors: []
   };
 
@@ -25,7 +23,10 @@ class HomeView extends Component {
         ([id, { authorId, ...project }]) => ({
           id,
           ...project,
-          author: users[authorId]
+          author: users[authorId] && {
+            id: authorId,
+            ...users[authorId]
+          }
         })
       )
     }).then(
