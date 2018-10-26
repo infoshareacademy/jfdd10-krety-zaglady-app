@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import HomeView from "../HomeView";
 import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
+import SignUpPage from "../SignUpPage/SignUpPage";
 
 import posed from "react-pose";
 import "./App.css";
@@ -35,6 +36,7 @@ class App extends Component {
             <Route exact path="/projects/:projectId" component={ProjectView} />
             <Route exact path="user/projects/:userId" component={ProjectView} />
             <Route exact path="/user/:userId" component={UserProfileView} />
+            <Route exact path="/sign-up" component={SignUpPage} />
           </header>
           <div className="App-footer">
             <a

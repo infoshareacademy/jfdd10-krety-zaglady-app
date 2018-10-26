@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Navbar.css";
-import SignInButton from "../SignInButton/SignInButton";
-import SignUp from "../SignUp/SignUp";
+import SignIn from "../SignIn/SignIn";
+import SignUpButton from "../SignUpButton/SignUpButton";
 // import { Link } from "react-router-dom";
 // import posed from "react-pose";
 
@@ -13,9 +13,8 @@ class Navbar extends Component {
         <div class="navbar">
         <div class="menu">
             <div class="navigation">
-            <SignUp />
-            <SignInButton /> 
-            
+            <SignIn />
+            <SignUpButton /> 
             
             </div>
         </div>

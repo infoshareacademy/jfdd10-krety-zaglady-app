@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 // import firebase from "firebase";
 
-import "./SignUp.css";
+import "./SignIn.css";
+// import SignInButton from '../SignInButton/SignInButton';
 
-class SignUp extends Component {
+class SignIn extends Component {
   state = {
     email: "",
     password: "",
@@ -30,7 +31,7 @@ class SignUp extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="SignUpForm">
+      <form onSubmit={this.handleSubmit} className="SignInForm">
         {this.state.error && <p>{this.state.error.message}</p>}
         <input
           placeholder="Adres e-mail"
@@ -45,10 +46,10 @@ class SignUp extends Component {
           onChange={this.handleChange}
         />
 
-        <button id="sign-up" className="sign-up">Zaloguj się</button>
+        <button id="sign-in" className="sign-in">Zaloguj się</button>
       </form>
     );
   }
 }
 
-export default SignUp;
+export default SignIn;
