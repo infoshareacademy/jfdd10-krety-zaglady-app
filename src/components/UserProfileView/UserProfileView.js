@@ -13,44 +13,49 @@ const PushUp = posed.div({
 
 class UserProfileView extends Component {
   state = {
-    projectsWithAuthors: []
+    projects: [],
+    users: []
   };
 
   componentDidMount() {
     this.componentIsMount = true;
-    const usersPromise = fetch(
+    fetch(
       "https://kretogrod-app.firebaseio.com/users.json"
-    ).then(response => response.json());
+    )
+    .then(response => response.json())
+    .then(users => this.setState({
+      users: Object.entries(users)
+        .map(([id, value]) => ({
+          id, ...value
+        }))
+      })
+    )
 
-    const projectsPromise = fetch(
+    fetch(
       "https://kretogrod-app.firebaseio.com/projects.json"
-    ).then(response => response.json());
-
-    Promise.all([usersPromise, projectsPromise]).then(([users, projects]) => {
-      return Object.entries(projects || {}).map(
-        ([id, { authorId, ...project }]) => ({
-          id,
-          ...project,
-          author: users[authorId] && {
-            id: authorId,
-            ...users[authorId]
-          }
-        })
-      )
-    }).then(
-      projectsWithAuthors => this.setState({ projectsWithAuthors })
+    )
+    .then(response => response.json())
+    .then(projects => this.setState({
+      projects: Object.entries(projects)
+        .map(([id, value]) => ({ 
+          id, ...value 
+        }))
+      })
     )
   }
 
+
+
   render() {
     const userId = this.props.match.params.userId
-    const user = this.state.projectsWithAuthors.find(user => user.id === userId)
+    const user = this.state.users.find(user => user.id === userId)
     if (user === undefined) {
       return <p>Nie ma jeszcze użytkownika...</p>;
     }
     const project = this.state.projects.find(
       project => project.authorId === userId
     );
+    console.log(user)
 
     if (project === undefined) {
       return <p>Coś poszło nie tak :(</p>;
@@ -58,7 +63,7 @@ class UserProfileView extends Component {
     return (
       <div class="UserProfileView">
         <div>
-          <UserPanel {...project}/>
+          <UserPanel {...project} />
 
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
