@@ -13,7 +13,7 @@ class ProjectListItem extends Component {
   render() {
     return (
       <div className="ProjectListItem-container">
-        <ProjectAuthor {...this.props} />
+        <ProjectAuthor {...this.props.author} />
 
         <PushUp
           pose={this.state.hovering ? "hovered" : "idle"}
@@ -28,9 +28,12 @@ class ProjectListItem extends Component {
           >
             <img src={this.props.boardImage} alt="boardImage" />
             <div className="ProjectListItem-fruitIcons">
-              {this.props.fruits.map(fruit => (
-                <img src={fruit.image} alt={fruit.alt} />
-              ))}
+              {Object.entries(this.props.fruits).map(([key, value]) => {
+                return {key, value}})
+              
+             .map(fruit => {
+                return(<img src={fruit.value} alt={fruit.key} />);
+              })}
             </div>
           </Link>
         </PushUp>

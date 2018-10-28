@@ -44,6 +44,11 @@
       "userDescriptionTitle": "Mój ogródek domowy",
       "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
       "size": 6,
+      "fruits": {
+        "carrot": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+        "apple": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+        "cherry": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png"
+      },
       "fields": {
         "0": {
           "3": "tree",
@@ -63,16 +68,21 @@
       "userDescriptionTitle": "Mója działka",
       "userGardenDescription": "Dopiero pracuję nad rozbudową mojej działki.",
       "size": 6,
+      "fruits": {
+        "cherry": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png",
+        "plum": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_ameixa-512.png",
+        "tomato": "https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png"
+      },
       "fields": {
         "0": {
-          "3": "tree",
+          "0": "tree",
           "4": "tree"
         },
-        "3": {
-          "1": "pond"
-        },
-        "2": {
+        "1": {
           "2": "pond"
+        },
+        "4": {
+          "4": "pond"
         }
       }
     },
@@ -82,15 +92,18 @@
       "userDescriptionTitle": "Mój ogródek",
       "userGardenDescription": "Kilkadziesiąt metrów kwadratowych mojego królestwa.",
       "size": 6,
+      "fruits": {
+        "pear": "https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png",
+        "blueberries": "https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png",
+        "broccoli": "https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png"
+      },
       "fields": {
-        "0": {
-          "4": "tree",
-          "2": "tree"
+        "1": {
+          "2": "tree",
+          "3": "tree",
+          "4": "tree"
         },
         "3": {
-          "2": "pond"
-        },
-        "2": {
           "1": "pond"
         }
       }
@@ -101,16 +114,22 @@
       "userDescriptionTitle": "Mój ogródek",
       "userGardenDescription": "Miejsce na Twój opis",
       "size": 6,
+      "fruits": {
+        "carrot": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+        "apple": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+        "tomato": "https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png"
+      },
       "fields": {
         "0": {
-          "4": "tree",
-          "2": "pond"
+          "1": "tree",
+          "2": "tree",
+          "3": "tree",
+          "4": "tree"
         },
         "3": {
-          "2": "tree"
-        },
-        "2": {
-          "1": "tree"
+          "1": "pond",
+          "2": "pond",
+          "3": "pond"
         }
       }
     },
@@ -120,6 +139,11 @@
       "userDescriptionTitle": "Ogródek przy domu",
       "userGardenDescription": "Skromny ogródek pełen witamin i pięknych kolorów.",
       "size": 4,
+      "fruits": {
+        "pear": "https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png",
+        "blueberries": "https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png",
+        "broccoli": "https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png"
+      },
       "fields": {
         "1": {
           "2": "tree",

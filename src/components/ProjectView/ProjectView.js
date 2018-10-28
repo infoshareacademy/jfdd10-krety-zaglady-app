@@ -5,29 +5,48 @@ import AuthorAvatar from '../AuthorAvatar/AuthorAvatar';
 
 class ProjectView extends Component {
   state = {
-    projects: []
+    projectsWithAuthors: []
   };
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "/data/projects.json")
-      .then(response => response.json())
-      .then(projects => this.setState({ projects }));
+    const usersPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/users.json"
+    ).then(response => response.json());
+
+    const projectsPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/projects.json"
+    ).then(response => response.json());
+
+    Promise.all([usersPromise, projectsPromise]).then(([users, projects]) => {
+      return Object.entries(projects || {}).map(
+        ([id, { authorId, ...project }]) => ({
+          id,
+          ...project,
+          author: users[authorId] && {
+            id: authorId,
+            ...users[authorId]
+          }
+        })
+      )
+    }).then(
+      projectsWithAuthors => this.setState({ projectsWithAuthors })
+    )
   }
 
   render() {
-    const projectId = parseInt(this.props.match.params.projectId);
-    const project = this.state.projects.find(
+    const projectId = this.props.match.params.projectId;
+    const project = this.state.projectsWithAuthors.find(
       project => project.id === projectId
     );
 
     if (project === undefined) {
-      return <div>Loading...</div>;
+      return <div>Nie ma jeszcze projektu...</div>;
     }
 
     return (
       <div className="main_b">
         <div className="ProjectView-projectAuthor">
-          <AuthorAvatar project={project} name={project.userName} userImage= {project.userImage} />
+          <AuthorAvatar project={project} name={project.author.userName} userImage= {project.author.userImage} />
         </div>
         <div className="ProjectView-board">
           <div className="top_box" />
