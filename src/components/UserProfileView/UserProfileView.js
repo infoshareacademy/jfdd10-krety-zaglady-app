@@ -14,7 +14,7 @@ const PushUp = posed.div({
 class UserProfileView extends Component {
   state = {
     projectsWithAuthors: []
-  };projectsWithAuthors
+  };
 
   componentDidMount() {
     this.componentIsMount = true;
@@ -44,15 +44,12 @@ class UserProfileView extends Component {
 
   render() {
     const userId = this.props.match.params.userId
-    const projectObject = this.state.projectsWithAuthors.find(project => project.author.id === userId)
-    const user = Object.entries(projectObject).map(([id, other]) => ({id, ...other}))
-    // .map(({author, ...project }) => ({ author }))
-    console.log(user)
+    const user = this.state.projectsWithAuthors.find(user => user.id === userId)
     if (user === undefined) {
       return <p>Nie ma jeszcze użytkownika...</p>;
     }
-    const project = this.state.projectsWithAuthors.find(
-      project => project.author.id === userId
+    const project = this.state.projects.find(
+      project => project.authorId === userId
     );
 
     if (project === undefined) {
