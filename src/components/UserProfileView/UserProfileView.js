@@ -55,7 +55,6 @@ class UserProfileView extends Component {
     const project = this.state.projects.find(
       project => project.authorId === userId
     );
-    console.log(user)
 
     if (project === undefined) {
       return <p>Coś poszło nie tak :(</p>;
@@ -63,7 +62,7 @@ class UserProfileView extends Component {
     return (
       <div class="UserProfileView">
         <div>
-          <UserPanel {...project} />
+          <UserPanel {...user} />
 
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
