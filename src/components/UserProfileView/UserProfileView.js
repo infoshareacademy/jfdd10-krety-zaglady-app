@@ -13,49 +13,46 @@ const PushUp = posed.div({
 
 class UserProfileView extends Component {
   state = {
-    projects: [],
-    users: []
-  };
+    projectsWithAuthors: []
+  };projectsWithAuthors
 
   componentDidMount() {
     this.componentIsMount = true;
-    fetch("https://kretogrod-app.firebaseio.com/users.json")
-      .then(response => response.json())
-      .then(objectOfUsers => {
-        // console.log(objectOfUsers)
-        if (this.componentIsMount) {
-          this.setState({
-            users: Object.entries(objectOfUsers || {}).map(
-              ([id, other]) => ({ id, ...other })
-            )
-          });
-          console.log(this.state.users)
-        }
-      });
+    const usersPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/users.json"
+    ).then(response => response.json());
 
-      fetch("https://kretogrod-app.firebaseio.com/projects.json")
-      .then(response => response.json())
-      .then(objectOfProjects => {
-        // console.log(objectOfProjects)
-        if (this.componentIsMount) {
-          this.setState({
-            projects: Object.entries(objectOfProjects || {}).map(
-              ([id, other]) => ({ id, ...other })
-            )
-          });
-          console.log(this.state.projects)
-        }
-      });
+    const projectsPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/projects.json"
+    ).then(response => response.json());
+
+    Promise.all([usersPromise, projectsPromise]).then(([users, projects]) => {
+      return Object.entries(projects || {}).map(
+        ([id, { authorId, ...project }]) => ({
+          id,
+          ...project,
+          author: users[authorId] && {
+            id: authorId,
+            ...users[authorId]
+          }
+        })
+      )
+    }).then(
+      projectsWithAuthors => this.setState({ projectsWithAuthors })
+    )
   }
 
   render() {
     const userId = this.props.match.params.userId
-    const user = this.state.users.find(user => user.id === userId)
+    const projectObject = this.state.projectsWithAuthors.find(project => project.author.id === userId)
+    const user = Object.entries(projectObject).map(([id, other]) => ({id, ...other}))
+    // .map(({author, ...project }) => ({ author }))
+    console.log(user)
     if (user === undefined) {
       return <p>Nie ma jeszcze użytkownika...</p>;
     }
-    const project = this.state.projects.find(
-      project => project.authorId === userId
+    const project = this.state.projectsWithAuthors.find(
+      project => project.author.id === userId
     );
 
     if (project === undefined) {
