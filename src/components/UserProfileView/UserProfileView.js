@@ -71,7 +71,7 @@ class UserProfileView extends Component {
             className="User-Project-Item"
           >
             <Link
-              to={"/projects/" + userId}
+              to={"/projects/" + project.id}
               style={{ textDecoration: "none" }}
               className="ProjectListItem"
             >
