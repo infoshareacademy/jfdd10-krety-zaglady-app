@@ -75,14 +75,14 @@
       },
       "fields": {
         "0": {
-          "3": "tree",
+          "0": "tree",
           "4": "tree"
         },
-        "3": {
-          "1": "pond"
-        },
-        "2": {
+        "1": {
           "2": "pond"
+        },
+        "4": {
+          "4": "pond"
         }
       }
     },
@@ -98,14 +98,12 @@
         "broccoli": "https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png"
       },
       "fields": {
-        "0": {
-          "4": "tree",
-          "2": "tree"
+        "1": {
+          "2": "tree",
+          "3": "tree",
+          "4": "tree"
         },
         "3": {
-          "2": "pond"
-        },
-        "2": {
           "1": "pond"
         }
       }
@@ -123,14 +121,15 @@
       },
       "fields": {
         "0": {
-          "4": "tree",
-          "2": "pond"
+          "1": "tree",
+          "2": "tree",
+          "3": "tree",
+          "4": "tree"
         },
         "3": {
-          "2": "tree"
-        },
-        "2": {
-          "1": "tree"
+          "1": "pond",
+          "2": "pond",
+          "3": "pond"
         }
       }
     },
