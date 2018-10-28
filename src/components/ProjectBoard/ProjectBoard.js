@@ -36,7 +36,6 @@ class ProjectBoard extends Component {
           >
           </td>
         ))}
-        {console.log(this.props.fields)}
       </tr>
     ));
 
