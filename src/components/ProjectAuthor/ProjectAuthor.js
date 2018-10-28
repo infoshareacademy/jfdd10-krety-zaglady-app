@@ -14,7 +14,7 @@ class ProjectAuthor extends Component {
 
   render() {
     return (
-      <Link to={"/user/" + this.props.userId} className="ProjectAuthorLink">
+      <Link to={"/user/" + this.props.id} className="ProjectAuthorLink">
         <PushUp
           pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
