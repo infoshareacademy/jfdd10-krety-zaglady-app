@@ -5,6 +5,7 @@ import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
 import posed from "react-pose";
 import "./App.css";
+import BoardGeneratorForm from "../BoardGeneratorForm/BoardGeneratorForm";
 
 
 const PushUp = posed.div({
@@ -28,11 +29,13 @@ class App extends Component {
                 <img src="/data/molelogo.png" alt="home" className="App-logo" />
               </PushUp>
             </NavLink>
+            <NavLink to="/userId/edit-form">Nowy Projekt</NavLink>
 
             <Route exact path="/" component={HomeView} />
             <Route exact path="/projects/:projectId" component={ProjectView} />
             <Route exact path="user/projects/:userId" component={ProjectView} />
             <Route exact path="/user/:userId" component={UserProfileView} />
+            <Route exact path="/userId/edit-form" component={BoardGeneratorForm} />
           </header>
           <div className="App-footer">
             <a
