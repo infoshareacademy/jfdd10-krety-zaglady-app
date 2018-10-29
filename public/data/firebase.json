@@ -13,19 +13,42 @@
       "userName": "Liwia",
       "userSurname": "Kretowska",
       "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Singer-avatar-occupation-profession-woman-human-512.png",
-      "userAge": "31",
+      "userAge": "35",
       "userGender": "kobieta",
-      "userCity": "Radom",
-      "userDescription": "Szalona Graża mająca bzika na punkcie ogrodnictwa."
+      "userCity": "Kielce",
+      "userDescription": "Lubię ogrodnictwo i moim marzeniem jest uprawiać własne warzywa"
+    },
+    "-a54326aassdf": {
+      "userName": "Michael",
+      "userSurname": "Cranberry",
+      "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Businessman-avatar-occupation-profession-man-human-512.png",
+      "userAge": "22",
+      "userGender": "mężczyzna",
+      "userCity": "Rzeszotary Panciawa",
+      "userDescription": "Chciałem spróbować czegoś nowego, dlatego kupiłem ogród. Teraz chcę go zaprojektować."
+    },
+    "-a54f32tsggg": {
+      "userName": "Stefan",
+      "userSurname": "Kowalski",
+      "userImage": "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Businessman-avatar-occupation-profession-man-human-512.png",
+      "userAge": "65",
+      "userGender": "mężczyzna",
+      "userCity": "Małe Pety",
+      "userDescription": "Chcę mieć najpiękniejszy i najbardziej praktyczny ogród!"
     }
   },
   "projects": {
     "-adfsdfa": {
       "authorId": "-asdfaassdf",
       "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
-      "userDescriptionTitle": "Mój ogródek",
+      "userDescriptionTitle": "Mój ogródek domowy",
       "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
       "size": 6,
+      "fruits": {
+        "carrot": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+        "apple": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+        "cherry": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png"
+      },
       "fields": {
         "0": {
           "3": "tree",
@@ -42,19 +65,93 @@
     "-adfsssdfdfa": {
       "authorId": "-asdfaassdf",
       "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
-      "userDescriptionTitle": "Mój ogródek",
-      "userGardenDescription": "Ogródek ze szklarnią i małym oczkiem wodnym.",
+      "userDescriptionTitle": "Mója działka",
+      "userGardenDescription": "Dopiero pracuję nad rozbudową mojej działki.",
       "size": 6,
+      "fruits": {
+        "cherry": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png",
+        "plum": "https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_ameixa-512.png",
+        "tomato": "https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png"
+      },
       "fields": {
         "0": {
+          "0": "tree",
+          "4": "tree"
+        },
+        "1": {
+          "2": "pond"
+        },
+        "4": {
+          "4": "pond"
+        }
+      }
+    },
+    "-adfsdfds5433fa": {
+      "authorId": "-a54326aassdf",
+      "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+      "userDescriptionTitle": "Mój ogródek",
+      "userGardenDescription": "Kilkadziesiąt metrów kwadratowych mojego królestwa.",
+      "size": 6,
+      "fruits": {
+        "pear": "https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png",
+        "blueberries": "https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png",
+        "broccoli": "https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png"
+      },
+      "fields": {
+        "1": {
+          "2": "tree",
           "3": "tree",
           "4": "tree"
         },
         "3": {
           "1": "pond"
+        }
+      }
+    },
+    "-hre654s5433fa": {
+      "authorId": "-a54326aassdf",
+      "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+      "userDescriptionTitle": "Mój ogródek",
+      "userGardenDescription": "Miejsce na Twój opis",
+      "size": 6,
+      "fruits": {
+        "carrot": "https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png",
+        "apple": "https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png",
+        "tomato": "https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png"
+      },
+      "fields": {
+        "0": {
+          "1": "tree",
+          "2": "tree",
+          "3": "tree",
+          "4": "tree"
         },
-        "2": {
-          "2": "pond"
+        "3": {
+          "1": "pond",
+          "2": "pond",
+          "3": "pond"
+        }
+      }
+    },
+    "-adf76543erfg3fa": {
+      "authorId": "-a54f32tsggg",
+      "boardImage": "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+      "userDescriptionTitle": "Ogródek przy domu",
+      "userGardenDescription": "Skromny ogródek pełen witamin i pięknych kolorów.",
+      "size": 4,
+      "fruits": {
+        "pear": "https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png",
+        "blueberries": "https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png",
+        "broccoli": "https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png"
+      },
+      "fields": {
+        "1": {
+          "2": "tree",
+          "3": "tree",
+          "4": "tree"
+        },
+        "3": {
+          "1": "pond"
         }
       }
     }
