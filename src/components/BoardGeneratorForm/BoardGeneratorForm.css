@@ -1,3 +1,13 @@
+.BoardGeneratorForm-form input{
+  display: block;
+  margin: 5px auto;
+}
+
 .BoardGeneratorForm-form img {
   height: 3vh;
+}
+
+.BoardGeneratorForm-fruitsContainer {
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
