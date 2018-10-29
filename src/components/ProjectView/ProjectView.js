@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./ProjectView.css";
 import ProjectBoard from "../ProjectBoard/ProjectBoard";
 import AuthorAvatar from '../AuthorAvatar/AuthorAvatar';
+import BoardLegend from "../BoardLegend/BoardLegend";
 
 class ProjectView extends Component {
   state = {
@@ -52,6 +53,7 @@ class ProjectView extends Component {
           <div className="top_box" />
           <ProjectBoard size={project.size} fields={project.fields} />
         </div>
+        <BoardLegend/>
       </div>
     );
   }
