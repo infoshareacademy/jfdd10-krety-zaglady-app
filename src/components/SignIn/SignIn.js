@@ -33,20 +33,31 @@ class SignIn extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="SignInForm">
         {this.state.error && <p>{this.state.error.message}</p>}
+        <table>
+          <tbody>
+            <tr>
+              <td>
         <input
           placeholder="Adres e-mail"
           name="email"
           value={this.state.email}
           onChange={this.handleChange}
         />
+        </td>
+        <td>
         <input
           placeholder="Hasło"
           name="password"
           value={this.state.password}
           onChange={this.handleChange}
         />
-
+</td>
+<td>
         <button id="sign-in" className="sign-in">Zaloguj się</button>
+        </td>
+        </tr>
+        </tbody>
+      </table>
       </form>
     );
   }

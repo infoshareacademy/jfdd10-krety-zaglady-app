@@ -16,53 +16,69 @@ class SignUpPage extends Component {
     return (
       <div className="SignUpPage">
         <form onSubmit={this.handleSubmit} className="SignUpForm">
-        <div className="SignText">Zachęcamy do rejestracji</div>
+        <div className="SignText">[MIEJSCE NA TEKST]</div>
         {this.state.error && <p>{this.state.error.message}</p>}
-        <div><label for="name">Imię</label> 
+        <table>
+          <tbody>
+            <tr>
+        <td><label for="name">Imię</label></td>
+        <td> 
         <input
           placeholder="Imię"
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
-        />
-        </div>
-        <div>
-        <label for="surname">Nazwisko</label>
-         <input
+        /></td>
+        </tr>
+        <tr><td><label for="surname">Nazwisko</label></td>
+         <td><input
           placeholder="Nazwisko"
           name="surname"
           value={this.state.surname}
           onChange={this.handleChange}
-        />
-        </div>
-        <div>
-        <label for="email">Adres e-mail</label>
+        /></td>
+       </tr>
+        <tr>
+          <td>
+            <label for="email">Adres e-mail</label>
+            </td>
+            <td>
         <input
           placeholder="Adres e-mail"
           name="email"
           value={this.state.email}
           onChange={this.handleChange}
         />
-        </div>
-        <div>
+        </td>
+       </tr>
+          <tr>
+            <td>
           <label for="password">Hasło</label>
+          </td>
+        <td>
         <input
           placeholder="Hasło"
           name="password"
           value={this.state.password}
           onChange={this.handleChange}
         />
-        </div>
-        <div>
+        </td>
+      </tr>
+        <tr>
+          <td>
         <label for="passoword2">Powtórz hasło</label>
+        </td>
+        <td>
         <input
           placeholder="Powtórz hasło"
           name="password2"
           value={this.state.password2}
           onChange={this.handleChange}
         />
-        </div>
-
+        </td>
+        </tr>
+        </tbody>
+      </table>
         
         <div>
         <button id="register" className="register">Wyślij</button>
