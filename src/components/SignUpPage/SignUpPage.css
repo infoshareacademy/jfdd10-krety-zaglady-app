@@ -1,0 +1,65 @@
+.SignUpForm {
+    font-size: 17px;
+    text-align: start;
+    margin: 100px;
+    padding: 50px;
+    background: white;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 30px solid green;
+    background: rgb(54, 211, 54, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.SignText {
+    text-align: center;
+}
+
+.SignUpForm input {
+    margin-left: 10px;
+    
+    margin-top: 10px;
+}
+
+.SignUpForm label {
+    margin: 50px;
+}
+
+.SignUpForm button {
+    margin-top: 100px;
+    margin-left: 100px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        cursor: hand;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+        background-color: rgba(83, 197, 2, 0.925);
+        border-bottom: 5px solid #669644;
+        text-shadow: 0px -2px #669644;
+        margin-right: 10px;
+        position: absolute;
+        z-index: 100;
+}
+
+.SignUpForm button:hover {
+    background-color:  rgb(125, 185, 82);
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+    
+}
+
+.SignUpForm img {
+    margin-top: 50px; 
+        width: 90%;
+        height: 90%;
+        position: relative;
+       
+} 
