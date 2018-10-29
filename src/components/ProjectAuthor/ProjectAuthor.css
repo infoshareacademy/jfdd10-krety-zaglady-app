@@ -1,6 +1,9 @@
 .ProjectAuthorLink {
   color: black;
   text-decoration: none;
+  display: flex;
+  margin: 10px;
+
 }
 
 .ProjectAuthor-header {
@@ -8,12 +11,18 @@
 }
 
 .ProjectAuthor-photo {
-    
+  
 }
 .ProjectListItem-userInfo {
   display: flex;
   margin: 2%;
 }
 .ProjectAuthor {
-
+  
+}
+.AvatarAuthor {
+  align-self: flex-start;
+}
+.AvatarCloudTextBox {
+  width: 900px;
 }

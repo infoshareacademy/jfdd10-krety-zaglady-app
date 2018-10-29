@@ -16,10 +16,10 @@ class ProjectListItem extends Component {
         <ProjectAuthor {...this.props} />
 
         <PushUp
+          className="ProjectListItem-boardImage"
           pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
           onMouseLeave={() => this.setState({ hovering: false })}
-          className="ProjectListItem-boardImage"
         >
           <Link
             to={"projects/" + this.props.id}

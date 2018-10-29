@@ -4,21 +4,20 @@
 
 .main_box{
     background: gray;
-    /* height: 400px; */
+    height: 400px;
 }
 .top_box{
     background: green;
-    /* height: 200px; */
+    height: 200px;
 }
 
 .ProjectView-board {
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
     margin-top: 50px;
 }
 .main_b {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
 }
