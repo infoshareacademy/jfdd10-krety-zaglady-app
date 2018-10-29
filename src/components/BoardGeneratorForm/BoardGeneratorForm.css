@@ -1,5 +1,10 @@
+.BoardGeneratorForm-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+
 .BoardGeneratorForm-form input{
-  display: block;
   margin: 5px auto;
 }
 
@@ -7,7 +12,16 @@
   height: 3vh;
 }
 
-.BoardGeneratorForm-fruitsContainer {
+.BoardGeneratorForm-fruitContainer, .BoardGeneratorForm-vegetableContainer {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-direction: row;
+}
+
+.BoardGeneratorForm-fruitContainer label, .BoardGeneratorForm-vegetableContainer label {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column
+}
+.BoardGeneratorForm-selectAll {
+  font-size: 1.5vh;
 }

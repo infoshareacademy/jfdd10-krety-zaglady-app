@@ -25,7 +25,7 @@ class BoardGeneratorForm extends Component {
           <label>
             <input type="number" min="3" max="10" name="size" placeholder="3" />
           </label>
-          <div className="BoardGeneratorForm-fruitsContainer">
+          <div className="BoardGeneratorForm-fruitContainer">
             <label name="cherry">
               <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png" />
               <input type="checkbox" name="cherry" />
@@ -34,13 +34,23 @@ class BoardGeneratorForm extends Component {
               <img src="https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png" />
               <input type="checkbox" name="apple" />
             </label>
-            <label name="carrot">
-              <img src="https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png" />
-              <input type="checkbox" name="carrot" />
-            </label>
             <label name="plum">
               <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_ameixa-512.png" />
               <input type="checkbox" name="plum" />
+            </label>
+            <label name="pear">
+              <img src="https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png" />
+              <input type="checkbox" name="pear" />
+            </label>
+            <label name="blueberries">
+              <img src="https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png" />
+              <input type="checkbox" name="blueberries" />
+            </label>
+          </div>
+          <div className="BoardGeneratorForm-vegetableContainer">
+            <label name="broccoli">
+              <img src="https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png" />
+              <input type="checkbox" name="broccoli" />
             </label>
             <label name="tomato">
               <img src="https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png" />
@@ -50,20 +60,13 @@ class BoardGeneratorForm extends Component {
               <img src="https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png" />
               <input type="checkbox" name="carrot" />
             </label>
-            <label name="carrot">
-              <img src="https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png" />
-              <input type="checkbox" name="carrot" />
-            </label>
-            <label name="carrot">
-              <img src="https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png" />
-              <input type="checkbox" name="carrot" />
-            </label>
-
           </div>
+          <div className="BoardGeneratorForm-selectAll">
           <label name="allFriuits">
-            <span>Zaznacz wszystkie</span>
+            <span>Zaznacz wszystkie  </span>
             <input type="checkbox" name="allFruits" />
           </label>
+          </div>
         </form>
       </div>
     );
