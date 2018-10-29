@@ -13,33 +13,56 @@ const PushUp = posed.div({
 
 class UserProfileView extends Component {
   state = {
-    projects: []
+    projects: [],
+    users: []
   };
 
   componentDidMount() {
     this.componentIsMount = true;
-    fetch("/data/projects.json")
-      .then(response => response.json())
-      .then(arrayOfProjects => {
-        if (this.componentIsMount) {
-          this.setState({ projects: arrayOfProjects });
-        }
-      });
+    fetch(
+      "https://kretogrod-app.firebaseio.com/users.json"
+    )
+    .then(response => response.json())
+    .then(users => this.setState({
+      users: Object.entries(users)
+        .map(([id, value]) => ({
+          id, ...value
+        }))
+      })
+    )
+
+    fetch(
+      "https://kretogrod-app.firebaseio.com/projects.json"
+    )
+    .then(response => response.json())
+    .then(projects => this.setState({
+      projects: Object.entries(projects)
+        .map(([id, value]) => ({ 
+          id, ...value 
+        }))
+      })
+    )
   }
 
+
+
   render() {
-    const userId = parseInt(this.props.match.params.userId);
+    const userId = this.props.match.params.userId
+    const user = this.state.users.find(user => user.id === userId)
+    if (user === undefined) {
+      return <p>Nie ma jeszcze użytkownika...</p>;
+    }
     const project = this.state.projects.find(
-      project => project.userId === userId
+      project => project.authorId === userId
     );
 
     if (project === undefined) {
-      return <p>Loading...</p>;
+      return <p>Coś poszło nie tak :(</p>;
     }
     return (
       <div class="UserProfileView">
         <div>
-          <UserPanel {...project} />
+          <UserPanel {...user} />
 
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
@@ -48,7 +71,7 @@ class UserProfileView extends Component {
             className="User-Project-Item"
           >
             <Link
-              to={"/projects/" + userId}
+              to={"/projects/" + project.id}
               style={{ textDecoration: "none" }}
               className="ProjectListItem"
             >

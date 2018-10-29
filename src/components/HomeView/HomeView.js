@@ -1,30 +1,48 @@
 import React, { Component } from "react";
 import ProjectList from "../ProjectList";
-
+import AppIntro from "../AppIntro/AppIntro";
 import "./HomeView.css";
 class HomeView extends Component {
   state = {
-    projects: []
+    projectsWithAuthors: []
   };
 
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + "/data/projects.json")
-      .then(response => response.json())
-      .then(arrayOfProjects =>
-        this.setState({
-          projects: arrayOfProjects
+    this.componentIsMount = true;
+
+    const usersPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/users.json"
+    ).then(response => response.json());
+
+    const projectsPromise = fetch(
+      "https://kretogrod-app.firebaseio.com/projects.json"
+    ).then(response => response.json());
+
+    Promise.all([usersPromise, projectsPromise]).then(([users, projects]) => {
+      return Object.entries(projects || {}).map(
+        ([id, { authorId, ...project }]) => ({
+          id,
+          ...project,
+          author: users[authorId] && {
+            id: authorId,
+            ...users[authorId]
+          }
         })
-      );
+      )
+    }).then(
+      projectsWithAuthors => this.setState({ projectsWithAuthors })
+    )
   }
 
   render() {
     return (
       <>
         <div className="HomeView-main_box">
+          <AppIntro />
           <h1> WITAJCIE W KRETOGRODZIE! </h1>
         </div>
         <div className="HomeView-top_box">
-          <ProjectList projects={this.state.projects} />
+          <ProjectList projects={this.state.projectsWithAuthors} />
         </div>
       </>
     );

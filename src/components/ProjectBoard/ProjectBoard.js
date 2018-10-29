@@ -32,6 +32,7 @@ class ProjectBoard extends Component {
                 ? "1px solid black"
                 : "5px solid black"
             }}
+            
           >
           </td>
         ))}

@@ -14,7 +14,7 @@ class ProjectListItem extends Component {
   render() {
     return (
       <div className="ProjectListItem-container">
-        <ProjectAuthor {...this.props} />
+        <ProjectAuthor {...this.props.author} />
 
         <PushUp
           className="ProjectListItem-boardImage"
@@ -28,9 +28,13 @@ class ProjectListItem extends Component {
             className="ProjectListItem"
           >
             <div className="ProjectListItem-fruitIcons">
-              {this.props.fruits.map(fruit => (
-                <img src={fruit.image} alt={fruit.alt} />
-                ))}
+
+              {Object.entries(this.props.fruits).map(([key, value]) => {
+                return {key, value}})
+              
+             .map(fruit => {
+                return(<img src={fruit.value} alt={fruit.key} />);
+              })}
             </div>
                 <img className="BoardImage" src={this.props.boardImage} alt="boardImage" />
           </Link>

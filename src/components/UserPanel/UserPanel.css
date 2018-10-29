@@ -17,7 +17,7 @@ html {
 -webkit-animation: AnimationName 30s ease infinite;
 -moz-animation: AnimationName 30s ease infinite;
 animation: AnimationName 30s ease infinite;
-
+}
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -33,7 +33,7 @@ animation: AnimationName 30s ease infinite;
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-}
+
 
 
 .UserPanelAvatar {
@@ -47,8 +47,12 @@ animation: AnimationName 30s ease infinite;
 }
 
 .UserPanelAvatar img {
-    height: 150px;
     width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background: white;
+    border: 1px solid black;
+    box-shadow: 1px 5px 15px  black;
     margin-top: 50px;
 }
 
