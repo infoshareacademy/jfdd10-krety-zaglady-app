@@ -15,8 +15,14 @@ class ProjectAuthor extends Component {
   render() {
     return (
       <Link to={"/user/" + this.props.userId} className="ProjectAuthorLink">
-      <div className="AvatarCloudTextBox">
-      
+      <AuthorAvatar 
+            className="AvatarAuthor"
+            // noLink
+            disabled
+            userId={this.props.userId}
+            name={this.props.name}
+            userImage={this.props.userImage}
+          />
         <PushUp
           pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
@@ -34,14 +40,6 @@ class ProjectAuthor extends Component {
             </div>
           </div>
         </PushUp>
-        <AuthorAvatar 
-              className="AvatarAuthor"
-              // noLink
-              userId={this.props.userId}
-              name={this.props.name}
-              userImage={this.props.userImage}
-            />
-        </div>
       </Link>
     );
   }

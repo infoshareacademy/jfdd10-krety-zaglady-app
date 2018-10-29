@@ -20,8 +20,8 @@ class AuthorAvatar extends Component {
         <div className="nameBox">
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
-            onMouseEnter={() => this.setState({ hovering: true })}
-            onMouseLeave={() => this.setState({ hovering: false })}
+            onMouseEnter={this.props.disabled ? null : () => this.setState({ hovering: true })}
+            onMouseLeave={this.props.disabled ? null : () => this.setState({ hovering: false })}
           >
             <img
               className="avatar"

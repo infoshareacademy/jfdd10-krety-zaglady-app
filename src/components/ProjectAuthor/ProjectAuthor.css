@@ -15,14 +15,15 @@
 }
 .ProjectListItem-userInfo {
   display: flex;
-  margin: 2%;
+  /* margin: 0%; */
 }
 .ProjectAuthor {
-  
+  margin: auto;
+  margin-left: -100px
 }
 .AvatarAuthor {
-  align-self: flex-start;
+  margin: auto;
 }
 .AvatarCloudTextBox {
-  width: 900px;
+  width: 700px;
 }

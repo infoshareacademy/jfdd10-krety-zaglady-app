@@ -3,6 +3,7 @@ import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
 import posed from "react-pose";
+import ProjectBoard from '../ProjectBoard/ProjectBoard'
 
 const PushUp = posed.div({
   idle: { scale: 1 },
@@ -26,12 +27,12 @@ class ProjectListItem extends Component {
             style={{ textDecoration: "none" }}
             className="ProjectListItem"
           >
-            <img src={this.props.boardImage} alt="boardImage" />
             <div className="ProjectListItem-fruitIcons">
               {this.props.fruits.map(fruit => (
                 <img src={fruit.image} alt={fruit.alt} />
-              ))}
+                ))}
             </div>
+                <img className="BoardImage" src={this.props.boardImage} alt="boardImage" />
           </Link>
         </PushUp>
       </div>

@@ -25,8 +25,8 @@
 
 .ProjectListItem-userInfo {
   display: flex;
-  
-  border-radius: 70px 70px 70px 0px;
+  margin-left: 180px;
+  border-radius: 0px 70px 70px 70px;
   padding: 20px 10px;
   box-shadow: 5px 5px 15px  black;
   /* border-radius: 10px; */
@@ -36,7 +36,7 @@
 }
 
 .ProjectListItem-userInfo img {
-  width: 150px;
+  /* width: 150px; */
   height: 150px;
   border-radius: 100px;
   box-shadow: 1px 5px 15px  black;
@@ -87,4 +87,7 @@
 }
 .avatar {
   margin: 0 auto;
+}
+.BoardImage {
+  margin-top: -80px;
 }
