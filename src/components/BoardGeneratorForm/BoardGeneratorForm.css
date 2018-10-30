@@ -2,13 +2,15 @@
 .BoardGeneratorForm-form {
   display: flex;
   align-items: center;
+  height: 100%;
+  align-items: stretch;
 }
 
-.BoardGeneratorForm-form input{
+.BoardGeneratorForm-formContainer input{
   margin: 5px auto;
 }
 
-.BoardGeneratorForm-form img {
+.BoardGeneratorForm-itemsContainer img {
   height: 3vh;
 }
 
@@ -23,6 +25,7 @@
 .BoardGeneratorForm-formContainer {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .BoardGeneratorForm-fruitContainer, .BoardGeneratorForm-vegetableContainer {
