@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProjectList from "../ProjectList";
 import AppIntro from "../AppIntro/AppIntro";
 import "./HomeView.css";
+
 class HomeView extends Component {
   state = {
     projectsWithAuthors: []
