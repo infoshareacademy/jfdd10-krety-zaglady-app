@@ -9,6 +9,8 @@ class BoardGeneratorForm extends Component {
         <h2>Generator Projektu</h2>
         <form className="BoardGeneratorForm-form">
           <div className="BoardGeneratorForm-formContainer">
+          <h3>Informacje</h3>
+          <p>Nazwij i opisz swój projekt ogródka</p>
             <label>
               <input
                 type="text"
@@ -20,6 +22,7 @@ class BoardGeneratorForm extends Component {
               <textarea
                 type="textarea"
                 name="userGardenDescription"
+                rows="10" cols="30"
                 placeholder="Opis projektu..."
               />
             </label>
@@ -74,7 +77,7 @@ class BoardGeneratorForm extends Component {
             </div>
             <div className="BoardGeneratorForm-selectAll">
               <label name="allFriuits">
-                <span>Wszystko </span>
+                <span>Zaznacz wszystko</span>
                 <input type="checkbox" name="allFruits" />
               </label>
             </div>

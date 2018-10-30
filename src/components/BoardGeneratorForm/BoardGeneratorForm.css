@@ -14,9 +14,12 @@
   height: 3vh;
 }
 
-.BoardGeneratorForm-itemsContainer {
+.BoardGeneratorForm-itemsContainer, .BoardGeneratorForm-formContainer {
  font-size: 1.4vh;
+}
 
+.BoardGeneratorForm-formContainer h3 {
+  margin-bottom: 0px;
 }
 
 .BoardGeneratorForm-itemsContainer, .BoardGeneratorForm-formContainer {
@@ -46,6 +49,9 @@
   flex-direction: column;
   align-items: center;
 }
-.BoardGeneratorForm-selectAll {
+.BoardGeneratorForm-selectAll label{
   font-size: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
