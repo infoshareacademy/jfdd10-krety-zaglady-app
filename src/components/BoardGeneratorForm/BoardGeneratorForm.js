@@ -9,10 +9,11 @@ class BoardGeneratorForm extends Component {
         <h2>Generator Projektu</h2>
         <form className="BoardGeneratorForm-form">
           <div className="BoardGeneratorForm-formContainer">
-          <h3>Informacje</h3>
-          <p>Nazwij i opisz swój projekt ogródka</p>
+            <h3>Informacje</h3>
+            <p>Nazwij i opisz swój projekt ogródka</p>
             <label>
               <input
+                className="BoardGeneratorForm-title"
                 type="text"
                 name="userDescriptionTitle"
                 placeholder="Tytuł projektu..."
@@ -20,14 +21,17 @@ class BoardGeneratorForm extends Component {
             </label>
             <label>
               <textarea
+                className="BoardGeneratorForm-description"
                 type="textarea"
                 name="userGardenDescription"
-                rows="10" cols="30"
+                rows="10"
+                cols="30"
                 placeholder="Opis projektu..."
               />
             </label>
             <label>
               <input
+                className="BoardGeneratorForm-size"
                 type="number"
                 min="3"
                 max="10"
@@ -37,8 +41,11 @@ class BoardGeneratorForm extends Component {
             </label>
           </div>
           <div className="BoardGeneratorForm-itemsContainer">
-          <h3>Elementy</h3>
-          <p>Wybierz elementy do <br/>zastosowania w projekcie</p>
+            <h3>Elementy</h3>
+            <p>
+              Wybierz elementy do <br />
+              zastosowania w projekcie
+            </p>
             <div className="BoardGeneratorForm-fruitContainer">
               <label name="cherry">
                 <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png" />
