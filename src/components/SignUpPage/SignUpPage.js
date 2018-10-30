@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./SignUpPage.css";
 
+
 class SignUpPage extends Component {
   state = {
     name: "",
