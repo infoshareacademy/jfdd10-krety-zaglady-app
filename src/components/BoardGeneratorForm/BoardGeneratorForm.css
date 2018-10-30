@@ -1,15 +1,7 @@
-.BoardGeneratorForm {
-  background: rgb(54, 211, 54);
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid green;
-}
 
 .BoardGeneratorForm-form {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 28%;
+  align-items: center;
 }
 
 .BoardGeneratorForm-form input{
@@ -20,15 +12,29 @@
   height: 3vh;
 }
 
+.BoardGeneratorForm-itemsContainer, .BoardGeneratorForm-formContainer {
+  background: rgb(54, 211, 54);
+  padding: 2vh;
+  margin: 1vh;
+  border-radius: 10px;
+  border: 1px solid green;
+}
+
+.BoardGeneratorForm-formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .BoardGeneratorForm-fruitContainer, .BoardGeneratorForm-vegetableContainer {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100px;
 }
 
 .BoardGeneratorForm-fruitContainer label, .BoardGeneratorForm-vegetableContainer label {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column
+  flex-direction: column;
 }
 .BoardGeneratorForm-selectAll {
   font-size: 1.5vh;
