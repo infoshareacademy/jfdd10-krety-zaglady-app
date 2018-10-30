@@ -38,12 +38,13 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 100px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .BoardGeneratorForm-fruitContainer label, .BoardGeneratorForm-vegetableContainer label {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .BoardGeneratorForm-selectAll {
   font-size: 1.5vh;
