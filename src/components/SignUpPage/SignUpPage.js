@@ -27,7 +27,7 @@ class SignUpPage extends Component {
       this.state.name,
       this.state.surname,
       this.state.email,
-      this.state.password
+      this.password = this.password2
     ).then(
       () => this.setState({ error: null })
     ).catch(
