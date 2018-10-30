@@ -4,16 +4,29 @@
   width: 50px;
 }
 .null{
-  background: green;
+  background-size: cover;
+  background-image : url("../grass.jpg");
+  /* background-color: green; */
 }
 .undefined {
-  background: green;
+  /* background-color: lightgreen; */
+  background-size: cover;
   /* podstawiamy obraz z lokalizacji  */
-  /* background-image : url(../images/back_02.png);   */
+  background-image : url("../grass.jpg");  
 }
 .tree {
   background: brown;
+  background: url("../tree.jpg");
+  background-color: lightgreen;
+  background-size: cover;
+
 }
 .pond {
-  background: yellow;
+  background: url("https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png");
+  background-color: lightgreen;
+  background-size: cover;
+
 }
+/* 
+https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png
+*/

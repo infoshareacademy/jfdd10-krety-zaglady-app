@@ -4,12 +4,17 @@
     height: 200px;
     background: white;
     border: 1px solid black;
-    margin: -100px;
+    /* margin: -100px; */
     text-shadow: -1px -3px green, 2px 2px #333;
-    /* margin: 0 auto; */
-
+    margin: 0 auto;
 }
 .nameBox {
-    text-shadow: -1px -3px green, 2px 2px #333;
     font-size: 50px;
+}
+.AvatarName {
+
+}
+.AvatarLink {
+    text-decoration: none;
+    color: green;
 }
