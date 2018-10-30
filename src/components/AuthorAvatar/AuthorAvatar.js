@@ -13,7 +13,7 @@ class AuthorAvatar extends Component {
 
   render() {
     return (
-      <Link
+      <Link className="AvatarLink"
         onClick={e => this.props.noLink && e.preventDefault()}
         to={"/user/" + this.props.userId}
       >
@@ -29,7 +29,7 @@ class AuthorAvatar extends Component {
               alt="userImage"
             />
           </PushUp>
-          <div>{this.props.name}</div>
+          <div className="AvatarName">{this.props.name}</div>
         </div>
       </Link>
     );

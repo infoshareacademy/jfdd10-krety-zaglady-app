@@ -12,8 +12,13 @@
   /* background-image : url(../images/back_02.png);   */
 }
 .tree {
-  background: brown;
+  /* background: brown; */
+  background: url("../tree.png");
+
 }
 .pond {
   background: yellow;
 }
+/* 
+https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png
+*/
