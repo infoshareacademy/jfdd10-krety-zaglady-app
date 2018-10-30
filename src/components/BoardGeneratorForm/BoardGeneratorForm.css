@@ -14,6 +14,11 @@
   height: 3vh;
 }
 
+.BoardGeneratorForm-itemsContainer {
+ font-size: 1.4vh;
+
+}
+
 .BoardGeneratorForm-itemsContainer, .BoardGeneratorForm-formContainer {
   background: rgb(54, 211, 54);
   padding: 2vh;
@@ -33,6 +38,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 100px;
+  margin: 0 auto;
 }
 
 .BoardGeneratorForm-fruitContainer label, .BoardGeneratorForm-vegetableContainer label {

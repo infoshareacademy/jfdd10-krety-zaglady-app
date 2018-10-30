@@ -34,6 +34,8 @@ class BoardGeneratorForm extends Component {
             </label>
           </div>
           <div className="BoardGeneratorForm-itemsContainer">
+          <h3>Elementy</h3>
+          <p>Wybierz elementy do <br/>zastosowania w projekcie</p>
             <div className="BoardGeneratorForm-fruitContainer">
               <label name="cherry">
                 <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png" />
