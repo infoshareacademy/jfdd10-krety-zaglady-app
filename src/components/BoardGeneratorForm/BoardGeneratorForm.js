@@ -3,6 +3,37 @@ import React, { Component } from "react";
 import "./BoardGeneratorForm.css";
 
 class BoardGeneratorForm extends Component {
+  state = {
+    authorId: "",
+    boardImage:
+      "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
+    userDescriptionTitle: "",
+    userGardenDescription: "",
+    size: 3,
+    fruits: {
+      cherry: null,
+      apple: null,
+      plum: null,
+      pear: null,
+      bluberries: null,
+      broccoli: null,
+      tomato: null,
+      carrot: null,
+    },
+    // fields: {
+    //   0: {
+    //     3: "tree",
+    //     4: "tree"
+    //   },
+    //   3: {
+    //     1: "pond"
+    //   },
+    //   2: {
+    //     2: "pond"
+    //   }
+    // }
+  };
+
   render() {
     return (
       <div className="BoardGeneratorForm">
@@ -90,6 +121,7 @@ class BoardGeneratorForm extends Component {
                 <input type="checkbox" name="allFruits" />
               </label>
             </div>
+            <button>GENERUJ PROJEKT</button>
           </div>
         </form>
       </div>
