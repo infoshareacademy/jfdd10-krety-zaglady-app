@@ -3,6 +3,9 @@
   height: 50px;
   width: 50px;
 }
+.null{
+  background: green;
+}
 .undefined {
   background: green;
   /* podstawiamy obraz z lokalizacji  */
