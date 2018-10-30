@@ -50,6 +50,7 @@ class SignIn extends Component {
           name="password"
           value={this.state.password}
           onChange={this.handleChange}
+          type="password"
         />
 </td>
 <td>
