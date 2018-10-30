@@ -48,6 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10px;
 }
 .BoardGeneratorForm-selectAll label{
   font-size: 1.5vh;
