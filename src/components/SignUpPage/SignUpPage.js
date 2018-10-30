@@ -90,6 +90,7 @@ class SignUpPage extends Component {
           name="password"
           value={this.state.password}
           onChange={this.handleChange}
+          type="password"
         />
         </td>
       </tr>
@@ -103,6 +104,7 @@ class SignUpPage extends Component {
           name="password2"
           value={this.state.password2}
           onChange={this.handleChange}
+          type="password"
         />
         </td>
         </tr>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import firebase from "firebase";
+import firebase from "firebase";
 
 import "./SignIn.css";
-// import SignInButton from '../SignInButton/SignInButton';
+
 
 class SignIn extends Component {
   state = {
@@ -17,17 +17,17 @@ class SignIn extends Component {
     })
   }
 
-  // handleSubmit = event => {
-  //   event.preventDefault()
-  //   firebase.auth().createUserWithEmailAndPassword(
-  //     this.state.email,
-  //     this.state.password
-  //   ).then(
-  //     () => this.setState({ error: null })
-  //   ).catch(
-  //     error => this.setState({ error })
-  //   )
-  // }
+  handleSubmit = event => {
+    event.preventDefault()
+    firebase.auth().createUserWithEmailAndPassword(
+      this.state.email,
+      this.state.password
+    ).then(
+      () => this.setState({ error: null })
+    ).catch(
+      error => this.setState({ error })
+    )
+  }
 
   render() {
     return (
@@ -64,3 +64,4 @@ class SignIn extends Component {
 }
 
 export default SignIn;
+
