@@ -53,7 +53,7 @@ class ProjectView extends Component {
           <div className="top_box" />
           <ProjectBoard size={project.size} fields={project.fields} />
         </div >
-        <div className ="BordLegend"><BoardLegend/></div>
+        <div className ="BoardLegend"><BoardLegend fruits={project.fruits}/></div>
         
       </div>
     );
