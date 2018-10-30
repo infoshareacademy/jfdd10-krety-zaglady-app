@@ -29,16 +29,18 @@ class BoardGeneratorForm extends Component {
                 placeholder="Opis projektu..."
               />
             </label>
+            <h3>Wielkość ogródka</h3>
+            <p>Wybierz liczbę rzędów/kolumn w projekcie</p>
             <label>
               <input
                 className="BoardGeneratorForm-size"
-                type="number"
+                type="range"
                 min="3"
                 max="10"
                 name="size"
-                placeholder="3"
               />
             </label>
+            <span>10 rzędów i kolumn</span>
           </div>
           <div className="BoardGeneratorForm-itemsContainer">
             <h3>Elementy</h3>
