@@ -20,7 +20,8 @@ class BoardLegend extends Component {
           </div>
         </div> */}
 
-        <div>
+        <div BoardLegend-fruitIcon>
+        <div className="BoardLegend-fruitIcon">
           {Object.entries(this.props.fruits)
             .map(([key, value]) => {
               return { key, value };
@@ -29,6 +30,7 @@ class BoardLegend extends Component {
             .map(fruit => {
               return <img src={fruit.value} alt={fruit.key} />;
             })}
+            </div>
         </div>
       </>
     );
