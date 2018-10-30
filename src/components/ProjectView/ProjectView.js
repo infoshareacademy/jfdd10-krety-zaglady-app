@@ -42,7 +42,6 @@ class ProjectView extends Component {
     if (project === undefined) {
       return <div>Nie ma jeszcze projektu...</div>;
     }
-
     return (
       <div className="main_b">
         <div className="ProjectView-projectAuthor">

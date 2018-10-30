@@ -31,7 +31,6 @@
 
 .ProjectImage {
   display: flex;
-  /* background: red; */
   justify-content: center;
   width: 500px;
   align-items: center;
