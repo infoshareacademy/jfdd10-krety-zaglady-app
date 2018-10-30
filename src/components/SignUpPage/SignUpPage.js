@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./SignUpPage.css";
+import firebase from "firebase";
+
 
 
 class SignUpPage extends Component {
@@ -12,6 +14,26 @@ class SignUpPage extends Component {
     password2: "",
     error: null
   };
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    firebase.auth().createUserWithEmailAndPassword(
+      this.state.name,
+      this.state.surname,
+      this.state.email,
+      this.state.password
+    ).then(
+      () => this.setState({ error: null })
+    ).catch(
+      error => this.setState({ error })
+    )
+  }
 
   render() {
     return (
