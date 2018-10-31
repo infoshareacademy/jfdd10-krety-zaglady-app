@@ -43,6 +43,7 @@ class App extends Component {
             <Route exact path="/userId/edit-form" component={BoardGeneratorForm} />
             <Route exact path="/sign-up" component={SignUpPage} />
             <Route exact path="/welcome" component={WelcomePage} />
+            
           </header>
           <div className="App-footer">
             <a
