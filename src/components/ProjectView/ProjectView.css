@@ -1,7 +1,6 @@
 .ProjectView-projectAuthor {
     margin-top: 30px;
     /* margin: 0 auto; */
-    
 }
 
 .main_box{
@@ -24,11 +23,10 @@
 .BordLegend{
     margin: 0 auto;
     margin-top: 30px;
-   
+}
 
 .main_b {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
