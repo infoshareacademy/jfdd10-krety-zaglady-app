@@ -24,50 +24,49 @@ class BoardGeneratorForm extends Component {
     fields: {}
   };
 
+  //
   getCheckedFruits = () => {
-    return Object.keys(this.state.fruits)
-      .filter(fruitName => this.state.fruits[fruitName]);
-  }
+    return Object.keys(this.state.fruits).filter(
+      fruitName => this.state.fruits[fruitName]
+    );
+  };
 
-  pickRandomFruit = (checkedFruits) => {
+  pickRandomFruit = checkedFruits => {
     return checkedFruits[Math.floor(Math.random() * checkedFruits.length)];
-  }
-  
- 
+  };
 
   generateEmptyBoard = () => {
-    let board = {}
-    for(let i = 0; i < this.state.size; i++) {
-      board[i] = {}
+    let board = {};
+    for (let i = 0; i < this.state.size; i++) {
+      board[i] = {};
     }
-    this.setState ({
+    this.setState({
       fields: board
-    })
-  }
+    });
+  };
 
-
-  handleSizeChange = (event) => {
+  handleSizeChange = event => {
     this.setState({
       size: event.target.value
-    })
-    this.generateEmptyBoard()
-  }
+    });
+    this.generateEmptyBoard();
+  };
 
   generateBoard = () => {
-    let board = this.state.fields
+    let board = this.state.fields;
     let checkedFruits = this.getCheckedFruits();
-    for(let row = 0; row < this.state.size; row++) {
-      for(let col = 0; col < this.state.size; col++) {
+    for (let row = 0; row < this.state.size; row++) {
+      for (let col = 0; col < this.state.size; col++) {
         if (Math.random() > 0.5) {
           board[row][col] = this.pickRandomFruit(checkedFruits);
-        } 
+        }
       }
     }
     this.setState({
       fields: board
-    })
+    });
     return board;
-  }
+  };
 
   handleInputChange = event => {
     const target = event.target;
@@ -80,10 +79,7 @@ class BoardGeneratorForm extends Component {
         [name]: value
       }
     });
-
-    // let checked = this.getCheckedFruits();
-    console.log('board', this.generateBoard());
-  }
+  };
 
   handleAddAllFruits = event => {
     const fruitsArray = Object.keys(this.state.fruits);
@@ -94,7 +90,9 @@ class BoardGeneratorForm extends Component {
     this.setState({
       fruits: Object.assign({}, ...updatedFruitsArray)
     });
-  }
+  };
+
+  handleSubmit = event => {};
 
   render() {
     return (
@@ -137,7 +135,6 @@ class BoardGeneratorForm extends Component {
                 name="size"
                 value={this.state.size}
                 onChange={this.handleSizeChange}
-
               />
             </label>
             <span>{this.state.size} rzędów i kolumn</span>
@@ -236,9 +233,12 @@ class BoardGeneratorForm extends Component {
             <div className="BoardGeneratorForm-selectAll">
               <label name="checkAllFriuits">
                 <span>Zaznacz wszystko</span>
-                <input type="checkbox" name="checkAllFriuits" onChange={this.handleAddAllFruits}/>
+                <input
+                  type="checkbox"
+                  name="checkAllFriuits"
+                  onChange={this.handleAddAllFruits}
+                />
               </label>
-
             </div>
           </div>
           <button>GENERUJ PROJEKT</button>
