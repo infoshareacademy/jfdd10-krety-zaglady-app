@@ -20,17 +20,22 @@ class BoardLegend extends Component {
           </div>
         </div> */}
 
-        <div BoardLegend-fruitIcon>
-        <div className="BoardLegend-fruitIcon">
-          {Object.entries(this.props.fruits)
-            .map(([key, value]) => {
-              return { key, value };
-            })
-
-            .map(fruit => {
-              return <div className={fruit.key}><span className="SpanName">{fruit.value}</span></div>;
-            })}
-            </div>
+        <div className="FruitLegendBox" BoardLegend-fruitIcon>
+          <div className="BoardLegend-fruitIcon">
+            {Object.entries(this.props.fruits)
+              .map(([key, value]) => {
+                return { key, value };
+              })
+              .map(fruit => {
+                return (
+                  <div>
+                  <div className={fruit.key}>
+                  </div>
+                    <span className="SpanName">{fruit.value}</span>
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </>
     );
