@@ -1,0 +1,23 @@
+.WelcomeText {
+        font-size: 17px;
+        text-align: start;
+        margin: 100px;
+        padding: 50px;
+        background: white;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: 30px solid green;
+        background: rgb(54, 211, 54, 0.4);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+}
+
+.WelcomeText img {
+   
+        width: 99%;
+        height: 99%;
+        position: relative;
+}
