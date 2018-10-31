@@ -40,6 +40,7 @@ class App extends Component {
             <Route exact path="/user/:userId" component={UserProfileView} />
             <Route exact path="/sign-up" component={SignUpPage} />
             <Route exact path="/welcome" component={WelcomePage} />
+            
           </header>
           <div className="App-footer">
             <a
