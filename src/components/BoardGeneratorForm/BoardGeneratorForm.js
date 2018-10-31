@@ -21,19 +21,53 @@ class BoardGeneratorForm extends Component {
       carrot: null,
       tree: null
     },
-    fields: {
-      0: {
-        3: "tree",
-        4: "tree"
-      },
-      3: {
-        1: "pond"
-      },
-      2: {
-        2: "pond"
+    fields: {}
+  };
+
+  getCheckedFruits = () => {
+    return Object.keys(this.state.fruits)
+      .filter(fruitName => this.state.fruits[fruitName]);
+  }
+
+  pickRandomFruit = (checkedFruits) => {
+    return checkedFruits[Math.floor(Math.random() * checkedFruits.length)];
+  }
+  
+ 
+
+  generateEmptyBoard = () => {
+    let board = {}
+    for(let i = 0; i < this.state.size; i++) {
+      board[i] = {}
+    }
+    this.setState ({
+      fields: board
+    })
+  }
+
+
+  handleSizeChange = (event) => {
+    this.setState({
+      size: event.target.value
+    })
+    this.generateEmptyBoard()
+  }
+
+  generateBoard = () => {
+    let board = this.state.fields
+    let checkedFruits = this.getCheckedFruits();
+    for(let row = 0; row < this.state.size; row++) {
+      for(let col = 0; col < this.state.size; col++) {
+        if (Math.random() > 0.5) {
+          board[row][col] = this.pickRandomFruit(checkedFruits);
+        } 
       }
     }
-  };
+    this.setState({
+      fields: board
+    })
+    return board;
+  }
 
   handleInputChange = event => {
     const target = event.target;
@@ -41,9 +75,15 @@ class BoardGeneratorForm extends Component {
     const name = target.name;
 
     this.setState({
-      [name]: value
+      fruits: {
+        ...this.state.fruits,
+        [name]: value
+      }
     });
-  };
+
+    // let checked = this.getCheckedFruits();
+    console.log('board', this.generateBoard());
+  }
 
   handleAddAllFruits = event => {
     const fruitsArray = Object.keys(this.state.fruits);
@@ -54,7 +94,7 @@ class BoardGeneratorForm extends Component {
     this.setState({
       fruits: Object.assign({}, ...updatedFruitsArray)
     });
-  };
+  }
 
   render() {
     return (
@@ -96,7 +136,8 @@ class BoardGeneratorForm extends Component {
                 max="10"
                 name="size"
                 value={this.state.size}
-                onChange={this.handleInputChange}
+                onChange={this.handleSizeChange}
+
               />
             </label>
             <span>{this.state.size} rzędów i kolumn</span>
