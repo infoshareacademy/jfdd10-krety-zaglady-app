@@ -18,9 +18,19 @@ class SignOut extends Component {
         firebase.auth().onAuthStateChanged(user => this.setState({ user }))
     }
     render() {
-        return (
-            <div></div>
-        )
+        return user ? (
+            <>
+              <p>
+                {user.email} <button onClick={() => signOut()}>sign out</button>
+              </p>
+              {this.props.children}
+            </>
+          ) : (
+            <>
+              <SignInForm />
+              <SignUpForm />
+            </>
+          );
     }
 }
 
