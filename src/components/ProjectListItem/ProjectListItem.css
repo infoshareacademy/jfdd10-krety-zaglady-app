@@ -12,7 +12,8 @@
 }
 
 .ProjectListItem-container a {
-  width: 100%;
+  flex-grow: 1;
+  /* width: 100%; */
 }
 
 .ProjectListItem-leftSide {
@@ -20,22 +21,26 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .ProjectListItem-userInfo {
- display: flex;
- padding: 20px 10px;
- box-shadow: 5px 5px 15px  black;
- border-radius: 10px;
- background: white;
+  display: flex;
+  margin-left: 180px;
+  border-radius: 0px 70px 70px 70px;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 15px  black;
+  /* border-radius: 10px; */
+  background: red;
+  background: white;
+  width: 400px;
 }
 
 .ProjectListItem-userInfo img {
-  width: 150px;
+  /* width: 150px; */
   height: 150px;
   border-radius: 100px;
   box-shadow: 1px 5px 15px  black;
+  /* margin: 100px; */
 }
 
 .ProjectListItem-userInfo h1 {
@@ -51,9 +56,9 @@
 .ProjectListItem-fruitIcons {
   display: flex;
   justify-content: center;
-  /* border: 1px solid black;
+  border: 1px solid black;
   box-shadow: 5px 5px 15px black;
-  border-radius: 10px; */
+  border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   background: transparent;
@@ -82,4 +87,7 @@
 }
 .avatar {
   margin: 0 auto;
+}
+.BoardImage {
+  margin-top: -80px;
 }

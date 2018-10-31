@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import HomeView from "../HomeView";
 import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
+import SignUpPage from "../SignUpPage/SignUpPage";
+
 import posed from "react-pose";
 import "./App.css";
 
@@ -18,6 +21,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+        <Navbar />
           <header className="App-header">
             <NavLink exact to="/">
               <PushUp
@@ -33,6 +37,7 @@ class App extends Component {
             <Route exact path="/projects/:projectId" component={ProjectView} />
             <Route exact path="user/projects/:userId" component={ProjectView} />
             <Route exact path="/user/:userId" component={UserProfileView} />
+            <Route exact path="/sign-up" component={SignUpPage} />
           </header>
           <div className="App-footer">
             <a

@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -20,7 +20,7 @@
 .App-logo {
   max-width: 100px;
   max-height: 100px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .App-footer {

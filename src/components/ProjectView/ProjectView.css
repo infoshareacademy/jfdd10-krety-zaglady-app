@@ -1,14 +1,16 @@
 .ProjectView-projectAuthor {
     margin-top: 30px;
+    /* margin: 0 auto; */
+    
 }
 
 .main_box{
     background: gray;
-    /* height: 400px; */
+    height: 400px;
 }
 .top_box{
     background: green;
-    /* height: 200px; */
+    height: 200px;
 }
 
 .ProjectView-board {
@@ -18,8 +20,15 @@
 }
 
 
+
 .BordLegend{
     margin: 0 auto;
     margin-top: 30px;
    
+
+.main_b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
