@@ -1,18 +1,35 @@
 .ProjectView-projectAuthor {
     margin-top: 30px;
+    /* margin: 0 auto; */
 }
 
 .main_box{
     background: gray;
-    /* height: 400px; */
+    height: 400px;
 }
 .top_box{
     background: green;
-    /* height: 200px; */
+    height: 200px;
 }
 
 .ProjectView-board {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.BordLegend{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.main_b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.PushUpBox {
+    display: flex;
+    flex-direction: row;
 }

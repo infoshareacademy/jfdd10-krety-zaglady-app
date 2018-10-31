@@ -40,7 +40,7 @@ class ProjectBoard extends Component {
     ));
 
     return (
-      <PushUp
+      <div
       pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
           onMouseLeave={() => this.setState({ hovering: false })}
@@ -49,7 +49,7 @@ class ProjectBoard extends Component {
       <table>
         <tbody>{grid}</tbody>
       </table>
-      </PushUp>
+      </div>
     );
   }
 }

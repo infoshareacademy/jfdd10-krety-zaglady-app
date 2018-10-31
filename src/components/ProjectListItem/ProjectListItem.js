@@ -3,6 +3,7 @@ import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
 import posed from "react-pose";
+import ProjectBoard from '../ProjectBoard/ProjectBoard'
 
 const PushUp = posed.div({
   idle: { scale: 1 },
@@ -16,25 +17,26 @@ class ProjectListItem extends Component {
         <ProjectAuthor {...this.props.author} />
 
         <PushUp
+          className="ProjectListItem-boardImage"
           pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
           onMouseLeave={() => this.setState({ hovering: false })}
-          className="ProjectListItem-boardImage"
         >
           <Link
             to={"projects/" + this.props.id}
             style={{ textDecoration: "none" }}
             className="ProjectListItem"
           >
-            <img src={this.props.boardImage} alt="boardImage" />
             <div className="ProjectListItem-fruitIcons">
               {Object.entries(this.props.fruits || {}).map(([key, value]) => {
+
                 return {key, value}})
               
              .map(fruit => {
-                return(<img src={fruit.value} alt={fruit.key} />);
+                return(<div className={fruit.key} ></div>);
               })}
             </div>
+                <img className="BoardImage" src={this.props.boardImage} alt="boardImage" />
           </Link>
         </PushUp>
       </div>
@@ -42,3 +44,6 @@ class ProjectListItem extends Component {
   }
 }
 export default ProjectListItem;
+
+
+// alt={fruit.key}
