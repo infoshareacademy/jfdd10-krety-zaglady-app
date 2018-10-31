@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Navbar.css";
 import SignIn from "../SignIn/SignIn";
 import SignUpButton from "../SignUpButton/SignUpButton";
+import SignOut from "../SignOut/SignOut"
 // import { Link } from "react-router-dom";
 // import posed from "react-pose";
 
@@ -13,9 +14,8 @@ class Navbar extends Component {
         <div class="navbar">
         <div class="menu">
             <div class="navigation">
-            <SignIn />
-            <SignUpButton /> 
-            
+             
+            <SignOut />
             </div>
         </div>
     </div>

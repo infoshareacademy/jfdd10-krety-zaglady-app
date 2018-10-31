@@ -3,6 +3,8 @@ import firebase from 'firebase'
 
 
 import "./SignOut.css";
+import SignIn from "../SignIn/SignIn";
+import SignUpButton from "../SignUpButton/SignUpButton";
 
 
 class SignOut extends Component {
@@ -18,17 +20,19 @@ class SignOut extends Component {
         firebase.auth().onAuthStateChanged(user => this.setState({ user }))
     }
     render() {
+        const user = this.state.user
         return user ? (
             <>
               <p>
-                {user.email} <button onClick={() => signOut()}>sign out</button>
+                {user.userName} <button onClick={this.handleSignOutClick}>Wyloguj się</button>
               </p>
               {this.props.children}
             </>
           ) : (
             <>
-              <SignInForm />
-              <SignUpForm />
+              <SignIn />
+            <SignUpButton />
+
             </>
           );
     }

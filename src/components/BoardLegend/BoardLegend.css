@@ -1,29 +1,31 @@
+.FruitBoxName{
+  background-color: white; 
+}
 .BoardLegend {
-display: flex;
+  display: flex;
   justify-content: center;
-  /* border: 1px solid black;
+  border: 1px solid black;
   box-shadow: 5px 5px 15px black;
-  border-radius: 10px; */
+  border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background:transparent;
+  background: transparent;
   margin-top: 50px;
+  background-color: darkgoldenrod;
+  /* width: 70px; */
+  padding: 10px;
+  
 }
 
-
 .BoardLegend-fruitIcon img {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }     
-
-
-
-
-
-
-    
-
-
-
+  width: 50px;
+  height: 50px;
+}
+.SpanName {
+  background-color: white;
+  box-shadow: 4px 4px 10px black;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 50px;
+}

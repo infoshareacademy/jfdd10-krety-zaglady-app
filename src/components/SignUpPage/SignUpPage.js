@@ -23,16 +23,24 @@ class SignUpPage extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    firebase.auth().createUserWithEmailAndPassword(
-      this.state.name,
-      this.state.surname,
-      this.state.email,
-      this.password = this.password2
-    ).then(
-      () => this.setState({ error: null })
-    ).catch(
-      error => this.setState({ error })
-    )
+      if (this.state.password !== this.state.password2){
+        this.setState({
+          error: {message: "Hasła się nie zgadzają."}
+        })
+      } else  {
+        firebase.auth().createUserWithEmailAndPassword(
+          this.state.email,
+          this.state.password
+        ).then(
+          (data) => {
+          firebase.database().ref('/users/' + data.user.uid).set({name: this.state.name, surname: this.state.surname})
+          this.setState({ error: null })
+          this.props.history.push ("/welcome")
+          }
+        ).catch(
+          error => this.setState({ error })
+        )
+      }
   }
 
   render() {
@@ -48,9 +56,11 @@ class SignUpPage extends Component {
         <td> 
         <input
           placeholder="Imię"
+          required
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
+          
         /></td>
         </tr>
         <tr><td><label for="surname">Nazwisko</label></td>
@@ -84,6 +94,7 @@ class SignUpPage extends Component {
           name="password"
           value={this.state.password}
           onChange={this.handleChange}
+          type="password"
         />
         </td>
       </tr>
@@ -97,6 +108,7 @@ class SignUpPage extends Component {
           name="password2"
           value={this.state.password2}
           onChange={this.handleChange}
+          type="password"
         />
         </td>
         </tr>
@@ -104,7 +116,9 @@ class SignUpPage extends Component {
       </table>
         
         <div>
+      
         <button id="register" className="register">Wyślij</button>
+        
           <img src="/data/signmole.png" alt="sign" className="Sign-drawing" /></div>
     
       </form>

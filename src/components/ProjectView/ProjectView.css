@@ -1,7 +1,6 @@
 .ProjectView-projectAuthor {
     margin-top: 30px;
     /* margin: 0 auto; */
-    
 }
 
 .main_box{
@@ -17,18 +16,16 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
-
-
-
 .BordLegend{
     margin: 0 auto;
     margin-top: 30px;
-   
 }
 .main_b {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-
+    flex-wrap: wrap;
 }

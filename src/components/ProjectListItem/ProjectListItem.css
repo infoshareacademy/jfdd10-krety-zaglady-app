@@ -62,6 +62,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
   background: transparent;
+  background-color: darkgoldenrod;
+
 }
 
 .ProjectListItem-fruitIcons img {
@@ -90,4 +92,65 @@
 }
 .BoardImage {
   margin-top: -80px;
+}
+
+/* 
+-------------------------FRUITS-------------------------
+*/
+
+.cell {
+  color: red;
+  height: 50px;
+  width: 50px;
+}
+.null{
+  background-size: cover;
+  background-image : url("../grass.jpg");
+}
+.undefined {
+  background-size: cover;
+  background-image : url("../grass.jpg");  
+}
+.tree {
+  background: brown;
+  background: url("../tree.jpg");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+
+}
+/*
+--------------------FRUITS-------------------
+*/
+.tomato {
+  height: 50px;
+  width: 50px;
+}
+.carrot {
+  height: 50px;
+  width: 50px;
+}
+.apple {
+  height: 50px;
+  width: 50px;
+}
+.plum {
+  height: 50px;
+  width: 50px;
+}
+.cherry {
+  height: 50px;
+  width: 50px;
+}
+.pear {
+  height: 50px;
+  width: 50px;
+}
+.broccoli {
+  height: 50px;
+  width: 50px;
+}
+.blueberries {
+  height: 50px;
+  width: 50px;
 }
