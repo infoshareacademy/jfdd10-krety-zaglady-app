@@ -29,3 +29,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.PushUpBox {
+    display: flex;
+    flex-direction: row;
+}
