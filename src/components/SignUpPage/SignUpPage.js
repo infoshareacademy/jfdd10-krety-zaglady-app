@@ -112,7 +112,9 @@ class SignUpPage extends Component {
       </table>
         
         <div>
+        <Link to={"/welcome"} style={{ textDecoration: "none" }} className="WelcomePage">
         <button id="register" className="register">Wyślij</button>
+        </Link>
           <img src="/data/signmole.png" alt="sign" className="Sign-drawing" /></div>
     
       </form>
