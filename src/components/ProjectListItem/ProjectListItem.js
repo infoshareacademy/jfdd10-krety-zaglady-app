@@ -28,7 +28,7 @@ class ProjectListItem extends Component {
           >
             <img src={this.props.boardImage} alt="boardImage" />
             <div className="ProjectListItem-fruitIcons">
-              {Object.entries(this.props.fruits).map(([key, value]) => {
+              {Object.entries(this.props.fruits || {}).map(([key, value]) => {
                 return {key, value}})
               
              .map(fruit => {

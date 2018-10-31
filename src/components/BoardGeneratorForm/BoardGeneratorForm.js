@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import firebase from 'firebase';
+import firebase from "firebase";
 
 import "./BoardGeneratorForm.css";
 
@@ -56,22 +56,28 @@ class BoardGeneratorForm extends Component {
   generateBoard = () => {
     let board = this.state.fields;
     let checkedFruits = this.getCheckedFruits();
+    console.log(checkedFruits)
     for (let row = 0; row < this.state.size; row++) {
       for (let col = 0; col < this.state.size; col++) {
         if (Math.random() > 0.5) {
+          board[row] = board[row] || {}
           board[row][col] = this.pickRandomFruit(checkedFruits);
         }
       }
     }
-    this.setState({
-      fields: board
-    });
+
     return board;
+  };
+
+  handleTextInputChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   };
 
   handleInputChange = event => {
     const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
+    const value = target.checked;
     const name = target.name;
 
     this.setState({
@@ -94,24 +100,22 @@ class BoardGeneratorForm extends Component {
   };
 
   handleSubmit = event => {
-    event.preventDefault()
-    this.generateBoard()
-    fetch('https://kretogrod-app.firebaseio.com/projects.json', {
+    event.preventDefault();
+    const board = this.generateBoard();
+    fetch("https://kretogrod-app.firebaseio.com/projects.json", {
       method: "POST",
-      body: JSON.stringify ({
-        projects: this.state
-      }),
+      body: JSON.stringify({ ...this.state, fields: board }),
       headers: {
         "Content-Type": "application/json"
       }
-    })
+    });
   };
 
   render() {
     return (
       <div className="BoardGeneratorForm">
         <h2>Generator Projektu</h2>
-        <form className="BoardGeneratorForm-form">
+        <form className="BoardGeneratorForm-form" onSubmit={this.handleSubmit}>
           <div className="BoardGeneratorForm-formContainer">
             <h3>Informacje</h3>
             <p>Nazwij i opisz swój projekt ogródka</p>
@@ -122,7 +126,7 @@ class BoardGeneratorForm extends Component {
                 name="userDescriptionTitle"
                 placeholder="Tytuł projektu..."
                 value={this.state.userDescriptionTitle}
-                onChange={this.handleInputChange}
+                onChange={this.handleTextInputChange}
               />
             </label>
             <label>
@@ -134,7 +138,7 @@ class BoardGeneratorForm extends Component {
                 cols="30"
                 placeholder="Opis projektu..."
                 value={this.state.userGardenDescription}
-                onChange={this.handleInputChange}
+                onChange={this.handleTextInputChange}
               />
             </label>
             <h3>Wielkość ogródka</h3>
@@ -254,7 +258,7 @@ class BoardGeneratorForm extends Component {
               </label>
             </div>
           </div>
-          <button onSubmit={this.handleSubmit}>GENERUJ PROJEKT</button>
+          <button>GENERUJ PROJEKT</button>
         </form>
       </div>
     );
