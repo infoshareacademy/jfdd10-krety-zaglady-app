@@ -2,11 +2,7 @@ import React, { Component } from "react";
 
 import "./BoardGeneratorForm.css";
 
-
-
 class BoardGeneratorForm extends Component {
-  
-  
   state = {
     authorId: "",
     boardImage:
@@ -19,10 +15,11 @@ class BoardGeneratorForm extends Component {
       apple: null,
       plum: null,
       pear: null,
-      bluberries: null,
+      blueberries: null,
       broccoli: null,
       tomato: null,
-      carrot: null
+      carrot: null,
+      tree: null
     },
     fields: {
       0: {
@@ -38,17 +35,26 @@ class BoardGeneratorForm extends Component {
     }
   };
 
-
-  
-  handleInputChange = (event) => {
+  handleInputChange = event => {
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
 
     this.setState({
       [name]: value
     });
-  }
+  };
+
+  handleAddAllFruits = event => {
+    const fruitsArray = Object.keys(this.state.fruits);
+    const updatedFruitsArray = fruitsArray.map(fruit => ({
+      [fruit]: event.target.checked
+    }));
+
+    this.setState({
+      fruits: Object.assign({}, ...updatedFruitsArray)
+    });
+  };
 
   render() {
     return (
@@ -104,48 +110,94 @@ class BoardGeneratorForm extends Component {
             <div className="BoardGeneratorForm-fruitContainer">
               <label name="cherry">
                 <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png" />
-                <input type="checkbox" name="cherry" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="cherry"
+                  checked={this.state.fruits.cherry}
+                  onChange={this.handleInputChange}
+                />
               </label>
               <label name="apple">
                 <img src="https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png" />
-                <input type="checkbox" name="apple" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="apple"
+                  checked={this.state.fruits.apple}
+                  onChange={this.handleInputChange}
+                />
               </label>
               <label name="plum">
                 <img src="https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_ameixa-512.png" />
-                <input type="checkbox" name="plum" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="plum"
+                  checked={this.state.fruits.plum}
+                  onChange={this.handleInputChange}
+                />
               </label>
               <label name="pear">
                 <img src="https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png" />
-                <input type="checkbox" name="pear" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="pear"
+                  checked={this.state.fruits.pear}
+                  onChange={this.handleInputChange}
+                />
               </label>
               <label name="blueberries">
                 <img src="https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png" />
-                <input type="checkbox" name="blueberries" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="blueberries"
+                  checked={this.state.fruits.blueberries}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <label name="tree">
+                <img src="../tree.jpg" />
+                <input
+                  type="checkbox"
+                  name="tree"
+                  checked={this.state.fruits.tree}
+                  onChange={this.handleInputChange}
+                />
               </label>
             </div>
             <div className="BoardGeneratorForm-vegetableContainer">
               <label name="broccoli">
                 <img src="https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png" />
-                <input type="checkbox" name="broccoli" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="broccoli"
+                  checked={this.state.fruits.broccoli}
+                  onChange={this.handleInputChange}
+                />
               </label>
               <label name="tomato">
                 <img src="https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png" />
-                <input type="checkbox" name="tomato" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="tomato"
+                  checked={this.state.fruits.tomato}
+                  onChange={this.handleInputChange}
+                />
               </label>
               <label name="carrot">
                 <img src="https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png" />
-                <input type="checkbox" name="carrot" onChange={this.handleInputChange}/>
+                <input
+                  type="checkbox"
+                  name="carrot"
+                  checked={this.state.fruits.carrot}
+                  onChange={this.handleInputChange}
+                />
               </label>
             </div>
             <div className="BoardGeneratorForm-selectAll">
               <label name="checkAllFriuits">
                 <span>Zaznacz wszystko</span>
-                <input type="checkbox" name="checkAllFriuits" />
+                <input type="checkbox" name="checkAllFriuits" onChange={this.handleAddAllFruits}/>
               </label>
-              <label name="uncheckAllFriuits">
-                <span>Odznacz wszystko</span>
-                <input type="checkbox" name="uncheckAllFriuits" />
-              </label>
+
             </div>
           </div>
           <button>GENERUJ PROJEKT</button>
