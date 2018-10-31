@@ -19,7 +19,7 @@ class SignIn extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    firebase.auth().createUserWithEmailAndPassword(
+    firebase.auth().signInWithEmailAndPassword(
       this.state.email,
       this.state.password
     ).then(

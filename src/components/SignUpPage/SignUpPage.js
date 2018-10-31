@@ -32,9 +32,11 @@ class SignUpPage extends Component {
           this.state.email,
           this.state.password
         ).then(
-          (data) =>
-          firebase.database().ref('/users/' + data.user.uid).set({name: this.state.name, surname: this.state.surname}),
+          (data) => {
+          firebase.database().ref('/users/' + data.user.uid).set({name: this.state.name, surname: this.state.surname})
           this.setState({ error: null })
+          this.props.history.push ("/welcome")
+          }
         ).catch(
           error => this.setState({ error })
         )
@@ -54,9 +56,11 @@ class SignUpPage extends Component {
         <td> 
         <input
           placeholder="Imię"
+          required
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
+          
         /></td>
         </tr>
         <tr><td><label for="surname">Nazwisko</label></td>
@@ -112,9 +116,9 @@ class SignUpPage extends Component {
       </table>
         
         <div>
-        <Link to={"/welcome"} style={{ textDecoration: "none" }} className="WelcomePage">
+      
         <button id="register" className="register">Wyślij</button>
-        </Link>
+        
           <img src="/data/signmole.png" alt="sign" className="Sign-drawing" /></div>
     
       </form>
