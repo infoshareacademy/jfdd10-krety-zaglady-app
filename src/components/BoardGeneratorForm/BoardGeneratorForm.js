@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import firebase from 'firebase';
 
 import "./BoardGeneratorForm.css";
 
@@ -92,7 +93,19 @@ class BoardGeneratorForm extends Component {
     });
   };
 
-  handleSubmit = event => {};
+  handleSubmit = event => {
+    event.preventDefault()
+    this.generateBoard()
+    fetch('https://kretogrod-app.firebaseio.com/projects.json', {
+      method: "POST",
+      body: JSON.stringify ({
+        projects: this.state
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+  };
 
   render() {
     return (
@@ -241,7 +254,7 @@ class BoardGeneratorForm extends Component {
               </label>
             </div>
           </div>
-          <button>GENERUJ PROJEKT</button>
+          <button onSubmit={this.handleSubmit}>GENERUJ PROJEKT</button>
         </form>
       </div>
     );
