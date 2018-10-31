@@ -5,7 +5,7 @@ import "./BoardGeneratorForm.css";
 
 class BoardGeneratorForm extends Component {
   state = {
-    authorId: "",
+    // authorId: firebase.auth().currentUser.uid,
     boardImage:
       "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
     userDescriptionTitle: "",
@@ -154,7 +154,7 @@ class BoardGeneratorForm extends Component {
                 onChange={this.handleSizeChange}
               />
             </label>
-            <span>{this.state.size} rzędów i kolumn</span>
+            <span>{this.state.size}</span>
           </div>
           <div className="BoardGeneratorForm-itemsContainer">
             <h3>Elementy</h3>

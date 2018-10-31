@@ -1,3 +1,6 @@
+.BoardGeneratorForm h2, h3, p {
+  text-align: center;
+}
 
 .BoardGeneratorForm-form {
   display: flex;
@@ -32,6 +35,7 @@
 .BoardGeneratorForm-formContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
 }
 
@@ -67,7 +71,7 @@
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
-  width: 70%;
+  width: 100%;
 }
 input[type=range]:focus {
   outline: none;
