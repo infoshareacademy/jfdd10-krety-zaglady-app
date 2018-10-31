@@ -19,7 +19,7 @@ class ProjectAuthor extends Component {
             className="AvatarAuthor"
             // noLink
             disabled
-            userId={this.props.userId}
+            userId={this.props.id}
             name={this.props.name}
             userImage={this.props.userImage}
           />

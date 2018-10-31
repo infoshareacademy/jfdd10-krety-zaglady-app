@@ -17,7 +17,7 @@
 .tree {
   background: brown;
   background: url("../tree.jpg");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 
 }
@@ -33,41 +33,41 @@
 */
 .tomato {
   background: url("https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .carrot {
   background: url("https://cdn3.iconfinder.com/data/icons/spring-23/32/carrot-vegetable-spring-food-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .apple {
   background: url("https://cdn3.iconfinder.com/data/icons/fruits-8/512/apple-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .plum {
   background: url("https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_ameixa-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .cherry {
   background: url("https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_cerejas-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .pear {
   background: url("https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .broccoli {
   background: url("https://cdn4.iconfinder.com/data/icons/breakfast-14/48/broccoli-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }
 .blueberries {
   background: url("https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Black_Berries-512.png");
-  background-color: lightgreen;
+  background-color: darkgoldenrod;
   background-size: cover;
 }

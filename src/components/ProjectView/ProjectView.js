@@ -46,7 +46,7 @@ class ProjectView extends Component {
     return (
       <div className="main_b">
         <div className="ProjectView-projectAuthor">
-          <AuthorAvatar project={project} name={project.author.userName} userImage= {project.author.userImage} />
+          <AuthorAvatar project={project} userId={project.author.id} name={project.author.userName} userImage= {project.author.userImage} />
         </div>
         <div className="ProjectView-board">
           <div className="top_box" />

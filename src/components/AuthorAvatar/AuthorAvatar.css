@@ -1,20 +1,30 @@
 .avatar {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    background: white;
-    border: 1px solid black;
-    /* margin: -100px; */
-    text-shadow: -1px -3px green, 2px 2px #333;
-    margin: 0 auto;
+  /* border-radius: 50%; */
+  border-radius: 0px 50px 50px 0px;
+
+  width: 200px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  /* margin: -100px; */
+  text-shadow: -1px -3px green, 2px 2px #333;
+  margin: 0 auto;
 }
 .nameBox {
-    font-size: 50px;
 }
-.AvatarName {
-
+.AvatarNameText {
+  padding: 5px;
+  font-size: 40px;
+  box-shadow: 1px 5px 15px black;
+  background: white;
+  border-radius: 0px 50px 50px 0px;
+  text-align: center;
 }
 .AvatarLink {
-    text-decoration: none;
-    color: green;
+  text-decoration: none;
+  color: green;
+}
+.PrefixBox {
+  color: black;
+  font-size: 20px;
 }
