@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 import "./BoardGeneratorForm.css";
 
+
+
 class BoardGeneratorForm extends Component {
+  
+  
   state = {
     authorId: "",
     boardImage:
@@ -18,21 +22,29 @@ class BoardGeneratorForm extends Component {
       bluberries: null,
       broccoli: null,
       tomato: null,
-      carrot: null,
+      carrot: null
     },
-    // fields: {
-    //   0: {
-    //     3: "tree",
-    //     4: "tree"
-    //   },
-    //   3: {
-    //     1: "pond"
-    //   },
-    //   2: {
-    //     2: "pond"
-    //   }
-    // }
+    fields: {
+      0: {
+        3: "tree",
+        4: "tree"
+      },
+      3: {
+        1: "pond"
+      },
+      2: {
+        2: "pond"
+      }
+    }
   };
+
+
+  handleChange = (event) => (
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  )
+ 
 
   render() {
     return (
@@ -48,6 +60,8 @@ class BoardGeneratorForm extends Component {
                 type="text"
                 name="userDescriptionTitle"
                 placeholder="Tytuł projektu..."
+                value={this.state.userDescriptionTitle}
+                onChange={this.handleChange}
               />
             </label>
             <label>
@@ -58,6 +72,8 @@ class BoardGeneratorForm extends Component {
                 rows="10"
                 cols="30"
                 placeholder="Opis projektu..."
+                value={this.state.userGardenDescription}
+                onChange={this.handleChange}
               />
             </label>
             <h3>Wielkość ogródka</h3>
@@ -69,9 +85,11 @@ class BoardGeneratorForm extends Component {
                 min="3"
                 max="10"
                 name="size"
+                value={this.state.size}
+                onChange={this.handleChange}
               />
             </label>
-            <span>10 rzędów i kolumn</span>
+            <span>{this.state.size} rzędów i kolumn</span>
           </div>
           <div className="BoardGeneratorForm-itemsContainer">
             <h3>Elementy</h3>
@@ -121,8 +139,8 @@ class BoardGeneratorForm extends Component {
                 <input type="checkbox" name="allFruits" />
               </label>
             </div>
-            <button>GENERUJ PROJEKT</button>
           </div>
+          <button>GENERUJ PROJEKT</button>
         </form>
       </div>
     );
