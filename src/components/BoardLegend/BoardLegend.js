@@ -28,7 +28,7 @@ class BoardLegend extends Component {
             })
 
             .map(fruit => {
-              return <img src={fruit.value} alt={fruit.key} />;
+              return <div className={fruit.key}><span className="SpanName">{fruit.value}</span></div>;
             })}
             </div>
         </div>

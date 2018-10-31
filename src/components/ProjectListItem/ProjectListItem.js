@@ -33,7 +33,7 @@ class ProjectListItem extends Component {
                 return {key, value}})
               
              .map(fruit => {
-                return(<img src={fruit.value} alt={fruit.key} />);
+                return(<div className={fruit.key} ></div>);
               })}
             </div>
                 <img className="BoardImage" src={this.props.boardImage} alt="boardImage" />
@@ -44,3 +44,6 @@ class ProjectListItem extends Component {
   }
 }
 export default ProjectListItem;
+
+
+// alt={fruit.key}

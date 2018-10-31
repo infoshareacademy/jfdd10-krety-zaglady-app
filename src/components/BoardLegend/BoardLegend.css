@@ -1,4 +1,7 @@
 .BoardLegend {
+  /* position: absolute; */
+  /* left: 50px; */
+  /* top:200px; */
   display: flex;
   justify-content: center;
   /* border: 1px solid black;
@@ -15,4 +18,7 @@
   height: 50px;
   margin-left: 10px;
   margin-right: 10px;
+}
+.SpanName {
+  margin-left: 80px;
 }
