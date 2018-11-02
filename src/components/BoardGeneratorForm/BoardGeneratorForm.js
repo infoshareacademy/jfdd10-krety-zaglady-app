@@ -134,6 +134,7 @@ class BoardGeneratorForm extends Component {
               <input
                 className="BoardGeneratorForm-title"
                 type="text"
+                required
                 name="userDescriptionTitle"
                 placeholder="Tytuł projektu..."
                 value={this.state.userDescriptionTitle}
@@ -144,6 +145,7 @@ class BoardGeneratorForm extends Component {
               <textarea
                 className="BoardGeneratorForm-description"
                 type="textarea"
+                required
                 name="userGardenDescription"
                 rows="10"
                 cols="30"
