@@ -7,13 +7,12 @@ import posed from "react-pose";
 
 const PushUp = posed.div({
   idle: { scale: 1 },
-  hovered: { scale: 1.2 }
+  hovered: { scale: 1.5 }
 });
 class ProjectView extends Component {
   state = {
     projectsWithAuthors: [],
     hovering: false
-
   };
 
   componentDidMount() {
