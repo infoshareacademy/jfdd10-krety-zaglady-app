@@ -1,42 +1,46 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import PropTypes from 'prop-types'
+
 import "./EditProfile.css";
-import firebase from "firebase";
 
 
+class UserEditForm extends Component {
+  // static propTypes = {
 
-class EditProfile extends Component {
-    state = {
-        name: this.props.userName,
-        surname: this.props.surname
-      };
-    
-      handleSubmit = event => {
-        event.preventDefault();
-    
-        this.props.updateUser(
-          this.props.uid,
-          this.state.name,
-          this.state.surname
-        );
-      };
-    
-      handleNameChange = event => {
-        this.setState({
-          name: event.target.value
-        });
-      };
-    
-      handleSurnameChange = event => {
-        this.setState({
-          surname: event.target.value
-        });
-      };
-    
+  // }
+
+  state = {
+    name: this.props.name,
+    surname: this.props.surname
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    this.props.updateUser(
+      this.props.userId,
+      this.state.name,
+      this.state.surname
+    );
+  };
+
+  handleNameChange = event => {
+    this.setState({
+      name: event.target.value
+    });
+  };
+
+  handleSurnameChange = event => {
+    this.setState({
+      surname: event.target.value
+    });
+  };
 
   render() {
     return (
-      <div className="EditProfileDiv">
+     
+       
+        <div className="EditProfileDiv">
         <form onSubmit={this.handleSubmit} className="EditProfileForm">
         {this.state.error && <p>{this.state.error.message}</p>}
         <table>
@@ -130,9 +134,10 @@ class EditProfile extends Component {
       </form>
       
       </div>
+        
       
     );
   }
 }
 
-export default EditProfile;
+export default UserEditForm;
