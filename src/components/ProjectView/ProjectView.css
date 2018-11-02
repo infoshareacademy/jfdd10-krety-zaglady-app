@@ -15,6 +15,7 @@
 .ProjectView-board {
     display: flex;
     justify-content: center;
+    background-color: darkgoldenrod;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -32,4 +33,5 @@
 .PushUpBox {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }

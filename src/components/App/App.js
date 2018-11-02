@@ -10,6 +10,9 @@ import EditProfile from "../EditProfile/EditProfile";
 
 import posed from "react-pose";
 import "./App.css";
+import BoardGeneratorForm from "../BoardGeneratorForm/BoardGeneratorForm";
+import GameFruit from "../GameFruit/GameFruit";
+
 
 
 const PushUp = posed.div({
@@ -34,15 +37,17 @@ class App extends Component {
                 <img src="/data/molelogo.png" alt="home" className="App-logo" />
               </PushUp>
             </NavLink>
+            
 
             <Route exact path="/" component={HomeView} />
             <Route exact path="/projects/:projectId" component={ProjectView} />
             <Route exact path="user/projects/:userId" component={ProjectView} />
             <Route exact path="/user/:userId" component={UserProfileView} />
+            <Route exact path="/userId/edit-form" component={BoardGeneratorForm} />
             <Route exact path="/sign-up" component={SignUpPage} />
             <Route exact path="/welcome" component={WelcomePage} />
             <Route exact path="/edit-profile" component={EditProfile} />
-            
+            <Route exact path="/gamefruit" component={GameFruit} /> 
           </header>
           <div className="App-footer">
             <a

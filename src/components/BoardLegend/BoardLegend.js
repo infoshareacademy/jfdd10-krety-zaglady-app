@@ -33,14 +33,14 @@ class BoardLegend extends Component {
 
         <div className="FruitLegendBox" BoardLegend-fruitIcon>
           <div className="BoardLegend-fruitIcon">
-            {Object.entries(this.props.fruits)
+            {Object.entries(this.props.fruits || dictionary)
               .map(([key, value]) => {
                 return { key, value };
               })
               .map(fruit => {
                 return (
                   <div>
-                  <div className={fruit.key}>
+                  <div className={fruit.key} id="fruIco">
                   </div>
                     <span className="SpanName">{typeof fruit.value === 'string' ? fruit.value : dictionary[fruit.key]}</span>
                   </div>
