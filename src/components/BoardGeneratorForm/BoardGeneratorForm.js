@@ -52,19 +52,21 @@ class BoardGeneratorForm extends Component {
     for (let row = 0; row < this.state.size; row++) {
       for (let col = 0; col < this.state.size; col++) {
         if (Math.random() > 0.5) {
-          board[row] = board[row] || {}
+          board[row] = board[row] || {};
           board[row][col] = this.pickRandomFruit(checkedFruits);
         }
       }
     }
+
+    
+    return board;
+  };
 
   handleSizeChange = event => {
     this.setState({
       size: event.target.value
     });
     this.generateEmptyBoard();
-  };
-    return board;
   };
 
   handleTextInputChange = event => {

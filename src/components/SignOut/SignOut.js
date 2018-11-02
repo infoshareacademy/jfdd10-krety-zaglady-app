@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import firebase from "firebase";
 
 import "./SignOut.css";
@@ -24,13 +25,14 @@ class SignOut extends Component {
         <div className="sign-out-navbar">
           <div className="add-project-div">
             {" "}
+            <NavLink to="/userId/edit-form">
             <button
               id="add-project-button"
               className="add-project-button"
-              onClick={this.handleSignOutClick}
+              // onClick={this.handleSignOutClick}
             >
               Utwórz projekt
-            </button>{" "}
+            </button></NavLink>{" "}
           </div>
           <div className="navbar-user">
             {" "}

@@ -34,7 +34,7 @@ class App extends Component {
                 <img src="/data/molelogo.png" alt="home" className="App-logo" />
               </PushUp>
             </NavLink>
-            <NavLink to="/userId/edit-form">Utwórz projekt</NavLink>
+            
 
             <Route exact path="/" component={HomeView} />
             <Route exact path="/projects/:projectId" component={ProjectView} />
