@@ -4,6 +4,7 @@ import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
 import posed from "react-pose";
 import ProjectBoard from '../ProjectBoard/ProjectBoard'
+import { Z_FILTERED } from "zlib";
 
 const PushUp = posed.div({
   idle: { scale: 1 },
@@ -33,7 +34,7 @@ class ProjectListItem extends Component {
                 return {key, value}})
               
              .map(fruit => {
-                return(<div className={fruit.key} ></div>);
+               return(<div className={fruit.key} ></div>);
               })}
             </div>
                 <img className="BoardImage" src={this.props.boardImage} alt="boardImage" />
