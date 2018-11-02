@@ -14,7 +14,7 @@ class ProjectAuthor extends Component {
 
   render() {
     return (
-      <Link to={"/user/" + this.props.userId} className="ProjectAuthorLink">
+      <Link to={"/user/" + this.props.id} className="ProjectAuthorLink">
       <AuthorAvatar 
             className="AvatarAuthor"
             // noLink
