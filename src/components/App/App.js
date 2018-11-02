@@ -6,7 +6,7 @@ import ProjectView from "../ProjectView";
 import UserProfileView from "../UserProfileView";
 import SignUpPage from "../SignUpPage/SignUpPage";
 import WelcomePage from "../WelcomePage/WelcomePage";
-import EditProfile from "../EditProfile/EditProfile";
+import EditProfilePage from "../EditProfilePage/EditProfilePage";
 
 import posed from "react-pose";
 import "./App.css";
@@ -46,7 +46,7 @@ class App extends Component {
             <Route exact path="/userId/edit-form" component={BoardGeneratorForm} />
             <Route exact path="/sign-up" component={SignUpPage} />
             <Route exact path="/welcome" component={WelcomePage} />
-            <Route exact path="/edit-profile" component={EditProfile} />
+            <Route exact path="/edit-profile" component={EditProfilePage} />
             <Route exact path="/gamefruit" component={GameFruit} /> 
           </header>
           <div className="App-footer">

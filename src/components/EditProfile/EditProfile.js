@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import PropTypes from 'prop-types'
 
 import "./EditProfile.css";
+import firebase from 'firebase';
 
 
 class UserEditForm extends Component {
@@ -17,11 +18,12 @@ class UserEditForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    this.props.updateUser(
-      this.props.userId,
-      this.state.name,
-      this.state.surname
-    );
+    console.log(this.props.userId)
+
+    firebase.database().ref('users').child(this.props.userId).update({
+        userName: this.state.name,
+        userSurname: this.state.surname
+    })
   };
 
   handleNameChange = event => {
@@ -37,6 +39,8 @@ class UserEditForm extends Component {
   };
 
   render() {
+
+    console.log(this.props)
     return (
      
        
@@ -49,11 +53,10 @@ class UserEditForm extends Component {
         <td><label for="name">Imię</label></td>
         <td> 
         <input
-          placeholder="Imię"
           required
           name="name"
-          value={this.state.userName}
-          onChange={this.handleChange}
+          value={this.state.name}
+          onChange={this.handleNameChange}
           
         /></td>
         </tr>
@@ -62,7 +65,7 @@ class UserEditForm extends Component {
           placeholder="Nazwisko"
           name="surname"
           value={this.state.surname}
-          onChange={this.handleChange}
+          onChange={this.handleSurnameChange}
         /></td>
        </tr>
        <tr><td><label for="city">Miejscowość</label></td>
@@ -77,7 +80,15 @@ class UserEditForm extends Component {
          <td><input
           placeholder="Wiek"
           name="age"
-          value={this.state.surname}
+          value={this.state.age}
+          onChange={this.handleChange}
+        /></td>
+       </tr>
+       <tr><td><label for="description">Opis profilu</label></td>
+         <td><input
+          placeholder="Opis profilu"
+          name="description"
+          value={this.state.description}
           onChange={this.handleChange}
         /></td>
        </tr>

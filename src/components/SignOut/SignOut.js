@@ -30,7 +30,6 @@ class SignOut extends Component {
               <button
                 id="add-project-button"
                 className="add-project-button"
-                onClick={this.handleSignOutClick}
               >
                 Utwórz projekt
               </button>
