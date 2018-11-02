@@ -3,6 +3,14 @@ import ProjectList from "../ProjectList";
 import AppIntro from "../AppIntro/AppIntro";
 import "./HomeView.css";
 
+const funFacts = [
+  "\"Skorupki od jajek rozsyp koło sałaty, fasolki, ogórków, aby ślimaki ich nie zjadały\"",
+  "\"Koło bobu i koperku posadź cebulę - mszyce nie lubią tego zapachu\"",
+  "\"Jeżeli na porzeczce pojawią się mszyce, to spryskaj je rozwodnionym mlekiem\"",
+  "\"Problem z kretami? Wyplenisz je lawendą lub czosnkiem\""
+]
+
+const randomFunFact = funFacts[Math.floor(Math.random()*funFacts.length)];
 class HomeView extends Component {
   state = {
     projectsWithAuthors: []
@@ -40,7 +48,11 @@ class HomeView extends Component {
       <>
         <div className="HomeView-main_box">
           <AppIntro />
-          <h1> WITAJCIE W KRETOGRODZIE! </h1>
+          <h4> 
+            {randomFunFact}
+             </h4>
+
+          
         </div>
         <div className="HomeView-top_box">
           <ProjectList projects={this.state.projectsWithAuthors} />
