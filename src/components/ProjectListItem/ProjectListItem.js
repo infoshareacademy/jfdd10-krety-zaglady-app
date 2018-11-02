@@ -33,7 +33,7 @@ class ProjectListItem extends Component {
               {Object.entries(this.props.fruits).map(([key, value]) => {
                 return {key, value}})
               
-             .map(fruit => {
+             .slice(0,3).map(fruit => {
                return(<div className={fruit.key} ></div>);
               })}
             </div>

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-
+import "./GameFruit.css"
 class GameFruit extends Component {
     render () {
         return (
-            <div>Zaskoczony ?? :D</div>
-        )
+            <div className="viewer">( ; ; )</div>
+            )
+        }
     }
-}
 
 export default GameFruit
