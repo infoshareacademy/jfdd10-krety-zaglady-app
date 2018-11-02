@@ -23,9 +23,13 @@ class SignOut extends Component {
         const user = this.state.user
         return user ? (
             <>
-              <p>
+              <div className="sign-out-navbar">
+              <button id="add-project-button" className="add-project-button" onClick={this.handleSignOutClick}>Utwórz projekt</button>
+                  {/* <div className="add-project-button"> </div> */}
                 <div className="navbar-user"> {user.email} <button id="sign-out" className="sign-out" onClick={this.handleSignOutClick}>Wyloguj się</button>
-                </div>              </p>
+                </div>
+                              
+                </div>
               {this.props.children}
             </>
           ) : (

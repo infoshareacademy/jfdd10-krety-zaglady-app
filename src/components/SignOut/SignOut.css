@@ -1,3 +1,9 @@
+.sign-out-navbar {
+    display: flex;
+    justify-content: space-between;
+    weight: 100%;
+}
+
 #sign-out {
     padding: 10px;
     border-radius: 10px;
@@ -27,4 +33,8 @@
 .navbar-user {
 color: white;
 font-weight: 600;
+}
+
+.add-project-button {
+margin-left: 60px;
 }
