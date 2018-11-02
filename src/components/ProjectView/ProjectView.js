@@ -12,7 +12,7 @@ const PushUp = posed.div({
 class ProjectView extends Component {
   state = {
     projectsWithAuthors: [],
-    hovering: false 
+    hovering: false
   };
 
   componentDidMount() {
@@ -40,6 +40,10 @@ class ProjectView extends Component {
     )
   }
 
+  gardenTrigger() {
+
+  }
+
   render() {
     const projectId = this.props.match.params.projectId;
     const project = this.state.projectsWithAuthors.find(
@@ -57,8 +61,11 @@ class ProjectView extends Component {
         <PushUp
         className="PushUpBox"
         pose={this.state.hovering ? "hovered" : "idle"}
-        onMouseEnter={() => this.setState({ hovering: true })}
+        // onMouseEnter={() => this.setState({ hovering: true })}
         onMouseLeave={() => this.setState({ hovering: false })}
+        onClick={() => this.setState({ hovering: false})}
+        onDoubleClick={() => this.setState({ hovering: true})}
+      
         >
         <div className="ProjectView-board">
           <div className="top_box" />
