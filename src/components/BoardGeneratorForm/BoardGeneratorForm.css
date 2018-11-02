@@ -162,3 +162,11 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
+.GenerateButtonBox {
+  font-size: 30px;
+}
+.GenerateButton{
+  border-radius: 50px;
+  padding: 10px;
+  background: white;
+}

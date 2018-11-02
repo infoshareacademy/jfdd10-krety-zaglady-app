@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import firebase from "firebase";
+import posed from "react-pose";
 
 import "./BoardGeneratorForm.css";
 
+const PushUp = posed.div({
+  idle: { scale: 1 },
+  hovered: { scale: 1.1 }
+});
 class BoardGeneratorForm extends Component {
   state = {
+    hovering: false,
     authorId: null,
     boardImage:
       "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
@@ -271,8 +277,14 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
             </div>
+          <PushUp className="GenerateButtonBox"
+          pose={this.state.hovering ? "hovered" : "idle"}
+          onMouseEnter={this.props.disabled ? null : () => this.setState({ hovering: true })}
+          onMouseLeave={this.props.disabled ? null : () => this.setState({ hovering: false })}
+          >
+          <button className="GenerateButton">GENERUJ PROJEKT</button>
+        </PushUp>
           </div>
-          <button>GENERUJ PROJEKT</button>
         </form>
       </div>
     );
