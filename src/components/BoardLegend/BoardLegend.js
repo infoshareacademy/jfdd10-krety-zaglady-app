@@ -40,7 +40,7 @@ class BoardLegend extends Component {
               .map(fruit => {
                 return (
                   <div>
-                  <div className={fruit.key}>
+                  <div className={fruit.key} id="fruIco">
                   </div>
                     <span className="SpanName">{typeof fruit.value === 'string' ? fruit.value : dictionary[fruit.key]}</span>
                   </div>
