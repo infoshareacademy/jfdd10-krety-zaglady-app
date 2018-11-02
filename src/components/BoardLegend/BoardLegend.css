@@ -23,7 +23,7 @@
 .BoardLegend-fruitIcon{
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
+  width: 250px;
   /* flex-direction: column; */
   /* width: 250px; */
 }
