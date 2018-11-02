@@ -33,7 +33,7 @@ class SignUpPage extends Component {
           this.state.password
         ).then(
           (data) => {
-          firebase.database().ref('/users/' + data.user.uid).set({name: this.state.name, surname: this.state.surname})
+          firebase.database().ref('/users/' + data.user.uid).set({userName: this.state.name, userSurname: this.state.surname})
           this.setState({ error: null })
           this.props.history.push ("/welcome")
           }
