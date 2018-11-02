@@ -64,9 +64,6 @@ class BoardGeneratorForm extends Component {
     });
     this.generateEmptyBoard();
   };
-
-  
-
     return board;
   };
 
