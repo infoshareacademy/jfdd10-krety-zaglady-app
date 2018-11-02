@@ -68,6 +68,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.tree, .cherry, .apple, .carrot, .plum, .pear, .blueberries, .broccoli, .tomato {
+  width: 3vh;
+  height: 3vh;
+  background-color: transparent;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
