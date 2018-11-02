@@ -13,7 +13,6 @@ const PushUp = posed.div({
 class ProjectListItem extends Component {
   state = { hovering: false };
   render() {
-    console.log(this.props.fruits)
     return (
       <div className="ProjectListItem-container">
         <ProjectAuthor {...this.props.author} />
