@@ -16,6 +16,11 @@
 
 .HomeView-main_box h1 {
     padding: 0px 20px 20px 20px;
-    font-size: 60px;
-    
+    font-size: 60px; 
+}
+
+.HomeView-main_box h4 {
+    font-size: 23px;
+    text-shadow: 5px 3px 10px rgb(86, 194, 230);
+    opacity: 0.5;
 }
