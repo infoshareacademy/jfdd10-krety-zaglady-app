@@ -9,6 +9,7 @@ import WelcomePage from "../WelcomePage/WelcomePage";
 
 import posed from "react-pose";
 import "./App.css";
+import GameFruit from "../GameFruit/GameFruit";
 
 
 const PushUp = posed.div({
@@ -40,7 +41,8 @@ class App extends Component {
             <Route exact path="/user/:userId" component={UserProfileView} />
             <Route exact path="/sign-up" component={SignUpPage} />
             <Route exact path="/welcome" component={WelcomePage} />
-            
+            <Route exact path="/gamefruit" component={GameFruit} /> 
+
           </header>
           <div className="App-footer">
             <a
