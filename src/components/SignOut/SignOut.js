@@ -24,8 +24,8 @@ class SignOut extends Component {
         return user ? (
             <>
               <p>
-                {user.userName} <button id="sign-out" className="sign-out" onClick={this.handleSignOutClick}>Wyloguj się</button>
-              </p>
+                <div className="navbar-user"> {user.email} <button id="sign-out" className="sign-out" onClick={this.handleSignOutClick}>Wyloguj się</button>
+                </div>              </p>
               {this.props.children}
             </>
           ) : (
