@@ -10,7 +10,7 @@ class BoardGeneratorForm extends Component {
       "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
     userDescriptionTitle: "",
     userGardenDescription: "",
-    size: 3,
+    size: 4,
     fruits: {
       cherry: null,
       apple: null,
@@ -109,6 +109,7 @@ class BoardGeneratorForm extends Component {
         "Content-Type": "application/json"
       }
     });
+    this.props.history.push ("/projects/:projectId");
   };
 
   render() {
@@ -147,7 +148,7 @@ class BoardGeneratorForm extends Component {
               <input
                 className="BoardGeneratorForm-size"
                 type="range"
-                min="3"
+                min="4"
                 max="10"
                 name="size"
                 value={this.state.size}
@@ -258,7 +259,7 @@ class BoardGeneratorForm extends Component {
               </label>
             </div>
           </div>
-          <button>GENERUJ PROJEKT</button>
+          <button>GENERUJ PROJEKT</button>         
         </form>
       </div>
     );
