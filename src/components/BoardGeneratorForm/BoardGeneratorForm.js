@@ -46,17 +46,9 @@ class BoardGeneratorForm extends Component {
     });
   };
 
-  handleSizeChange = event => {
-    this.setState({
-      size: event.target.value
-    });
-    this.generateEmptyBoard();
-  };
-
   generateBoard = () => {
     let board = this.state.fields;
     let checkedFruits = this.getCheckedFruits();
-    console.log(checkedFruits)
     for (let row = 0; row < this.state.size; row++) {
       for (let col = 0; col < this.state.size; col++) {
         if (Math.random() > 0.5) {
@@ -65,6 +57,15 @@ class BoardGeneratorForm extends Component {
         }
       }
     }
+
+  handleSizeChange = event => {
+    this.setState({
+      size: event.target.value
+    });
+    this.generateEmptyBoard();
+  };
+
+  
 
     return board;
   };
