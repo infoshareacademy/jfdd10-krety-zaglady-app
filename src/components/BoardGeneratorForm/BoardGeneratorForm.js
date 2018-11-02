@@ -5,7 +5,7 @@ import "./BoardGeneratorForm.css";
 
 class BoardGeneratorForm extends Component {
   state = {
-    authorId: firebase.auth().currentUser.uid,
+    authorId: null,
     boardImage:
       "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678074-map-512.png",
     userDescriptionTitle: "",
@@ -24,6 +24,16 @@ class BoardGeneratorForm extends Component {
     },
     fields: {}
   };
+
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged(
+      user => {
+        if (user) {
+          this.setState({ authorId: user.uid })
+        }
+      }
+    )
+  }
 
   //
   getCheckedFruits = () => {
@@ -58,7 +68,6 @@ class BoardGeneratorForm extends Component {
       }
     }
 
-    
     return board;
   };
 
@@ -108,8 +117,9 @@ class BoardGeneratorForm extends Component {
       headers: {
         "Content-Type": "application/json"
       }
-    });
-    this.props.history.push ("/projects/:projectId");
+    })
+      .then(response => response.json())
+      .then(({ name }) => this.props.history.push(`/projects/${name}`));
   };
 
   render() {
@@ -165,7 +175,7 @@ class BoardGeneratorForm extends Component {
             </p>
             <div className="BoardGeneratorForm-fruitContainer">
               <label name="cherry">
-                <div className="cherry"/>
+                <div className="cherry" />
                 <input
                   type="checkbox"
                   name="cherry"
@@ -209,11 +219,12 @@ class BoardGeneratorForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </label>
-              <label name="tree">
+              <label htmlFor="tree">
                 <div className="tree" />
                 <input
                   type="checkbox"
                   name="tree"
+                  id="tree"
                   checked={this.state.fruits.tree}
                   onChange={this.handleInputChange}
                 />
@@ -259,7 +270,7 @@ class BoardGeneratorForm extends Component {
               </label>
             </div>
           </div>
-          <button>GENERUJ PROJEKT</button>         
+          <button>GENERUJ PROJEKT</button>
         </form>
       </div>
     );

@@ -33,7 +33,7 @@ class BoardLegend extends Component {
 
         <div className="FruitLegendBox" BoardLegend-fruitIcon>
           <div className="BoardLegend-fruitIcon">
-            {Object.entries(this.props.fruits)
+            {Object.entries(this.props.fruits || dictionary)
               .map(([key, value]) => {
                 return { key, value };
               })
