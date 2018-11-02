@@ -1,7 +1,7 @@
 .menu{
     z-index: 1000;
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
     align-items: center;
     background-color: #063d4d;
     background: rgba(0,0,0);

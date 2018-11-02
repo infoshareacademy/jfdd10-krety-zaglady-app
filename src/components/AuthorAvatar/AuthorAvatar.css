@@ -9,13 +9,15 @@
   /* margin: -100px; */
   text-shadow: -1px -3px green, 2px 2px #333;
   margin: 0 auto;
+  box-shadow: 1px 1px 15px black;
 }
 .nameBox {
+
 }
 .AvatarNameText {
   padding: 5px;
   font-size: 40px;
-  box-shadow: 1px 5px 15px black;
+  /* box-shadow: 1px 5px 15px black; */
   background: white;
   border-radius: 0px 50px 50px 0px;
   text-align: center;
