@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import "./BoardLegend.css";
 
+const dictionary = {
+  tomato: 'pomidor',
+  carrot: 'marchewa',
+  apple: 'jabol',
+  plum: 'sliwica',
+  cherry: 'cherry',
+  pear: 'grucha',
+  broccoli: 'brokula',
+  blueberries: 'niebieskie jagodki',
+  tree: 'd ż e wo'
+}
 class BoardLegend extends Component {
   render() {
     return (
@@ -31,7 +42,7 @@ class BoardLegend extends Component {
                   <div>
                   <div className={fruit.key}>
                   </div>
-                    <span className="SpanName">{fruit.value}</span>
+                    <span className="SpanName">{typeof fruit.value === 'string' ? fruit.value : dictionary[fruit.key]}</span>
                   </div>
                 );
               })}
