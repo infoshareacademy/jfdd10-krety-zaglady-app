@@ -3,7 +3,6 @@ import "./Navbar.css";
 import SignIn from "../SignIn/SignIn";
 import SignUpButton from "../SignUpButton/SignUpButton";
 import SignOut from "../SignOut/SignOut";
-import AddProjectButton from "../AddProjectButton/AddProjectButton";
 // import { Link } from "react-router-dom";
 // import posed from "react-pose";
 
