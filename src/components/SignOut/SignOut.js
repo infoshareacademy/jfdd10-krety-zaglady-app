@@ -24,7 +24,7 @@ class SignOut extends Component {
         return user ? (
             <>
               <p>
-                {user.userName} <button onClick={this.handleSignOutClick}>Wyloguj się</button>
+                {user.userName} <button id="sign-out" className="sign-out" onClick={this.handleSignOutClick}>Wyloguj się</button>
               </p>
               {this.props.children}
             </>
