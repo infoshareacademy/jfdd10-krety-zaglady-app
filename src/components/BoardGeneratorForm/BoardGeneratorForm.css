@@ -1,4 +1,8 @@
-.BoardGeneratorForm h2, h3, p {
+.BoardGeneratorForm-text {
+  text-align: center;
+  font-size: 2vh
+}
+.BoardGeneratorForm-header {
   text-align: center;
 }
 
@@ -14,10 +18,6 @@
 
 .BoardGeneratorForm-itemsContainer img {
   height: 3vh;
-}
-
-.BoardGeneratorForm-itemsContainer, .BoardGeneratorForm-formContainer {
- font-size: 1.4vh;
 }
 
 .BoardGeneratorForm-formContainer h3 {
@@ -54,7 +54,6 @@
   padding-top: 10px;
 }
 .BoardGeneratorForm-selectAll label{
-  font-size: 1.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,6 +71,11 @@
   width: 50px;
   height: 50px;
   background-color: transparent;
+}
+
+.formFruit {
+  width: 30px;
+  height: 30px;
 }
 
 input[type=range] {
