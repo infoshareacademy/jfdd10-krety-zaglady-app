@@ -84,47 +84,6 @@ class UserEditForm extends Component {
           onChange={this.handleChange}
         /></td>
        </tr>
-        <tr>
-          <td>
-            <label for="email">Adres e-mail</label>
-            </td>
-            <td>
-        <input
-          placeholder="Adres e-mail"
-          name="email"
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
-        </td>
-       </tr>
-          <tr>
-            <td>
-          <label for="password">Hasło</label>
-          </td>
-        <td>
-        <input
-          placeholder="Hasło"
-          name="password"
-          value={this.state.password}
-          onChange={this.handleChange}
-          type="password"
-        />
-        </td>
-      </tr>
-        <tr>
-          <td>
-        <label for="password2">Powtórz hasło</label>
-        </td>
-        <td>
-        <input
-          placeholder="Powtórz hasło"
-          name="password2"
-          value={this.state.password2}
-          onChange={this.handleChange}
-          type="password"
-        />
-        </td>
-        </tr>
         </tbody>
       </table>
         
