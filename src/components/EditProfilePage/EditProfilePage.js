@@ -22,7 +22,6 @@ class EditProfilePage extends Component {
           .once("value")
           .then(snapshot => {
             const userData = snapshot.val();
-            console.log(userData);
             this.setState({
               user,
               name: userData.userName,
@@ -36,10 +35,8 @@ class EditProfilePage extends Component {
   render() {
     const user = this.state.user;
     if (user === null) {
-      return <p>loading user data...</p>;
+      return <p>pobieranie danych...</p>;
     }
-
-    console.log(user)
 
     return (
       <EditProfile
