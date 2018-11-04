@@ -34,4 +34,8 @@
   .avatar {
     border-radius: 100px;
   }
+
+  .AvatarNameText {
+    border-radius: 20px;
+  }
 }
