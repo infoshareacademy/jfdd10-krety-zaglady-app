@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./ProjectBoard.css";
-import posed from "react-pose";
 
 
 const range = length => Array.from({ length }, (_, i) => i);

@@ -7,11 +7,12 @@ import firebase from 'firebase';
 class UserEditForm extends Component {
 
   state = {
-    name: this.props.name,
-    surname: this.props.surname,
-    age: '',
-    city: '',
-    description: '',
+    name: this.props.userName,
+    surname: this.props.userSurname,
+    city: this.props.userCity,
+    age: this.props.userAge,
+    gender: this.props.userGender,
+    description: this.props.userDescription,
     isSubmitted: false
   };
 
@@ -20,8 +21,9 @@ class UserEditForm extends Component {
     firebase.database().ref('/users/' + this.props.userId).set({
       userName: this.state.name,
       userSurname: this.state.surname,
-      userAge: this.state.age,
       userCity: this.state.city,
+      userAge: this.state.age,
+      userGender: this.state.gender,
       userDescription: this.state.description
     })
       .then(() => {
@@ -51,7 +53,7 @@ class UserEditForm extends Component {
           <table>
             <tbody>
               <tr>
-                <td><label for="name">Imię</label></td>
+                <td><label htmlFor="name">Imię</label></td>
                 <td>
                   <input
                     required
@@ -61,7 +63,7 @@ class UserEditForm extends Component {
 
                   /></td>
               </tr>
-              <tr><td><label for="surname">Nazwisko</label></td>
+              <tr><td><label htmlFor="surname">Nazwisko</label></td>
                 <td><input
                   placeholder="Nazwisko"
                   name="surname"
@@ -69,7 +71,7 @@ class UserEditForm extends Component {
                   onChange={this.handleChange}
                 /></td>
               </tr>
-              <tr><td><label for="city">Miejscowość</label></td>
+              <tr><td><label htmlFor="city">Miejscowość</label></td>
                 <td><input
                   placeholder="Miejscowość"
                   name="city"
@@ -77,7 +79,15 @@ class UserEditForm extends Component {
                   onChange={this.handleChange}
                 /></td>
               </tr>
-              <tr><td><label for="age">Wiek</label></td>
+              <tr><td><label htmlFor="gender">Płeć</label></td>
+                <td><input
+                  placeholder="Płeć"
+                  name="gender"
+                  value={this.state.gender}
+                  onChange={this.handleChange}
+                /></td>
+              </tr>
+              <tr><td><label htmlFor="age">Wiek</label></td>
                 <td><input
                   placeholder="Wiek"
                   name="age"
@@ -85,7 +95,7 @@ class UserEditForm extends Component {
                   onChange={this.handleChange}
                 /></td>
               </tr>
-              <tr><td><label for="description">Opis profilu</label></td>
+              <tr><td><label htmlFor="description">Opis profilu</label></td>
                 <td><input
                   placeholder="Opis profilu"
                   name="description"

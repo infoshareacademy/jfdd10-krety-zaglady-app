@@ -5,10 +5,10 @@ import SignOut from "../SignOut/SignOut";
 class Navbar extends Component {
   render() {
     return (
-      <div class="navbar">
+      <div className="navbar">
        
-        <div class="menu">
-          <div class="navigation">
+        <div className="menu">
+          <div className="navigation">
             <SignOut />
           </div>
         </div>
