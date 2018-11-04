@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-// import PropTypes from 'prop-types'
-
 import "./EditProfile.css";
 import firebase from 'firebase';
 
 
 class UserEditForm extends Component {
-  // static propTypes = {
-
-  // }
 
   state = {
     name: this.props.name,
