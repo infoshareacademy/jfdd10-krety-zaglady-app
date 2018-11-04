@@ -50,14 +50,14 @@ class UserProfileView extends Component {
     const userId = this.props.match.params.userId
     const user = this.state.users.find(user => user.id === userId)
     if (user === undefined) {
-      return <p>Nie ma jeszcze użytkownika...</p>;
+      return <p>pobieranie danych...</p>;
     }
     const project = this.state.projects.find(
       project => project.authorId === userId
     );
 
     if (project === undefined) {
-      return <p>Coś poszło nie tak :(</p>;
+      return <p>Nie ma jeszcze projektów</p>;
     }
     return (
       <div class="UserProfileView">
