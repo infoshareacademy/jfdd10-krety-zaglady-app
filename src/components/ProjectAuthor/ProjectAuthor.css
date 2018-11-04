@@ -17,6 +17,13 @@
   flex-grow: 1;
 }
 
+@media screen and (max-width: 400px) {
+  .ProjectAuthor-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 
 .ProjectListItem-userInfo {
   display: flex;

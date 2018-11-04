@@ -11,6 +11,13 @@
   border: 1px solid green;
 }
 
+@media screen and (max-width: 400px) {
+  .ProjectListItem-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .ProjectListItem-leftSide {
   display: flex;
   flex-direction: column;
@@ -20,14 +27,13 @@
 
 .ProjectListItem-userInfo {
   display: flex;
-  /* margin-left: 180px; */
+  margin-right: 10px;
   border-radius: 0px 70px 70px 70px;
   padding: 20px 10px;
   box-shadow: 5px 5px 15px  black;
   flex-grow: 1;
   background: red;
   background: white;
-  /* width: 400px; */
 }
 
 .ProjectListItem-userInfo img {
@@ -67,7 +73,7 @@
 }
 
 .ProjectListItem-boardImage {
-  margin: 0px 20px;
+  margin-top: 10px;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 5px 5px 15px black;
