@@ -61,9 +61,8 @@ class UserProfileView extends Component {
     }
     return (
       <div class="UserProfileView">
-        <div>
           <UserPanel {...user} />
-
+<div className="UserProjects">
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
             onMouseEnter={() => this.setState({ hovering: true })}
@@ -75,12 +74,10 @@ class UserProfileView extends Component {
               style={{ textDecoration: "none" }}
               className="ProjectListItem"
             >
-              <div className="User-Project-Item">
                 <UserProjectItem {...project} />
-              </div>
             </Link>
           </PushUp>
-        </div>
+          </div>
       </div>
     );
   }

@@ -1,10 +1,9 @@
 .UserProjectItem {
   display: flex;
+  justify-content: flex-start;
   padding: 20px;
-  width: 60%;
-  margin-left: 250px;
+  width: 100%;
   margin-top: 50px;
-  text-align: start;
   border-radius: 5px;
   box-shadow: 5px 5px 5px grey;
   background: linear-gradient(270deg, #19d7d0, #07aea8);
@@ -28,6 +27,7 @@
   display: flex;
   justify-content: center;
   width: 200px;
+  height: 200px;
   align-items: center;
 }
 
@@ -40,6 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 300px;
   font-size: 22px;
   text-shadow: grey 2px 2px;
   color: rgb(241, 236, 236);
