@@ -67,7 +67,9 @@
         position: relative;
        
 } 
-
+.EditProfile-changesSaved {
+    text-align: center;
+}
 .table td {
 width: 100px;
 }
