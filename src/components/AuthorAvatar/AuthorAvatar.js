@@ -30,7 +30,7 @@ class AuthorAvatar extends Component {
             />
           </PushUp>
         </div>
-          <div className="AvatarNameText"><span className="PrefixBox">Ogrodnik </span>{this.props.name}</div>
+          <div className="AvatarNameText"><span className="PrefixBox">Ogrodnik {this.props.name}</span></div>
       </Link>
     );
   }

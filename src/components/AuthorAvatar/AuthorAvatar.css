@@ -6,14 +6,15 @@
   height: 200px;
   background: white;
   border: 1px solid black;
-  /* margin: -100px; */
   text-shadow: -1px -3px green, 2px 2px #333;
   margin: 0 auto;
   box-shadow: 1px 1px 15px black;
 }
 
 .AvatarNameText {
-  padding: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
   color: black;
   font-size: 40px;
   background: white;
