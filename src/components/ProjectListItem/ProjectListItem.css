@@ -11,11 +11,6 @@
   border: 1px solid green;
 }
 
-.ProjectListItem-container a {
-  flex-grow: 1;
-  /* width: 100%; */
-}
-
 .ProjectListItem-leftSide {
   display: flex;
   flex-direction: column;
@@ -25,22 +20,20 @@
 
 .ProjectListItem-userInfo {
   display: flex;
-  margin-left: 180px;
+  /* margin-left: 180px; */
   border-radius: 0px 70px 70px 70px;
   padding: 20px 10px;
   box-shadow: 5px 5px 15px  black;
-  /* border-radius: 10px; */
+  flex-grow: 1;
   background: red;
   background: white;
-  width: 400px;
+  /* width: 400px; */
 }
 
 .ProjectListItem-userInfo img {
-  /* width: 150px; */
   height: 150px;
   border-radius: 100px;
   box-shadow: 1px 5px 15px  black;
-  /* margin: 100px; */
 }
 
 .ProjectListItem-userInfo h1 {

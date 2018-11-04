@@ -14,7 +14,7 @@ class ProjectAuthor extends Component {
 
   render() {
     return (
-      <>
+      <div className="ProjectAuthor-container">
       <AuthorAvatar 
             className="AvatarAuthor"
             // noLink
@@ -43,7 +43,7 @@ class ProjectAuthor extends Component {
           </div>
         </PushUp>
       </Link>
-      </>
+      </div>
     );
   }
 }
