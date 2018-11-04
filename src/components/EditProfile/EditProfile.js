@@ -13,6 +13,7 @@ class UserEditForm extends Component {
     age: this.props.userAge,
     gender: this.props.userGender,
     description: this.props.userDescription,
+    image: this.props.userImage,
     isSubmitted: false
   };
 
@@ -24,7 +25,8 @@ class UserEditForm extends Component {
       userCity: this.state.city,
       userAge: this.state.age,
       userGender: this.state.gender,
-      userDescription: this.state.description
+      userDescription: this.state.description,
+      userImage: this.state.image
     })
       .then(() => {
         this.setState({
