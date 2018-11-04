@@ -11,7 +11,7 @@ class ProjectList extends Component {
         {this.props.projects.length !== 0 ? (
           <>
             {this.props.projects.map(project => (
-              <div class="ProjectList-projectListItem" key={project.id}>
+              <div className="ProjectList-projectListItem" key={project.id}>
                 <ProjectListItem {...project} />
               </div>
             ))}
