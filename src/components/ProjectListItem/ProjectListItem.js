@@ -3,8 +3,6 @@ import ProjectAuthor from "../ProjectAuthor/ProjectAuthor";
 import "./ProjectListItem.css";
 import { Link } from "react-router-dom";
 import posed from "react-pose";
-import ProjectBoard from "../ProjectBoard/ProjectBoard";
-import { Z_FILTERED } from "zlib";
 
 const PushUp = posed.div({
   idle: { scale: 1 },
