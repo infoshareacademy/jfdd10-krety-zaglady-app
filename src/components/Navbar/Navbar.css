@@ -24,3 +24,12 @@
     background-color: rgba(4, 59, 209, 0.247);
     opacity: 0.5;
 }
+
+/*----- RWD -------*/
+
+@media screen and (max-width: 520px) {
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+}

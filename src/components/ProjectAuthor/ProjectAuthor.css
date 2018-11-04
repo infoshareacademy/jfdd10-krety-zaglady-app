@@ -34,7 +34,7 @@
 /*------ RWD --------*/
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .ProjectAuthor-container {
     flex-wrap: wrap;
     justify-content: center;
