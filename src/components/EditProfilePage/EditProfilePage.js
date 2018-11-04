@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./EditProfilePage.css";
 import { updateUser } from "../../services/users";
 import EditProfile from "../EditProfile/EditProfile";
@@ -8,8 +7,12 @@ import firebase from "firebase";
 class EditProfilePage extends Component {
   state = {
     user: null,
-    name: this.props.userName,
-    surname: this.props.userSurname
+    userName: '',
+    userSurname: '',
+    userDescription: '',
+    userCity: '',
+    userAge: '',
+    userGender: ''
   };
 
   componentDidMount() {
@@ -20,20 +23,21 @@ class EditProfilePage extends Component {
           .ref("users")
           .child(user.uid)
           .once("value")
-          .then(snapshot => {
-            const userData = snapshot.val();
-            this.setState({
-              user,
-              name: userData.userName,
-              surname: userData.userSurname
-            });
-          });
+          .then(snapshot => snapshot.val())
+          .then(data => this.setState({
+            user,
+            ...data
+          }))
       }
     });
   }
+  
+
 
   render() {
-    const user = this.state.user;
+    const userInfo = this.state
+    const user = userInfo.user;
+    
     if (user === null) {
       return <p>pobieranie danych...</p>;
     }
@@ -41,8 +45,7 @@ class EditProfilePage extends Component {
     return (
       <EditProfile
         userId={user.uid}
-        name={this.state.name}
-        surname={this.state.surname}
+        {...userInfo}
       />
     );
   }

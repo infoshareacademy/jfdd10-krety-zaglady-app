@@ -50,20 +50,19 @@ class UserProfileView extends Component {
     const userId = this.props.match.params.userId
     const user = this.state.users.find(user => user.id === userId)
     if (user === undefined) {
-      return <p>Nie ma jeszcze użytkownika...</p>;
+      return <p>pobieranie danych...</p>;
     }
     const project = this.state.projects.find(
       project => project.authorId === userId
     );
 
     if (project === undefined) {
-      return <p>Coś poszło nie tak :(</p>;
+      return <p>Nie ma jeszcze projektów</p>;
     }
     return (
       <div class="UserProfileView">
-        <div>
           <UserPanel {...user} />
-
+<div className="UserProjects">
           <PushUp
             pose={this.state.hovering ? "hovered" : "idle"}
             onMouseEnter={() => this.setState({ hovering: true })}
@@ -75,12 +74,10 @@ class UserProfileView extends Component {
               style={{ textDecoration: "none" }}
               className="ProjectListItem"
             >
-              <div className="User-Project-Item">
                 <UserProjectItem {...project} />
-              </div>
             </Link>
           </PushUp>
-        </div>
+          </div>
       </div>
     );
   }

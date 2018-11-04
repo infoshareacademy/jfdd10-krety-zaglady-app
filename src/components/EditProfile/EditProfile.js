@@ -1,146 +1,128 @@
 import React, { Component } from "react";
 import "./EditProfile.css";
+import { withRouter } from 'react-router-dom';
 import firebase from 'firebase';
 
 
 class UserEditForm extends Component {
 
   state = {
-    name: this.props.name,
-    surname: this.props.surname
+    name: this.props.userName,
+    surname: this.props.userSurname,
+    city: this.props.userCity,
+    age: this.props.userAge,
+    gender: this.props.userGender,
+    description: this.props.userDescription,
+    image: this.props.userImage,
+    isSubmitted: false
   };
 
   handleSubmit = event => {
     event.preventDefault();
-
-    firebase.database().ref('users').child(this.props.userId).update({
-        userName: this.state.name,
-        userSurname: this.state.surname
+    firebase.database().ref('/users/' + this.props.userId).set({
+      userName: this.state.name,
+      userSurname: this.state.surname,
+      userCity: this.state.city,
+      userAge: this.state.age,
+      userGender: this.state.gender,
+      userDescription: this.state.description,
+      userImage: this.state.image
     })
+      .then(() => {
+        this.setState({
+          isSubmitted: true
+        })
+      })
+
   };
 
-  handleNameChange = event => {
+  handleChange = event => {
     this.setState({
-      name: event.target.value
-    });
-  };
-
-  handleSurnameChange = event => {
-    this.setState({
-      surname: event.target.value
+      [event.target.name]: event.target.value
     });
   };
 
   render() {
 
     return (
-     
-       
-        <div className="EditProfileDiv">
+
+
+      <div className="EditProfileDiv">
         <form onSubmit={this.handleSubmit} className="EditProfileForm">
-        {this.state.error && <p>{this.state.error.message}</p>}
-        <table>
-          <tbody>
-            <tr>
-        <td><label for="name">Imię</label></td>
-        <td> 
-        <input
-          required
-          name="name"
-          value={this.state.name}
-          onChange={this.handleNameChange}
-          
-        /></td>
-        </tr>
-        <tr><td><label for="surname">Nazwisko</label></td>
-         <td><input
-          placeholder="Nazwisko"
-          name="surname"
-          value={this.state.surname}
-          onChange={this.handleSurnameChange}
-        /></td>
-       </tr>
-       <tr><td><label for="city">Miejscowość</label></td>
-         <td><input
-          placeholder="Miejscowość"
-          name="city"
-          value={this.state.city}
-          onChange={this.handleChange}
-        /></td>
-       </tr>
-       <tr><td><label for="age">Wiek</label></td>
-         <td><input
-          placeholder="Wiek"
-          name="age"
-          value={this.state.age}
-          onChange={this.handleChange}
-        /></td>
-       </tr>
-       <tr><td><label for="description">Opis profilu</label></td>
-         <td><input
-          placeholder="Opis profilu"
-          name="description"
-          value={this.state.description}
-          onChange={this.handleChange}
-        /></td>
-       </tr>
-        <tr>
-          <td>
-            <label for="email">Adres e-mail</label>
-            </td>
-            <td>
-        <input
-          placeholder="Adres e-mail"
-          name="email"
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
-        </td>
-       </tr>
-          <tr>
-            <td>
-          <label for="password">Hasło</label>
-          </td>
-        <td>
-        <input
-          placeholder="Hasło"
-          name="password"
-          value={this.state.password}
-          onChange={this.handleChange}
-          type="password"
-        />
-        </td>
-      </tr>
-        <tr>
-          <td>
-        <label for="password2">Powtórz hasło</label>
-        </td>
-        <td>
-        <input
-          placeholder="Powtórz hasło"
-          name="password2"
-          value={this.state.password2}
-          onChange={this.handleChange}
-          type="password"
-        />
-        </td>
-        </tr>
-        </tbody>
-      </table>
-        
-        <div>
-      
-        <button id="register" className="register">Wyślij</button>
-        
-          <img src="/data/signmole.png" alt="sign" className="Sign-drawing" /></div>
-    
-      </form>
-      
+        <div className="EditProfileFormHeader">EDYCJA PROFILU</div>
+          {this.state.error && <p>{this.state.error.message}</p>}
+          <table>
+            <tbody>
+              <tr>
+                <td><label htmlFor="name">Imię</label></td>
+                <td>
+                  <input
+                    required
+                    name="name"
+                    value={this.state.name}
+                    onChange={this.handleChange}
+
+                  /></td>
+              </tr>
+              <tr><td><label htmlFor="surname">Nazwisko</label></td>
+                <td><input
+                  placeholder="Nazwisko"
+                  name="surname"
+                  value={this.state.surname}
+                  onChange={this.handleChange}
+                /></td>
+              </tr>
+              <tr><td><label htmlFor="city">Miejscowość</label></td>
+                <td><input
+                  placeholder="Miejscowość"
+                  name="city"
+                  value={this.state.city}
+                  onChange={this.handleChange}
+                /></td>
+              </tr>
+              <tr><td> 
+         
+            
+          <label htmlFor="gender">Płeć</label></td>
+                <td> <select value={this.state.gender} name="gender" onChange={this.handleChange}>
+                <option value=""></option>
+            <option value="Kobieta">Kobieta</option>
+            <option value="Mężczyzna">Mężczyzna</option>
+            </select>
+                  </td>
+              </tr>
+              <tr><td><label htmlFor="age">Wiek</label></td>
+                <td><input
+                  placeholder="Wiek"
+                  name="age"
+                  value={this.state.age}
+                  onChange={this.handleChange}
+                /></td>
+              </tr>
+              <tr><td><label htmlFor="description">Opis profilu</label></td>
+                <td><input
+                  placeholder="Opis profilu"
+                  name="description"
+                  value={this.state.description}
+                  onChange={this.handleChange}
+                /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+{this.state.isSubmitted === true && <p style={{color: 'green'}}>Zmiany zostały zapisane</p>}
+            <button id="register" className="register">Wyślij</button>
+
+            <img src="/data/signmole.png" alt="sign" className="Sign-drawing" /></div>
+
+        </form>
+
       </div>
-        
-      
+
+
     );
   }
 }
 
-export default UserEditForm;
+export default withRouter(UserEditForm);

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./SignUpPage.css";
 import firebase from "firebase";
 
@@ -16,6 +15,7 @@ class SignUpPage extends Component {
     gender: "",
     city: "",
     description: "",
+    image: "https://cdn3.iconfinder.com/data/icons/avatar-55/64/Scientist-avatar-occupation-profession-man-human-512.png",
     error: null
   };
 
@@ -37,7 +37,9 @@ class SignUpPage extends Component {
           this.state.password
         ).then(
           (data) => {
-          firebase.database().ref('/users/' + data.user.uid).set({userName: this.state.name, userSurname: this.state.surname})
+          firebase.database()
+          .ref('/users/' + data.user.uid)
+          .set({userName: this.state.name, userSurname: this.state.surname, userImage: this.state.image})
           this.setState({ error: null })
           this.props.history.push ("/welcome")
           }
@@ -51,7 +53,7 @@ class SignUpPage extends Component {
     return (
       <div className="SignUpPage">
         <form onSubmit={this.handleSubmit} className="SignUpForm">
-        <div className="SignText">[MIEJSCE NA TEKST]</div>
+        <div className="SignText">FORMULARZ REJESTRACJI</div>
         {this.state.error && <p>{this.state.error.message}</p>}
         <table>
           <tbody>

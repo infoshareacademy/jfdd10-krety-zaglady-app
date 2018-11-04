@@ -1,7 +1,7 @@
 .EditProfileForm {
     font-size: 17px;
     text-align: start;
-    margin: 100px;
+    margin: 50px;
     padding: 50px;
     background: white;
     width: 600px;
@@ -12,6 +12,11 @@
     background: rgb(54, 211, 54, 0.4);
     padding: 20px;
     border-radius: 10px;
+}
+
+.EditProfileFormHeader {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .SignText {

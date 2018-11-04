@@ -16,7 +16,7 @@ class UserPanel extends Component {
 
           <div className="UserInfos">
             <div className="UserInfo">
-              <p>
+              <p className="UserInfo-List">
                 Miasto: {this.props.userCity}
                 <br />
                 Płeć: {this.props.userGender}
@@ -24,7 +24,7 @@ class UserPanel extends Component {
                 Wiek: {this.props.userAge}
               </p>
               <div className="Description">
-                <p>{this.props.userDescription}</p>
+                <p className="DescriptionText">{this.props.userDescription}</p>
               </div>
             </div>
             <div className="UserMail" />

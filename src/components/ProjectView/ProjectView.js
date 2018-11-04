@@ -49,9 +49,9 @@ class ProjectView extends Component {
     const project = this.state.projectsWithAuthors.find(
       project => project.id === projectId
     );
-
+    
     if (project === undefined) {
-      return <div>Nie ma jeszcze projektu...</div>;
+      return <div>pobieranie danych...</div>;
     }
     return (
       <div className="main_b">

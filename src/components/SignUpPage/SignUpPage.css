@@ -1,7 +1,7 @@
 .SignUpForm {
     font-size: 17px;
     text-align: start;
-    margin: 100px;
+    margin: 50px;
     padding: 50px;
     background: white;
     width: 600px;
@@ -16,6 +16,7 @@
 
 .SignText {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .SignUpForm input {

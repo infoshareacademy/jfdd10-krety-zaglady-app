@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import "./SignUpButton.css";
 
 class SignUpButton extends Component {
-
   render() {
     return (
       <table>
@@ -24,9 +22,6 @@ class SignUpButton extends Component {
   }
 }
 
-SignUpButton.propTypes = {
-  handleClick: PropTypes.func.isRequired,
-  children: PropTypes.string.isRequired
-}
+
 
 export default SignUpButton;
