@@ -47,7 +47,6 @@ class UserEditForm extends Component {
 
       <div className="EditProfileDiv">
         <form onSubmit={this.handleSubmit} className="EditProfileForm">
-        {this.state.isSubmitted === true && <p style={{color: 'green'}}>Zmiany zostały zapisane</p>}
         <div className="EditProfileFormHeader">EDYCJA PROFILU</div>
           {this.state.error && <p>{this.state.error.message}</p>}
           <table>
@@ -110,7 +109,7 @@ class UserEditForm extends Component {
           </table>
 
           <div>
-
+{this.state.isSubmitted === true && <p style={{color: 'green'}}>Zmiany zostały zapisane</p>}
             <button id="register" className="register">Wyślij</button>
 
             <img src="/data/signmole.png" alt="sign" className="Sign-drawing" /></div>
