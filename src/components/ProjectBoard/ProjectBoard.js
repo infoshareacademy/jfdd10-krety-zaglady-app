@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import "./ProjectBoard.css";
 import posed from "react-pose";
 
-const PushUp = posed.div({
-  idle: { scale: 1 },
-  hovered: { scale: 1.5 }
-});
-
 
 const range = length => Array.from({ length }, (_, i) => i);
 

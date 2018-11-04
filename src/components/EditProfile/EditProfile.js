@@ -1,57 +1,43 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./SignUpPage.css";
-import firebase from "firebase";
+import "./EditProfile.css";
+import firebase from 'firebase';
 
 
+class UserEditForm extends Component {
 
-class SignUpPage extends Component {
   state = {
-    name: "",
-    surname: "",
-    email: "",
-    password: "",
-    password2: "",
-    age: "",
-    gender: "",
-    city: "",
-    description: "",
-    error: null
+    name: this.props.name,
+    surname: this.props.surname
   };
 
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
   handleSubmit = event => {
-    event.preventDefault()
-      if (this.state.password !== this.state.password2){
-        this.setState({
-          error: {message: "Hasła się nie zgadzają."}
-        })
-      } else  {
-        firebase.auth().createUserWithEmailAndPassword(
-          this.state.email,
-          this.state.password
-        ).then(
-          (data) => {
-          firebase.database().ref('/users/' + data.user.uid).set({userName: this.state.name, userSurname: this.state.surname})
-          this.setState({ error: null })
-          this.props.history.push ("/welcome")
-          }
-        ).catch(
-          error => this.setState({ error })
-        )
-      }
-  }
+    event.preventDefault();
+
+    firebase.database().ref('users').child(this.props.userId).update({
+        userName: this.state.name,
+        userSurname: this.state.surname
+    })
+  };
+
+  handleNameChange = event => {
+    this.setState({
+      name: event.target.value
+    });
+  };
+
+  handleSurnameChange = event => {
+    this.setState({
+      surname: event.target.value
+    });
+  };
 
   render() {
+
     return (
-      <div className="SignUpPage">
-        <form onSubmit={this.handleSubmit} className="SignUpForm">
-        <div className="SignText">[MIEJSCE NA TEKST]</div>
+     
+       
+        <div className="EditProfileDiv">
+        <form onSubmit={this.handleSubmit} className="EditProfileForm">
         {this.state.error && <p>{this.state.error.message}</p>}
         <table>
           <tbody>
@@ -59,11 +45,10 @@ class SignUpPage extends Component {
         <td><label for="name">Imię</label></td>
         <td> 
         <input
-          placeholder="Imię"
           required
           name="name"
           value={this.state.name}
-          onChange={this.handleChange}
+          onChange={this.handleNameChange}
           
         /></td>
         </tr>
@@ -72,6 +57,30 @@ class SignUpPage extends Component {
           placeholder="Nazwisko"
           name="surname"
           value={this.state.surname}
+          onChange={this.handleSurnameChange}
+        /></td>
+       </tr>
+       <tr><td><label for="city">Miejscowość</label></td>
+         <td><input
+          placeholder="Miejscowość"
+          name="city"
+          value={this.state.city}
+          onChange={this.handleChange}
+        /></td>
+       </tr>
+       <tr><td><label for="age">Wiek</label></td>
+         <td><input
+          placeholder="Wiek"
+          name="age"
+          value={this.state.age}
+          onChange={this.handleChange}
+        /></td>
+       </tr>
+       <tr><td><label for="description">Opis profilu</label></td>
+         <td><input
+          placeholder="Opis profilu"
+          name="description"
+          value={this.state.description}
           onChange={this.handleChange}
         /></td>
        </tr>
@@ -104,7 +113,7 @@ class SignUpPage extends Component {
       </tr>
         <tr>
           <td>
-        <label for="passoword2">Powtórz hasło</label>
+        <label for="password2">Powtórz hasło</label>
         </td>
         <td>
         <input
@@ -128,9 +137,10 @@ class SignUpPage extends Component {
       </form>
       
       </div>
+        
       
     );
   }
 }
 
-export default SignUpPage;
+export default UserEditForm;
