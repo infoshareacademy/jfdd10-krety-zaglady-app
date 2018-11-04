@@ -12,13 +12,6 @@
   font-size: calc(10px + 2vmin);
 
 }
-.App-header a{
-  text-decoration: none;
-  color: black;
-  font-size: 1.6vh;
-  font-weight: bold;
-}
-
 
 .App-logo {
   max-width: 100px;
@@ -31,6 +24,7 @@
   padding: 10px;
   display: flex;
   justify-content: center;
+  font-size: 15px;
 }
 
 .App-footer a {
