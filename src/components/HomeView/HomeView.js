@@ -13,7 +13,7 @@ const funFacts = [
 const randomFunFact = funFacts[Math.floor(Math.random()*funFacts.length)];
 class HomeView extends Component {
   state = {
-    projectsWithAuthors: []
+    projectsWithAuthors: null
   };
 
   componentDidMount() {
@@ -44,6 +44,11 @@ class HomeView extends Component {
   }
 
   render() {
+    const state = this.state.projectsWithAuthors;
+    if (state === null) {
+      return <p>pobieranie danych...</p>;
+    }
+
     return (
       <>
         <div className="HomeView-main_box">
