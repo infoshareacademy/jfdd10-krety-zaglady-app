@@ -9,12 +9,10 @@
     font-size: 15px;
     font-weight: 600;
     color: white;
-    margin: 0 auto;
+    margin: 0 5px;
     background-color: rgba(83, 197, 2, 0.925);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-    margin-left: 10px;
-    margin-right: 10px;
 
 }
 

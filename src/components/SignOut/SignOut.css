@@ -3,10 +3,9 @@
     justify-content: space-between;
     width: 100%;
     align-self: center;
-    margin-top: 5px;
 }
 
-.add-project-button {
+.add-project-button, .edit-profile, #sign-out {
     padding: 10px;
     border-radius: 10px;
     width: 150px;
@@ -17,12 +16,10 @@
     font-size: 15px;
     font-weight: 600;
     color: white;
-    margin: 0 auto;
+    margin: 3px 5px;
     background-color: rgba(83, 197, 2, 0.925);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-    margin-left: 20px;
-    margin-right: 10px;
 
 }
 
@@ -32,50 +29,10 @@
     text-shadow: 0px -2px #669644;
 }
 
-.edit-profile {
-    padding: 10px;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-    margin: 0 auto;
-    background-color: rgba(83, 197, 2, 0.925);
-    border-bottom: 5px solid #669644;
-    text-shadow: 0px -2px #669644;
-    margin-left: 20px;
-    margin-right: 10px;
-
-}
-
 .add-project-button:hover {
     background-color:  rgb(125, 185, 82);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-}
-
-#sign-out {
-    padding: 10px;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-    margin: 0 auto;
-    background-color: rgba(83, 197, 2, 0.925);
-    border-bottom: 5px solid #669644;
-    text-shadow: 0px -2px #669644;
-    margin-left: 10px;
-    margin-right: 10px;
-
 }
 
 #sign-out:hover {
@@ -89,3 +46,16 @@ color: white;
 font-weight: 600;
 }
 
+/*------ RWD -------*/
+@media screen and (max-width: 700px) {
+    .sign-out-navbar {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-user {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+}
