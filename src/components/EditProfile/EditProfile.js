@@ -18,8 +18,6 @@ class UserEditForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    console.log(this.props.userId)
-
     firebase.database().ref('users').child(this.props.userId).update({
         userName: this.state.name,
         userSurname: this.state.surname
@@ -40,7 +38,6 @@ class UserEditForm extends Component {
 
   render() {
 
-    console.log(this.props)
     return (
      
        
