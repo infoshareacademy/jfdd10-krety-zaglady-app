@@ -11,13 +11,6 @@
   border: 1px solid green;
 }
 
-@media screen and (max-width: 400px) {
-  .ProjectListItem-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
 .ProjectListItem-leftSide {
   display: flex;
   flex-direction: column;
@@ -152,4 +145,24 @@
 .blueberries {
   height: 50px;
   width: 50px;
+}
+
+/*------ RWD --------*/
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .ProjectListItem-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ProjectListItem-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ProjectListItem-userInfo {
+    border-radius: 20px;
+  }
 }
