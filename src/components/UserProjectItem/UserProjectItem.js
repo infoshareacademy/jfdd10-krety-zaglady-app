@@ -3,6 +3,7 @@ import "./UserProjectItem.css";
 
 class UserProjectItem extends Component {
   render() {
+    console.log(this.props.userDescriptionTitle)
     return (
       <div class="UserProjectItem">
         <div class="ProjectImage">

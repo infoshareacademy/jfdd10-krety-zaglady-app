@@ -24,15 +24,10 @@
   }
 }
 
-.ProjectItem h3 {
-  text-shadow: grey 2px 2px;
-  color: rgb(241, 236, 236);
-}
-
 .ProjectImage {
   display: flex;
   justify-content: center;
-  width: 500px;
+  width: 200px;
   align-items: center;
 }
 
@@ -41,10 +36,11 @@
   width: 80%;
 }
 
-.DescriptionOfProject {
+.UserGardenProject {
   display: flex;
   flex-direction: column;
-  font-size: 10px;
- 
-  /* background: grey; */
+  align-items: flex-start;
+  font-size: 22px;
+  text-shadow: grey 2px 2px;
+  color: rgb(241, 236, 236);
 }

@@ -2,35 +2,19 @@ import React, { Component } from "react";
 import "./BoardLegend.css";
 
 const dictionary = {
-  tomato: 'pomidor',
-  carrot: 'marchewa',
-  apple: 'jabol',
-  plum: 'sliwica',
-  cherry: 'cherry',
-  pear: 'grucha',
-  broccoli: 'brokula',
-  blueberries: 'niebieskie jagodki',
-  tree: 'd ż e wo'
+  tomato: 'pomidory',
+  carrot: 'marchew',
+  apple: 'jabłoń',
+  plum: 'śliwa',
+  cherry: 'wiśnia',
+  pear: 'grusza',
+  broccoli: 'brokuły',
+  blueberries: 'jagody',
+  tree: 'drzewo'
 }
 class BoardLegend extends Component {
   render() {
     return (
-      <>
-        {/* <div className="BoardLegend">
-          <div className="BordLegendFruit">
-            <div className="FruitIcon Carrot"> </div>
-            <div className="FruitName Carrot" />
-          </div>
-          <div className="BordLegendFruit">
-            <div className="FruitIcon AppleIcon" />
-            <div className="FruitName Apple" />
-          </div>
-          <div className="BordLegendFruit">
-            <div className="FruitIcon Orange" />
-            <div className="FruitName Orange" />
-          </div>
-        </div> */}
-
         <div className="FruitLegendBox" BoardLegend-fruitIcon>
           <div className="BoardLegend-fruitIcon">
             {Object.entries(this.props.fruits || dictionary)
@@ -48,7 +32,6 @@ class BoardLegend extends Component {
               })}
           </div>
         </div>
-      </>
     );
   }
 }
