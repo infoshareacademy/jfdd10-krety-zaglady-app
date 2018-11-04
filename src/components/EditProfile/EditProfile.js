@@ -79,13 +79,16 @@ class UserEditForm extends Component {
                   onChange={this.handleChange}
                 /></td>
               </tr>
-              <tr><td><label htmlFor="gender">Płeć</label></td>
-                <td><input
-                  placeholder="Płeć"
-                  name="gender"
-                  value={this.state.gender}
-                  onChange={this.handleChange}
-                /></td>
+              <tr><td> 
+         
+            
+          <label htmlFor="gender">Płeć</label></td>
+                <td> <select value={this.state.gender} name="gender" onChange={this.handleChange}>
+                <option value=""></option>
+            <option value="Kobieta">Kobieta</option>
+            <option value="Mężczyzna">Mężczyzna</option>
+            </select>
+                  </td>
               </tr>
               <tr><td><label htmlFor="age">Wiek</label></td>
                 <td><input
