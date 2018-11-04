@@ -16,7 +16,7 @@ class UserPanel extends Component {
 
           <div className="UserInfos">
             <div className="UserInfo">
-              <p>
+              <p className="UserInfo-List">
                 Miasto: {this.props.userCity}
                 <br />
                 Płeć: {this.props.userGender}

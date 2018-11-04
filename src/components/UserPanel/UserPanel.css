@@ -1,6 +1,9 @@
 html {
     background: white;
 }
+.UserInfo-List {
+text-align: left;
+}
 
 .UserPanel {
     display: flex;
