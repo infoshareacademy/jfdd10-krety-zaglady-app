@@ -3,6 +3,12 @@ import firebase from "firebase";
 import { withRouter } from 'react-router-dom';
 import "./SignIn.css";
 
+const dictionary = {
+  'auth/invalid-email': 'E-mail jest niepoprawny.',
+  'auth/user-not-found': 'Użytkownik nie istnieje.',
+  'auth/wrong-password': 'Hasło jest nieprawidłowe.'
+  
+}
 class SignIn extends Component {
   state = {
     email: "",
@@ -29,10 +35,12 @@ class SignIn extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="SignInForm">
-        {this.state.error && <p>{this.state.error.message}</p>}
         <table>
           <tbody>
             <tr>
+              <td>
+              {this.state.error && <p>{dictionary[this.state.error.code] || this.state.error.message}</p>}
+              </td>
               <td>
                 <input
                   placeholder="Adres e-mail"
