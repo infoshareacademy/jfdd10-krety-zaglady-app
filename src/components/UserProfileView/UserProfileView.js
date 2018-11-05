@@ -60,7 +60,7 @@ class UserProfileView extends Component {
       return <p>Nie ma jeszcze projektów</p>;
     }
     return (
-      <div class="UserProfileView">
+      <div className="UserProfileView">
           <UserPanel {...user} />
 <div className="UserProjects">
           <PushUp

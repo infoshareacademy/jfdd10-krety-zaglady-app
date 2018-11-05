@@ -6,6 +6,7 @@
 .HomeView-top_box{
     background: green;
     border-radius: 10px;
+    width: 95%;
   
 }
 
@@ -23,4 +24,5 @@
     font-size: 23px;
     text-shadow: 5px 3px 10px rgb(86, 194, 230);
     opacity: 0.5;
+    text-align: center;
 }

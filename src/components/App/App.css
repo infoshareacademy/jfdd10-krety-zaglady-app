@@ -1,9 +1,4 @@
-.App {
-  /* text-align: center; */
-}
-
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
 
@@ -17,13 +12,6 @@
   font-size: calc(10px + 2vmin);
 
 }
-.App-header a{
-  text-decoration: none;
-  color: black;
-  font-size: 1.6vh;
-  font-weight: bold;
-}
-
 
 .App-logo {
   max-width: 100px;
@@ -34,6 +22,9 @@
 .App-footer {
   background: rgb(215, 237, 240);
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
 }
 
 .App-footer a {

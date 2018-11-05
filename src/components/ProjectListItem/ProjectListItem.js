@@ -35,7 +35,7 @@ class ProjectListItem extends Component {
 
                 .slice(0, 3)
                 .map(fruit => {
-                  return <div className={fruit.key} />;
+                  return <div key={fruit.key} className={fruit.key} />;
                 })}
             </div>
             <img

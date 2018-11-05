@@ -131,11 +131,11 @@ class BoardGeneratorForm extends Component {
   render() {
     return (
       <div className="BoardGeneratorForm">
-        <h2>Generator Projektu</h2>
+        <h2 className="BoardGeneratorForm-header">Generator Projektu</h2>
         <form className="BoardGeneratorForm-form" onSubmit={this.handleSubmit}>
           <div className="BoardGeneratorForm-formContainer">
-            <h3>Informacje</h3>
-            <p>Nazwij i opisz swój projekt ogródka</p>
+            <h3 className="BoardGeneratorForm-text">Informacje</h3>
+            <p className="BoardGeneratorForm-text">Nazwij i opisz swój projekt ogródka</p>
             <label>
               <input
                 className="BoardGeneratorForm-title"
@@ -160,8 +160,8 @@ class BoardGeneratorForm extends Component {
                 onChange={this.handleTextInputChange}
               />
             </label>
-            <h3>Wielkość ogródka</h3>
-            <p>Wybierz liczbę rzędów/kolumn w projekcie</p>
+            <h3 className="BoardGeneratorForm-text">Wielkość ogródka</h3>
+            <p className="BoardGeneratorForm-text">Wybierz liczbę rzędów/kolumn w projekcie</p>
             <label>
               <input
                 className="BoardGeneratorForm-size"
@@ -173,17 +173,17 @@ class BoardGeneratorForm extends Component {
                 onChange={this.handleSizeChange}
               />
             </label>
-            <span>{this.state.size}</span>
+            <span className="BoardGeneratorForm-text">{this.state.size}</span>
           </div>
           <div className="BoardGeneratorForm-itemsContainer">
-            <h3>Elementy</h3>
-            <p>
+            <h3 className="BoardGeneratorForm-text">Elementy</h3>
+            <p className="BoardGeneratorForm-text">
               Wybierz elementy do <br />
               zastosowania w projekcie
             </p>
             <div className="BoardGeneratorForm-fruitContainer">
               <label name="cherry">
-                <div className="cherry" />
+                <div className="cherry formFruit"/>
                 <input
                   type="checkbox"
                   name="cherry"
@@ -192,7 +192,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label name="apple">
-                <div className="apple" />
+                <div className="apple formFruit" />
                 <input
                   type="checkbox"
                   name="apple"
@@ -201,7 +201,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label name="plum">
-                <div className="plum" />
+                <div className="plum formFruit" />
                 <input
                   type="checkbox"
                   name="plum"
@@ -210,7 +210,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label name="pear">
-                <div className="pear" />
+                <div className="pear formFruit" />
                 <input
                   type="checkbox"
                   name="pear"
@@ -219,7 +219,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label name="blueberries">
-                <div className="blueberries" />
+                <div className="blueberries formFruit" />
                 <input
                   type="checkbox"
                   name="blueberries"
@@ -228,7 +228,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label htmlFor="tree">
-                <div className="tree" />
+                <div className="tree formFruit" />
                 <input
                   type="checkbox"
                   name="tree"
@@ -240,7 +240,7 @@ class BoardGeneratorForm extends Component {
             </div>
             <div className="BoardGeneratorForm-vegetableContainer">
               <label name="broccoli">
-                <div className="broccoli" />
+                <div className="broccoli formFruit" />
                 <input
                   type="checkbox"
                   name="broccoli"
@@ -249,7 +249,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label name="tomato">
-                <div className="tomato" />
+                <div className="tomato formFruit" />
                 <input
                   type="checkbox"
                   name="tomato"
@@ -258,7 +258,7 @@ class BoardGeneratorForm extends Component {
                 />
               </label>
               <label name="carrot">
-                <div className="carrot" />
+                <div className="carrot formFruit" />
                 <input
                   type="checkbox"
                   name="carrot"
@@ -269,7 +269,7 @@ class BoardGeneratorForm extends Component {
             </div>
             <div className="BoardGeneratorForm-selectAll">
               <label name="checkAllFriuits">
-                <span>Zaznacz wszystko</span>
+                <span className="BoardGeneratorForm-text">Zaznacz wszystko</span>
                 <input
                   type="checkbox"
                   name="checkAllFriuits"

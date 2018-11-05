@@ -110,7 +110,7 @@ class UserEditForm extends Component {
             </tbody>
           </table>
 
-          <div>
+          <div className="EditProfile-changesSaved">
 {this.state.isSubmitted === true && <p style={{color: 'green'}}>Zmiany zostały zapisane</p>}
             <button id="register" className="register">Wyślij</button>
 
