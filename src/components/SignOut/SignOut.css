@@ -3,10 +3,9 @@
     justify-content: space-between;
     width: 100%;
     align-self: center;
-    margin-top: 5px;
 }
 
-.add-project-button {
+.add-project-button, .edit-profile, #sign-out {
     padding: 10px;
     border-radius: 10px;
     width: 150px;
@@ -17,75 +16,73 @@
     font-size: 15px;
     font-weight: 600;
     color: white;
-    margin: 0 auto;
+    margin: 3px 5px;
     background-color: rgba(83, 197, 2, 0.925);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-    margin-left: 20px;
-    margin-right: 10px;
-
 }
 
 .add-project-button:hover {
-    background-color:  rgb(125, 185, 82);
+    background-color: rgb(125, 185, 82);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-}
-
-.edit-profile {
-    padding: 10px;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-    margin: 0 auto;
-    background-color: rgba(83, 197, 2, 0.925);
-    border-bottom: 5px solid #669644;
-    text-shadow: 0px -2px #669644;
-    margin-left: 20px;
-    margin-right: 10px;
-
 }
 
 .add-project-button:hover {
-    background-color:  rgb(125, 185, 82);
+    background-color: rgb(125, 185, 82);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-}
-
-#sign-out {
-    padding: 10px;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-    margin: 0 auto;
-    background-color: rgba(83, 197, 2, 0.925);
-    border-bottom: 5px solid #669644;
-    text-shadow: 0px -2px #669644;
-    margin-left: 10px;
-    margin-right: 10px;
-
 }
 
 #sign-out:hover {
-    background-color:  rgb(125, 185, 82);
+    background-color: rgb(125, 185, 82);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
 }
 
 .navbar-user {
-color: white;
-font-weight: 600;
+    color: white;
+    font-weight: 600;
 }
 
+/*------ RWD -------*/
+
+@media screen and (min-width: 521px) and (max-width: 800px) {
+    .sign-out-navbar {
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-user {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .add-project-button, .edit-profile, #sign-out {
+        padding: 10px 0px;
+        width: 110px;
+        margin: 3px 5px;   
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sign-out-navbar {
+        max-width: 200px;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-user {
+        max-width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .add-project-button, .edit-profile, #sign-out {
+        padding: 3px;
+        height: 20px;
+        font-size: 12px;
+    }
+}

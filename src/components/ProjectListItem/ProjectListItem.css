@@ -20,14 +20,13 @@
 
 .ProjectListItem-userInfo {
   display: flex;
-  /* margin-left: 180px; */
+  margin-right: 10px;
   border-radius: 0px 70px 70px 70px;
   padding: 20px 10px;
   box-shadow: 5px 5px 15px  black;
   flex-grow: 1;
   background: red;
   background: white;
-  /* width: 400px; */
 }
 
 .ProjectListItem-userInfo img {
@@ -67,7 +66,7 @@
 }
 
 .ProjectListItem-boardImage {
-  margin: 0px 20px;
+  margin-top: 10px;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 5px 5px 15px black;
@@ -146,4 +145,24 @@
 .blueberries {
   height: 50px;
   width: 50px;
+}
+
+/*------ RWD --------*/
+
+@media screen and (min-width: 521px) and (max-width: 800px) {
+  .ProjectListItem-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .ProjectListItem-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ProjectListItem-userInfo {
+    border-radius: 20px;
+  }
 }

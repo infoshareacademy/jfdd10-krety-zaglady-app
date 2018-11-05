@@ -1,7 +1,5 @@
 .avatar {
-  /* border-radius: 50%; */
   border-radius: 0px 50px 50px 0px;
-
   width: 200px;
   height: 200px;
   background: white;
@@ -28,4 +26,17 @@
 .PrefixBox {
   color: black;
   font-size: 20px;
+}
+
+/*------ RWD --------*/
+
+@media screen and (max-width: 520px) {
+  .avatar {
+    border-radius: 100px;
+  }
+
+  .AvatarNameText {
+    margin: 10px 0px;
+    border-radius: 20px;
+  }
 }

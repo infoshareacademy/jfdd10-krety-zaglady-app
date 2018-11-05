@@ -5,7 +5,6 @@
   justify-content: flex-start;
   margin: 10px;
   flex-grow: 1;
-  
 }
 
 .ProjectAuthor-header {
@@ -16,7 +15,6 @@
   display: flex;
   flex-grow: 1;
 }
-
 
 .ProjectListItem-userInfo {
   display: flex;
@@ -31,4 +29,21 @@
 }
 .AvatarCloudTextBox {
   width: 700px;
+}
+
+/*------ RWD --------*/
+
+
+@media screen and (max-width: 520px) {
+  .ProjectAuthor-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ProjectAuthorLink {
+    flex-grow: 0;
+  }
+  .ProjectAuthor {
+    text-align: center;
+  }
 }
