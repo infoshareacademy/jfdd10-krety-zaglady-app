@@ -52,10 +52,11 @@ class HomeView extends Component {
     return (
       <>
         <div className="HomeView-main_box">
-          <AppIntro />
-          <h4> 
-            {randomFunFact}
+        <h4> 
+             {randomFunFact}
              </h4>
+          <AppIntro />
+          
 
           
         </div>

@@ -6,7 +6,7 @@
 .HomeView-top_box{
     background: green;
     border-radius: 10px;
-    width: 95%;
+    width: 70%;
   
 }
 
@@ -25,4 +25,11 @@
     text-shadow: 5px 3px 10px rgb(86, 194, 230);
     opacity: 0.5;
     text-align: center;
+}
+/*--------- RWD -------------*/
+
+@media screen and (max-width: 1200px) {
+    .HomeView-top_box {
+        width: 90%;
+    }
 }
