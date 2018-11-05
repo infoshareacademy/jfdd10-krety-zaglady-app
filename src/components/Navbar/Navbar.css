@@ -27,9 +27,23 @@
 
 /*----- RWD -------*/
 
+@media screen and (min-width: 521px) and (max-width: 685px) {
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 @media screen and (max-width: 520px) {
     .menu {
         display: flex;
         justify-content: center;
     }
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
 }

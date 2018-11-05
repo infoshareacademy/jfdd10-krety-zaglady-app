@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import firebase from "firebase";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+
 
 import "./SignOut.css";
 import SignIn from "../SignIn/SignIn";
@@ -13,7 +14,8 @@ class SignOut extends Component {
   };
 
   handleSignOutClick = () => {
-    firebase.auth().signOut();
+    firebase.auth().signOut()
+    this.props.history.push("/")
   };
 
   componentDidMount() {
@@ -71,4 +73,4 @@ class SignOut extends Component {
   }
 }
 
-export default SignOut;
+export default withRouter(SignOut);

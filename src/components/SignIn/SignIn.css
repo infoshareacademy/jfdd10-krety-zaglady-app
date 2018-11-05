@@ -24,3 +24,13 @@
 #sign-in input {
     padding: 10px;
 }
+
+/*------ RWD -------*/
+
+@media screen and (max-width: 685px) {
+    #sign-in {
+        padding: 10px 0px;
+        width: 110px;
+        margin: 0px 5px;   
+    }
+}
