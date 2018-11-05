@@ -28,8 +28,20 @@
 }
 
 .ButtonIntro{
-    width: 400px;
-    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin: 0 5px;
+    background-color: orange;
+    border-bottom: 5px solid #669644;
+    
    
   
 }
