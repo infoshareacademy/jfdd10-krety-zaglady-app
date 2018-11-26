@@ -45,9 +45,30 @@
   color: rgb(241, 236, 236);
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (min-width: 521px) and (max-width: 685px) {
   .ProjectImage img {
     height: 60%;
     width: auto;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .UserProjectItem {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ProjectImage {
+    height: 150px;
+  }
+
+  .ProjectImage img {
+    height: 60%;
+    width: auto;
+  }
+
+  .UserGardenProject {
+    align-items: center;
+    text-align: center;
   }
 }

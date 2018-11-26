@@ -117,7 +117,7 @@ animation: AnimationName 30s ease infinite;
 
 /* -------------------- RWD ----------------- */
 
-@media screen and (max-width: 685px) {
+@media screen and (min-width: 521px) and (max-width: 685px) {
     .UserPanel {
         height: 100%;
         width: auto;
@@ -136,6 +136,36 @@ animation: AnimationName 30s ease infinite;
 
     .UserInfo {
         width: auto;
+    }
+
+    .Description {
+        margin-bottom: 20px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .UserPanel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .UserPanelInfo {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .UserName {
+        padding-left: 0px; 
+        text-align: center;       
+    }
+
+    .UserInfos {
+        justify-content: center;
+        padding-left: 0px;
     }
 
     .Description {
