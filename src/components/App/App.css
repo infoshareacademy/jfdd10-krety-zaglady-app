@@ -36,4 +36,8 @@
   color: #61dafb;
 }
 
-
+@media screen and (max-width: 612px) {
+  .App-logo {
+    margin-top: 100px;
+  }
+}
