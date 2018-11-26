@@ -35,15 +35,13 @@
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 685px) {
     .menu {
         display: flex;
         justify-content: center;
     }
     .navigation {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: block;
     }
     
 }

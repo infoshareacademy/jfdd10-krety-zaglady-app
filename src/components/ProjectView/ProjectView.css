@@ -36,3 +36,13 @@
     flex-direction: row;
     align-items: flex-start;
 }
+
+/* ------------------------------- RWD -------------------------------- */
+
+@media screen and (max-width: 685px) {
+    .PushUpBox {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

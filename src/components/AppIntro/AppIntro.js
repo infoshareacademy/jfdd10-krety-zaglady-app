@@ -21,7 +21,7 @@ class AppIntro extends Component {
       <div className="AppIntro">
         <div className="MeloIintro" />
         <div className="Intro">
-          <h1> WITAJCIE W KRETOGRODZIE! </h1>
+          <h1 id="welcome"> WITAJ W KRETOGRODZIE! </h1>
         </div>
         <button className="ButtonIntro"
         onClick={this.handleCloseClick}
