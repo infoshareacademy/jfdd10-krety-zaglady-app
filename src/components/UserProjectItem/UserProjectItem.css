@@ -44,3 +44,10 @@
   text-shadow: grey 2px 2px;
   color: rgb(241, 236, 236);
 }
+
+@media screen and (max-width: 685px) {
+  .ProjectImage img {
+    height: 60%;
+    width: auto;
+  }
+}

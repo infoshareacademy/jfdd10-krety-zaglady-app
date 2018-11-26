@@ -79,7 +79,6 @@ animation: AnimationName 30s ease infinite;
     font-weight: bold;
     color: white;
     text-shadow: grey 2px 2px;
-    
 }
 
 .UserInfos {
@@ -113,4 +112,34 @@ animation: AnimationName 30s ease infinite;
     width: 70px;
     height: 70px;
     background-image: url ('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-4/177800/155-512.png')
+}
+
+
+/* -------------------- RWD ----------------- */
+
+@media screen and (max-width: 685px) {
+    .UserPanel {
+        height: 100%;
+        width: auto;
+        margin: 40px 20px;
+    }
+
+    .UserPanelInfo {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .UserName {
+        padding-left: 20px;        
+    }
+
+    .UserInfo {
+        width: auto;
+    }
+
+    .Description {
+        margin-bottom: 20px;
+        height: auto;
+    }
 }
