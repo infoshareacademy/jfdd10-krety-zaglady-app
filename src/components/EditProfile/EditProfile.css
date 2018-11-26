@@ -73,3 +73,32 @@
 .table td {
 width: 100px;
 }
+
+/* ------------ RWD ------------------ */
+@media screen and (max-width: 520px) {
+    .EditProfileForm {
+        margin: 20px;
+        padding: 10px;
+        width: auto;
+        border: 3px solid green;
+    }
+    
+    .table tbody {
+        font-size: 12px;
+    }
+
+    .EditProfileForm button {
+        display: block;
+        margin: 20px auto 0px auto;
+        width: auto;
+        position: relative;
+    }
+
+    .EditProfileForm img {
+       display: none; 
+    }
+
+    .EditProfileForm label {
+        margin: 0px;
+    }
+}
